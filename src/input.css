@@ -1,1 +1,10 @@
 @import "tailwindcss";
+@import url("https://fonts.cdnfonts.com/css/mukta");
+
+@theme {
+  --font-mukta: "Mukta", sans-serif;
+  --color-primary: #0c1b2b;
+  --color-secondary: #fcb621;
+  --color-description: #d8d9de;
+}
+

@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.6 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -6,8 +7,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --font-weight-black: 900;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-mukta: "Mukta", sans-serif;
+    --color-primary: #0c1b2b;
+    --color-secondary: #fcb621;
   }
 }
 @layer base {
@@ -168,6 +173,9 @@
   .justify-center {
     justify-content: center;
   }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
   .bg-\[url\(\'\.\.\/\.\.\/assets\/image\/blog\/heroSection\.png\'\)\] {
     background-image: url('../../assets/image/blog/heroSection.png');
   }
@@ -176,5 +184,27 @@
   }
   .bg-center {
     background-position: center;
+  }
+  .font-mukta {
+    font-family: var(--font-mukta);
+  }
+  .font-black {
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+}
+@import url("https://fonts.cdnfonts.com/css/mukta");
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-font-weight: initial;
+    }
   }
 }
