@@ -1246,6 +1246,25 @@
       }
     }
   }
+<<<<<<< HEAD
+=======
+  .group-hover\:translate-x-1 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-translate-x: calc(var(--spacing) * 1);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+  .group-hover\:translate-x-2 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-translate-x: calc(var(--spacing) * 2);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+>>>>>>> bf7482c011131e39ae0a455172da07352fc51da9
   .group-hover\:translate-x-4 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1270,7 +1289,29 @@
       }
     }
   }
+<<<<<<< HEAD
   .group-hover\:scale-105 {
+=======
+  .group-hover\:-translate-y-2 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-translate-y: calc(var(--spacing) * -2);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+  .group-hover\:scale-110 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-scale-x: 110%;
+        --tw-scale-y: 110%;
+        --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .group-hover\:scale-x-100 {
+>>>>>>> bf7482c011131e39ae0a455172da07352fc51da9
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         --tw-scale-x: 105%;
@@ -1294,6 +1335,13 @@
       }
     }
   }
+  .group-hover\:bg-primary {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-primary);
+      }
+    }
+  }
   .group-hover\:pl-1 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1301,10 +1349,25 @@
       }
     }
   }
+  .group-hover\:font-bold {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-font-weight: var(--font-weight-bold);
+        font-weight: var(--font-weight-bold);
+      }
+    }
+  }
   .group-hover\:text-secondary {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         color: var(--color-secondary);
+      }
+    }
+  }
+  .group-hover\:text-white {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-white);
       }
     }
   }
@@ -1339,14 +1402,22 @@
       }
     }
   }
+<<<<<<< HEAD
   .group-hover\:shadow-xl {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+=======
+  .group-hover\:shadow-lg {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+>>>>>>> bf7482c011131e39ae0a455172da07352fc51da9
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
     }
   }
+<<<<<<< HEAD
   .group-hover\:brightness-80 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1355,6 +1426,8 @@
       }
     }
   }
+=======
+>>>>>>> bf7482c011131e39ae0a455172da07352fc51da9
   .before\:pointer-events-none {
     &::before {
       content: var(--tw-content);
