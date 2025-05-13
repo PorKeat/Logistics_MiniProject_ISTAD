@@ -7,14 +7,33 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Blog</title>
   </head>
-  <body>
+  <body class="font-mukta">
     <header
-      class="bg-[url('../../assets/image/blog/heroSection.png')] bg-cover bg-center h-[840px] flex items-center justify-center"
+      class="bg-[url('../../assets/image/blog/heroSection.png')] bg-cover bg-center h-[840px] flex items-center"
     >
       <nav id="navbar"></nav>
+      <section class="w-[80%] mx-auto">
+        <small class="text-secondary text-[16px] block mb-[30px]"
+          >Blog Post</small
+        >
+        <h1 class="text-[64px] text-white font-bold leading-[80px]">
+          Smarter Shipping <br /><span class="text-secondary"
+            >The Way it Should Be</span
+          >.
+        </h1>
+      </section>
     </header>
-    <main>
-        <h1 class="font-mukta text-secondary font-black bg-primary">Hello</h1>
+    <main class="h-[200vh]">
+      <section class="w-[80%] mx-auto mt-[30px]">
+        <div class="relative flex items-center h-[30px]">
+          <hr class="w-full border-t-5 border-black" />
+          <span
+            class="absolute text-white bg-secondary px-6 left-[-2px] py-2 transform -skew-x-12 rounded-[2px]"
+          >
+            Trending Logistics News
+          </span>
+        </div>
+      </section>
     </main>
     <footer id="footer"></footer>
   </body>
