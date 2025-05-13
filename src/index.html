@@ -70,130 +70,89 @@
 
     <!-- Main Content -->
    <main>
-     <!-- Hero Section -->
-    <section class="relative h-screen min-h-[32rem] flex items-center overflow-hidden">
-  <!-- Video background -->
-  <video
-    autoplay
-    loop
-    muted
-    playsinline
-    class="absolute w-full h-full object-cover z-0"
-  >
-    <source src="../assets/image/home/videos/vdo-bg.mp4" type="video/mp4" />
-    <source src="/videos/vdo-bg.webm" type="video/webm" />
-    Your browser does not support the video tag.
-  </video>
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[32rem] flex items-center overflow-hidden" id="hero-section">
+      <!-- Video background -->
+      <video autoplay loop muted playsinline class="absolute w-full h-full object-cover z-0 gsap-video-bg">
+        <source src="../assets/image/home/videos/vdo-bg.mp4" type="video/mp4" />
+        <source src="/videos/vdo-bg.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
 
-  <!-- Dark overlay -->
-  <div
-    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30 z-10"
-  ></div>
+      <!-- Dark overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30 z-10 gsap-overlay"></div>
 
-  <!-- Content container -->
-  <div class="container mx-auto px-4 sm:px-6 relative z-20">
-    <div class="max-w-2xl text-white">
-      <!-- "LOGISTICS SIMPLIFIED" with responsive text size -->
-      <div class="mb-2 sm:mb-3">
-        <p
-          class="text-base sm:text-lg md:text-xl text-secondary tracking-widest font-bold uppercase inline-block relative pb-2 group"
-        >
-          LOGISTICS SIMPLIFIED
-          <span
-            class="absolute bottom-0 left-0 h-0.5 w-12 sm:w-16 bg-white transition-all duration-500 group-hover:w-16 sm:group-hover:w-24"
-          ></span>
-        </p>
-      </div>
-
-      <!-- Main headline with responsive typography -->
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-3 sm:mb-4">
-        <span class="block">Global Shipping</span>
-        <span class="block sm:inline">The Way it</span>
-        <span
-          class="block text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white"
-        >Should BE <span class="text-secondary">.</span></span>
-      </h1>
-
-      <!-- Supporting text with responsive sizing -->
-      <p class="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-md sm:max-w-lg leading-relaxed">
-        We revolutionize freight solutions with cutting-edge technology and
-        uncompromising reliability across continents.
-      </p>
-
-      <!-- CTA section with responsive spacing -->
-      <div class="flex flex-wrap items-center gap-4 sm:gap-6">
-        <a href="#_" class="relative inline-flex items-center justify-center p-0 sm:p-4 px-5 sm:px-6 py-2 sm:py-3 overflow-hidden font-medium text-secondary transition duration-300 ease-out border-2 border-secondary rounded-full shadow-md group text-sm sm:text-base">
-          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-secondary group-hover:translate-x-0 ease">
-              <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-          </span>
-          <span class="absolute flex items-center justify-center w-full h-full text-secondary transition-all duration-300 transform group-hover:translate-x-full ease">Get Instant Quote</span>
-          <span class="relative invisible">Get Instant Quote</span>
-        </a>
-
-        <div class="flex items-center space-x-2 sm:space-x-3">
-          <div
-            class="bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 animate-pulse"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 sm:h-6 sm:w-6 text-secondary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              />
-            </svg>
-          </div>
-          <div>
-            <p class="text-xs sm:text-sm uppercase tracking-wider text-gray-300">
-              24/7 Support
+      <!-- Content container -->
+      <div class="container mx-auto px-4 sm:px-6 relative z-20">
+        <div class="max-w-2xl text-white">
+          <!-- "LOGISTICS SIMPLIFIED" -->
+          <div class="mb-2 sm:mb-3 gsap-tagline">
+            <p class="text-base sm:text-lg md:text-xl text-secondary tracking-widest font-bold uppercase inline-block relative pb-2 group">
+              LOGISTICS SIMPLIFIED
+              <span class="absolute bottom-0 left-0 h-0.5 w-12 sm:w-16 bg-white transition-all duration-500 group-hover:w-16 sm:group-hover:w-24 gsap-underline"></span>
             </p>
-            <a href="tel:+1-800-555-0123" class="text-lg sm:text-xl font-semibold">+1-800-555-0123</a>
+          </div>
+
+          <!-- Main headline -->
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-3 sm:mb-4">
+            <span class="block gsap-headline-1">Global Shipping</span>
+            <span class="block sm:inline gsap-headline-2">The Way it</span>
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white gsap-headline-3">
+              Should BE <span class="text-secondary">.</span>
+            </span>
+          </h1>
+
+          <!-- Supporting text -->
+          <p class="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-md sm:max-w-lg leading-relaxed gsap-subtext">
+            We revolutionize freight solutions with cutting-edge technology and
+            uncompromising reliability across continents.
+          </p>
+
+          <!-- CTA section -->
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 gsap-cta">
+            <a href="#_" class="relative inline-flex items-center justify-center p-0 sm:p-4 px-5 sm:px-6 py-2 sm:py-3 overflow-hidden font-medium text-secondary transition duration-300 ease-out border-2 border-secondary rounded-full shadow-md group text-sm sm:text-base">
+              <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-secondary group-hover:translate-x-0 ease">
+                  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </span>
+              <span class="absolute flex items-center justify-center w-full h-full text-secondary transition-all duration-300 transform group-hover:translate-x-full ease">Get Instant Quote</span>
+              <span class="relative invisible">Get Instant Quote</span>
+            </a>
+
+            <div class="flex items-center space-x-2 sm:space-x-3 gsap-phone">
+              <div class="bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 animate-pulse">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs sm:text-sm uppercase tracking-wider text-gray-300">24/7 Support</p>
+                <a href="tel:+1-800-555-0123" class="text-lg sm:text-xl font-semibold">+1-800-555-0123</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust indicators - Fixed structure -->
+          <div class="mt-12 sm:mt-16 pt-4 sm:pt-6 border-t border-white/10">
+            <p class="text-xs sm:text-sm text-white/80 mb-3 sm:mb-4 gsap-trust-text">
+              Trusted by industry leaders:
+            </p>
+            <div class="flex flex-wrap items-center gap-4 sm:gap-8 opacity-80 gsap-logos-container z-50">
+              <span class="text-lg sm:text-xl font-bold gsap-logo">MAERSK</span>
+              <span class="text-lg sm:text-xl font-bold gsap-logo">DHL</span>
+              <span class="text-lg sm:text-xl font-bold gsap-logo">FEDEX</span>
+              <span class="text-lg sm:text-xl font-bold gsap-logo">COSCO</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Trust indicators with responsive sizing -->
-      <div class="mt-12 sm:mt-16 pt-4 sm:pt-6 border-t border-white/10">
-        <p class="text-xs sm:text-sm text-white/80 mb-3 sm:mb-4">
-          Trusted by industry leaders:
-        </p>
-        <div class="flex flex-wrap items-center gap-4 sm:gap-8 opacity-80">
-          <span class="text-lg sm:text-xl font-bold">MAERSK</span>
-          <span class="text-lg sm:text-xl font-bold">DHL</span>
-          <span class="text-lg sm:text-xl font-bold">FEDEX</span>
-          <span class="text-lg sm:text-xl font-bold">COSCO</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Scroll indicator -->
-  <a
-    href="#services"
-    class="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-6 w-6 sm:h-8 sm:w-8 text-white"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M19 14l-7 7m0 0l-7-7m7 7V3"
-      />
-    </svg>
-  </a>
-   </section>
+      <!-- Scroll indicator -->
+      <a href="#services" class="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce gsap-scroll-indicator">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </a>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="py-[150px] container mx-auto px-4">
@@ -208,7 +167,7 @@
         <!-- Service 1 -->
         <div class="relative flex flex-col justify-center overflow-hidden py-2">
           <div
-            class="group relative rounded-xl cursor-pointer overflow-hidden px-6 py-10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
+            class="group relative rounded-xl cursor-pointer overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
           >
             <span
               class="absolute top-10 z-0 h-20 w-20 rounded-full bg-primary transition-all duration-300 group-hover:scale-[10]"
@@ -246,7 +205,7 @@
         <!-- Service 2 -->
         <div class="relative flex flex-col justify-center overflow-hidden py-2">
           <div
-            class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
+            class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
           >
             <span
               class="absolute top-10 z-0 h-20 w-20 rounded-full bg-primary transition-all duration-300 group-hover:scale-[10]"
@@ -284,7 +243,7 @@
         <!-- Service 3 -->
       <div class="relative flex flex-col justify-center overflow-hidden py-2">
         <div
-          class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
+          class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
         >
           <span
             class="absolute top-10 z-0 h-20 w-20 rounded-full bg-primary transition-all duration-300 group-hover:scale-[10]"
@@ -782,7 +741,106 @@
     </script>
     <script
   src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-  type="module"
-></script>
+  type="module">
+    </script>
+<!-- gsap Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if GSAP is loaded
+  if (typeof gsap !== 'undefined') {
+    // Faster timeline with quicker animations
+    const heroTimeline = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.5 } });
+
+    // Initial setup - hide elements before animation
+    gsap.set(".gsap-video-bg", { opacity: 0, scale: 1.1 });
+    gsap.set(".gsap-overlay", { opacity: 0 });
+    gsap.set([".gsap-tagline", ".gsap-headline-1", ".gsap-headline-2", ".gsap-headline-3", 
+               ".gsap-subtext", ".gsap-cta", ".gsap-phone", ".gsap-trust-text", ".gsap-logo"], 
+               { opacity: 0, y: 10 });
+
+    // Faster animation sequence
+    heroTimeline
+      // Background elements (faster)
+      .to(".gsap-video-bg", { opacity: 1, scale: 1, duration: 0.8 })
+      .to(".gsap-overlay", { opacity: 1, duration: 0.5 }, "-=0.6")
+      
+      // Content elements (faster stagger)
+      .to(".gsap-tagline", { opacity: 1, y: 0, duration: 0.4 })
+      .to(".gsap-underline", { scaleX: 1, transformOrigin: "left center", duration: 0.5 }, "-=0.2")
+      
+      // Headline animation (faster staggered)
+      .to(".gsap-headline-1", { opacity: 1, y: 0 })
+      .to(".gsap-headline-2", { opacity: 1, y: 0 }, "-=0.2")
+      .to(".gsap-headline-3", { 
+        opacity: 1, 
+        y: 0,
+        onComplete: () => {
+          gsap.to(".gsap-headline-3 .text-secondary", {
+            scale: 1.2,
+            repeat: 1,
+            yoyo: true,
+            duration: 0.2
+          });
+        }
+      }, "-=0.2")
+      
+      // Subtext and CTA (faster)
+      .to(".gsap-subtext", { opacity: 1, y: 0 }, "-=0.2")
+      .to(".gsap-cta", { opacity: 1, y: 0 }, "-=0.2")
+      .to(".gsap-phone", { 
+        opacity: 1, 
+        y: 0,
+        onComplete: () => {
+          gsap.to(".gsap-phone .animate-pulse", {
+            scale: 1.05,
+            repeat: -1,
+            yoyo: true,
+            duration: 1,
+            ease: "sine.inOut"
+          });
+        }
+      }, "-=0.2")
+      
+      // Trust indicators (fixed targeting)
+      .to(".gsap-trust-text", { opacity: 1, y: 0 })
+      .to(".gsap-logo", { 
+        opacity: 1, 
+        y: 0, 
+        stagger: 0.1,
+        onComplete: () => {
+          gsap.to(".gsap-logo", {
+            x: "+=3",
+            repeat: -1,
+            yoyo: true,
+            duration: 2,
+            ease: "sine.inOut"
+          });
+        }
+      }, "-=0.2")
+      
+      // Scroll indicator
+      .to(".gsap-scroll-indicator", { opacity: 1, y: 0 }, "-=0.2");
+
+    // Hover effects for CTA button
+    const ctaButton = document.querySelector('.gsap-cta a');
+    if (ctaButton) {
+      ctaButton.addEventListener('mouseenter', () => {
+        gsap.to(".gsap-cta a", { scale: 1.03, duration: 0.2 });
+      });
+      ctaButton.addEventListener('mouseleave', () => {
+        gsap.to(".gsap-cta a", { scale: 1, duration: 0.2 });
+      });
+    }
+  } else {
+    console.error("GSAP is not loaded. Animations will not work.");
+    // Fallback: Show all content immediately if GSAP fails
+    document.querySelectorAll('[class*="gsap-"]').forEach(el => {
+      el.style.opacity = 1;
+      el.style.transform = 'none';
+    });
+  }
+});
+</script>
   </body>
 </html>
