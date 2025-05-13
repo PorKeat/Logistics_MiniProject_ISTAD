@@ -4,21 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <!-- <section class="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] bg-cover bg-center" style="background-image: url('https://cdn.prod.website-files.com/65f2e570a2efe26fa01d8dac/65f4432568cebe087e47f19a_cristina-gottardi-wndpWTiDuT0-unsplash%20(1)%20(1)%20(1)%20(1)%20(1).jpg');"data-aos="fade-up"
-    data-aos-anchor-placement="center-center">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-            <h1 class="text-4xl sm:text-6xl lg:text-8xl font-bold" data-aos="fade-down">Contact us</h1>
-            
-             <p class="mt-4 sm:mt-6 text-lg sm:text-xl lg:text-2xl max-w-2xl " data-aos="fade-up">
-              Connect with us for support, feedback, or collaboration ideas.
-            </p>
-           
-           
+    <section class="bg-cover bg-center text-white h-[50vh] sm:h-[60vh] lg:h-[70vh] flex items-center justify-center" 
+           style="background-image: linear-gradient(rgba(10, 27, 43, 0.47), rgba(10, 27, 43, 0.98) 70%, #0a1b2b), url('https://your-complete-image-url.jpg');">
+    <div class="text-center px-4">
+      <p class="text-[#FCB621] font-semibold mb-2 uppercase tracking-wide">FAQ</p>
+      <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold">
+        Clear your doubts and keep turning the page — FAQs made simple.
+      </h1>
+    </div>
+  </section>
+  <section class="bg-[#f4c24c] text-center py-10 mt-10">
+    <h2 class="text-xl sm:text-3xl lg:text-4xl font-semibold">Frequently Asked Questions</h2>
+  </section>
+
+  <section class="bg-gray-100 py-10 px-6 lg:px-32">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <!-- Left Column -->
+      <div>
+        <h3 class="text-xl font-bold text-[#FCB621] mb-2">Question</h3>
+        <p class="mb-6 text-gray-700">
+          Need help using our logistics platform? Find quick answers to common questions about tracking,
+          shipping, and managing your deliveries here.
+        </p>
+
+        <h3 class="text-xl font-bold text-[#FCB621] mb-2">Contact Support</h3>
+        <p class="text-gray-700 mb-4">
+          Still need help? Our support team is here for you—contact us anytime for quick assistance with your logistics needs.
+        </p>
+        <button class="bg-[#FCB621] hover:bg-[#e0a800] text-white font-semibold px-6 py-2 rounded shadow">
+          Contact Us
+        </button>
+      </div>
+
+      <!-- Right Column (FAQs) -->
+      <div class="space-y-4">
+        <!-- FAQ Item 1 -->
+        <div class="bg-white shadow p-4 rounded flex justify-between items-center cursor-pointer" onclick="toggleAccordion(0)">
+          <span class="text-[#fcb621] font-semibold">How can I track the status of my shipment?</span>
+          <span id="icon-0" class="text-2xl">🔽</span>
         </div>
-    </section> -->
+        <div id="answer-0" class="accordion-item hidden p-4 bg-gray-50 text-gray-600">
+          <p>You can track the status of your shipment by entering the tracking number provided at checkout.</p>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="bg-white shadow p-4 rounded flex justify-between items-center cursor-pointer" onclick="toggleAccordion(1)">
+          <span class="text-[#fcb621] font-semibold">What shipping carriers do you use?</span>
+          <span id="icon-1" class="text-2xl">🔽</span>
+        </div>
+        <div id="answer-1" class="accordion-item hidden p-4 bg-gray-50 text-gray-600">
+          <p>We use a variety of carriers, including UPS, FedEx, and DHL, to deliver your packages.</p>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="bg-white shadow p-4 rounded flex justify-between items-center cursor-pointer" onclick="toggleAccordion(2)">
+          <span class="text-[#fcb621] font-semibold">Can I change the shipping address after placing an order?</span>
+          <span id="icon-2" class="text-2xl">🔽</span>
+        </div>
+        <div id="answer-2" class="accordion-item hidden p-4 bg-gray-50 text-gray-600">
+          <p>If your order has not been shipped yet, you can update your shipping address by contacting customer support.</p>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="bg-white shadow p-4 rounded flex justify-between items-center cursor-pointer" onclick="toggleAccordion(3)">
+          <span class="text-[#fcb621] font-semibold">How can I request a return or refund?</span>
+          <span id="icon-3" class="text-2xl">🔽</span>
+        </div>
+        <div id="answer-3" class="accordion-item hidden p-4 bg-gray-50 text-gray-600">
+          <p>You can request a return or refund within 30 days of receiving your order by contacting customer service.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Section -->
+  <section class="bg-[#f4c24c] px-6 py-10 flex flex-col lg:flex-row items-center gap-6">
+    <!-- Image -->
+    <img src="your-image.png" alt="Illustration" class="w-64 h-auto mx-auto" />
+
+    <!-- Text -->
+    <div class="text-gray-800 max-w-xl">
+      <p>
+        Looking for quick answers? Our FAQ section is here to help you understand how to use our logistics platform—covering everything from booking and tracking shipments to managing your account and getting support.
+        <strong>It’s the fastest way to get the help you need.</strong>
+      </p>
+    </div>
+
+  </section>
+  <footer>
+  <section class="bg-[#0f1123] text-white py-10 px-6  font-[Inter]">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-[22px]">
+
+      <!-- Logo and Address -->
+      <div>
+        <img src="/path-to-your-logo.png" alt="Avast Logo" class="h-10 mb-4">
+        <p class="mb-1 font-normal">42 Hilton Ave. Austin, IL 32182,<br>New York, USA</p>
+        <p class="mb-1 font-normal">info@example.com</p>
+        <p class="mb-4 font-normal">61(322) 121 – 32 – 67</p>
+        <div class="space-y-1">
+          <p class="flex items-center gap-2 font-normal">
+            <i class="fa-regular fa-envelope"></i> <a href="mailto:info@example.com" class="text-yellow-400 hover:text-white transition duration-300">info@example.com</a>
+          </p>
+          <p class="flex items-center gap-2 font-normal">
+            💬 <a href="#" class="text-yellow-400 hover:text-white transition duration-300">Livechat</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Company Links -->
+      <div>
+        <h3 class="font-bold text-white mb-3">Company</h3>
+        <ul class="space-y-1 text-gray-300 font-normal">
+          <li><a href="#" class="hover:text-white transition duration-300">Home</a></li>
+          <li><a href="#" class="hover:text-white transition duration-300">Blog</a></li>
+          <li><a href="#" class="hover:text-white transition duration-300">Contact</a></li>
+          <li><a href="#" class="hover:text-white transition duration-300">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition duration-300">Service</a></li>
+          <li><a href="#" class="hover:text-white transition duration-300">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Links -->
+      <div>
+        <h3 class="font-bold text-white mb-3">Services</h3>
+        <ul class="space-y-1 text-gray-300 font-normal">
+          <li><a href="#" class="hover:text-white transition duration-300">Sea Freight</a></li>
+          <li><a href="#" class="hover:text-white transition duration-300">Train Freight</a></li>
+          <li><a href="#" class="hover:text-white transition duration-300">Air Freight</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="font-bold text-white mb-3">Contact Info</h3>
+        <ul class="space-y-3 text-gray-300 font-normal">
+          <li>
+            <p class="font-medium">+8558123456</p>
+            <p>Support Number</p>
+          </li>
+          <li>
+            <p class="font-medium">gmail.com</p>
+            <p>Support Email</p>
+          </li>
+          <li>
+            <p class="font-medium">Phnom Penh, Cambodia</p>
+            <p>Address</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+</footer>
+
 </body>
 </html>
