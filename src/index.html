@@ -33,6 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./input.css">
     <link rel="stylesheet" href="./output.css">
     <title>Avast Shipping - Global Shipping The Way It Should Be</title>
@@ -157,7 +158,7 @@
     <!-- Services Section -->
     <section id="services" class="py-[150px] container mx-auto px-4">
         <div class="flex justify-center items-center">
-      <h2 class="relative flex justify-center items-center text-center text-3xl font-bold mb-8 pb-2">
+      <h2 data-aos="fade-up" class="relative flex justify-center items-center text-center text-3xl font-bold mb-8 pb-2">
       <span class="text-secondary">Services <span class="text-primary">we offer</span></span> 
       <span class="absolute bottom-0 h-1 w-16 bg-primary transition-all duration-500 group-hover:w-24"></span>
     </h2>
@@ -165,7 +166,7 @@
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-8">
         <!-- Service 1 -->
-        <div class="relative flex flex-col justify-center overflow-hidden py-2">
+        <div data-aos="fade-up-right" class="relative flex flex-col justify-center overflow-hidden py-2">
           <div
             class="group relative rounded-xl cursor-pointer overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
           >
@@ -203,7 +204,7 @@
         </div>
 
         <!-- Service 2 -->
-        <div class="relative flex flex-col justify-center overflow-hidden py-2">
+        <div data-aos="fade-up" class="relative flex flex-col justify-center overflow-hidden py-2">
           <div
             class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
           >
@@ -241,7 +242,7 @@
         </div>
 
         <!-- Service 3 -->
-      <div class="relative flex flex-col justify-center overflow-hidden py-2">
+      <div data-aos="fade-up-left" class="relative flex flex-col justify-center overflow-hidden py-2">
         <div
           class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
         >
@@ -280,138 +281,140 @@
     </section>
 
     <!-- Core Features Section -->
-    <section class="py-16 bg-primary text-white">
-      <div class="container mx-auto px-4">
-         <div class="flex justify-center items-center">
-       <h2 class="relative flex justify-center items-center text-center text-3xl font-bold mb-8 pb-2">
-      <span class="text-secondary">Core <span class="text-white">Features</span></span> 
-      <span class="absolute bottom-0 h-1 w-16 bg-white transition-all duration-500 group-hover:w-24"></span>
-    </h2>
-      </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Feature 1 -->
-          <div class="p-6 rounded-lg">
-            <div class="flex items-center mb-4">
-              <img src="../assets/image/home/svg/box.svg" alt="Fastest Transit Times" class="w-10 h-10">
-              <h3 class="pl-5 text-xl font-bold">Fastest Transit Times</h3>
-            </div>
-            <p class="text-gray-300 mb-4">
-              We optimize your goods with competitive transit times through
-              strategic partnerships and optimized routing.
-            </p>
-            
-            <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200">
-                 <span class="text-secondary uppercase">Read more</span>
-                <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-            </button>
-          </div>
-
-          <!-- Feature 2 -->
-          <div class="p-6 rounded-lg">
-            <div class="flex items-center mb-4">
-              <img src="../assets/image/home/svg/flammable.svg" alt="Security & Protection" class="w-10 h-10">
-              <h3 class="pl-5 text-xl font-bold">Security & Protection</h3>
-            </div>
-            <p class="text-gray-300 mb-4">
-              Your commodities are protected with advanced security protocols
-              and GPS tracking throughout the journey.
-            </p>
-      <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200">
-                 <span class="text-secondary uppercase">Read more</span>
-                <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-            </button>
-          </div>
-
-          <!-- Feature 3 -->
-          <div class="p-6 rounded-lg">
-            <div class="flex items-center mb-4">
-              <img src="../assets/image/home/svg/do-not-tilt.svg" alt="Zero Risk" class="w-10 h-10">
-              <h3 class="pl-5 text-xl font-bold">Zero Risk</h3>
-            </div>
-            <p class="text-gray-300 mb-4">
-              We cover the responsibility for the safety of your products and
-              transparency in our operations.
-            </p>
-      <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200">
-                 <span class="text-secondary uppercase">Read more</span>
-                <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-            </button>
-          </div>
-
-          <!-- Feature 4 -->
-          <div class="p-6 rounded-lg">
-              <div class="flex items-center mb-4">
-              <img src="../assets/image/home/svg/recycle.svg" alt="Sustainable Travel" class="w-10 h-10">
-              <h3 class="pl-5 text-xl font-bold">Sustainable Travel</h3>
-            </div>
-            <p class="text-gray-300 mb-4">
-              Our logistics solutions are designed to minimize environmental
-              impact while providing efficient shipping solutions.
-            </p>
-      <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200">
-                 <span class="text-secondary uppercase">Read more</span>
-                <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-            </button>
-          </div>
-
-          <!-- Feature 5 -->
-          <div class="p-6 rounded-lg">
-              <div class="flex items-center mb-4">
-              <img src="../assets/image/home/svg/delivery-truck.svg" alt="Guaranteed Delivery" class="w-10 h-10">
-              <h3 class="pl-5 text-xl font-bold">Guaranteed Delivery</h3>
-            </div>
-            <p class="text-gray-300 mb-4">
-              We promise your delivery will arrive on time, every time, with
-              real-time tracking and immediate notifications.
-            </p>
-      <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200">
-                 <span class="text-secondary uppercase">Read more</span>
-                <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-            </button>
-          </div>
-
-          <!-- Feature 6 -->
-          <div class="p-6 rounded-lg">
-              <div class="flex items-center mb-4">
-              <img src="../assets/image/home/svg/logistics.svg" alt="No Hidden Costs" class="w-10 h-10">
-              <h3 class="pl-5 text-xl font-bold">No Hidden Costs</h3>
-            </div>
-            <p class="text-gray-300 mb-4">
-              Our pricing is clear, simple, and competitive with no hidden fees
-              or surprises when it's time to pay.
-            </p>
-      <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200">
-                 <span class="text-secondary uppercase">Read more</span>
-                <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-            </button>
-          </div>
+   <section class="py-16 bg-primary text-white overflow-hidden">
+    <div class="container mx-auto px-4">
+        <!-- Animated Section Header -->
+        <div class="flex justify-center items-center gsap-features-header">
+            <h2 class="relative flex justify-center items-center text-center text-3xl font-bold mb-8 pb-2">
+                <span class="text-secondary gsap-features-title">Core <span class="text-white">Features</span></span> 
+                <span class="absolute bottom-0 h-1 w-16 bg-white transition-all duration-500 group-hover:w-24 gsap-features-underline"></span>
+            </h2>
         </div>
-      </div>
-    </section>
+        
+        <!-- Features Grid with Staggered Animations -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 gsap-features-container">
+            <!-- Feature 1 -->
+            <div class="p-6 rounded-lg gsap-feature-card">
+                <div class="flex items-center mb-4 gsap-feature-header">
+                    <img src="../assets/image/home/svg/box.svg" alt="Fastest Transit Times" class="w-10 h-10 gsap-feature-icon">
+                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">Fastest Transit Times</h3>
+                </div>
+                <p class="text-gray-300 mb-4 gsap-feature-desc">
+                    We optimize your goods with competitive transit times through
+                    strategic partnerships and optimized routing.
+                </p>
+                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                    <span class="text-secondary uppercase">Read more</span>
+                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="p-6 rounded-lg gsap-feature-card">
+                <div class="flex items-center mb-4 gsap-feature-header">
+                    <img src="../assets/image/home/svg/flammable.svg" alt="Security & Protection" class="w-10 h-10 gsap-feature-icon">
+                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">Security & Protection</h3>
+                </div>
+                <p class="text-gray-300 mb-4 gsap-feature-desc">
+                    Your commodities are protected with advanced security protocols
+                    and GPS tracking throughout the journey.
+                </p>
+                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                    <span class="text-secondary uppercase">Read more</span>
+                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="p-6 rounded-lg gsap-feature-card">
+                <div class="flex items-center mb-4 gsap-feature-header">
+                    <img src="../assets/image/home/svg/do-not-tilt.svg" alt="Zero Risk" class="w-10 h-10 gsap-feature-icon">
+                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">Zero Risk</h3>
+                </div>
+                <p class="text-gray-300 mb-4 gsap-feature-desc">
+                    We cover the responsibility for the safety of your products and
+                    transparency in our operations.
+                </p>
+                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                    <span class="text-secondary uppercase">Read more</span>
+                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="p-6 rounded-lg gsap-feature-card">
+                <div class="flex items-center mb-4 gsap-feature-header">
+                    <img src="../assets/image/home/svg/recycle.svg" alt="Sustainable Travel" class="w-10 h-10 gsap-feature-icon">
+                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">Sustainable Travel</h3>
+                </div>
+                <p class="text-gray-300 mb-4 gsap-feature-desc">
+                    Our logistics solutions are designed to minimize environmental
+                    impact while providing efficient shipping solutions.
+                </p>
+                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                    <span class="text-secondary uppercase">Read more</span>
+                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="p-6 rounded-lg gsap-feature-card">
+                <div class="flex items-center mb-4 gsap-feature-header">
+                    <img src="../assets/image/home/svg/delivery-truck.svg" alt="Guaranteed Delivery" class="w-10 h-10 gsap-feature-icon">
+                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">Guaranteed Delivery</h3>
+                </div>
+                <p class="text-gray-300 mb-4 gsap-feature-desc">
+                    We promise your delivery will arrive on time, every time, with
+                    real-time tracking and immediate notifications.
+                </p>
+                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                    <span class="text-secondary uppercase">Read more</span>
+                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="p-6 rounded-lg gsap-feature-card">
+                <div class="flex items-center mb-4 gsap-feature-header">
+                    <img src="../assets/image/home/svg/logistics.svg" alt="No Hidden Costs" class="w-10 h-10 gsap-feature-icon">
+                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">No Hidden Costs</h3>
+                </div>
+                <p class="text-gray-300 mb-4 gsap-feature-desc">
+                    Our pricing is clear, simple, and competitive with no hidden fees
+                    or surprises when it's time to pay.
+                </p>
+                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                    <span class="text-secondary uppercase">Read more</span>
+                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+  </section>
 
     <!-- Operation Mode Section -->
    <section class="py-16 container mx-auto px-4 sm:px-6">
@@ -743,8 +746,16 @@
   src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
   type="module">
     </script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 550,
+    });
+  </script>
 <!-- gsap Animation -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   // Check if GSAP is loaded
@@ -840,6 +851,122 @@ document.addEventListener('DOMContentLoaded', () => {
       el.style.transform = 'none';
     });
   }
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Only run if GSAP is loaded
+    if (typeof gsap !== 'undefined') {
+        // Register ScrollTrigger plugin if needed
+        if (typeof ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+        }
+
+        // Initial setup - hide animated elements
+        gsap.set(".gsap-features-header", { opacity: 0, y: 30 });
+        gsap.set(".gsap-features-underline", { scaleX: 0 });
+        gsap.set(".gsap-feature-card", { opacity: 0, y: 30 });
+        gsap.set([".gsap-feature-icon", ".gsap-feature-title", ".gsap-feature-desc", ".gsap-feature-btn"], { opacity: 0, y: 10 });
+
+        // Create a timeline with scroll trigger
+        const featuresTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".gsap-features-container",
+                start: "top 60%",
+               toggleActions: "restart none none reset"
+            }
+        });
+
+        // Animation sequence
+        featuresTimeline
+            // Header animation
+            .to(".gsap-features-header", { 
+                opacity: 1, 
+                y: 0, 
+                duration: 0.4, 
+                ease: "power2.out" 
+            })
+            .to(".gsap-features-underline", { 
+                scaleX: 1, 
+                duration: 0.6, 
+                ease: "power3.out" 
+            }, "-=0.3")
+            
+            // Cards animation (staggered)
+            .to(".gsap-feature-card", { 
+                opacity: 1, 
+                y: 0, 
+                duration: 0.4, 
+                stagger: 0.1, 
+                ease: "power2.out" 
+            })
+            
+            // Inner elements animation (staggered per card)
+            .to(".gsap-feature-icon", {
+                opacity: 1,
+                y: 0,
+                duration: 0.3,
+                stagger: 0.05,
+                ease: "power2.out"
+            }, "-=0.4")
+            .to(".gsap-feature-title", {
+                opacity: 1,
+                y: 0,
+                duration: 0.3,
+                stagger: 0.05,
+                ease: "power2.out"
+            }, "-=0.3")
+            .to(".gsap-feature-desc", {
+                opacity: 1,
+                y: 0,
+                duration: 0.3,
+                stagger: 0.05,
+                ease: "power2.out"
+            }, "-=0.2")
+            .to(".gsap-feature-btn", {
+                opacity: 1,
+                y: 0,
+                duration: 0.3,
+                stagger: 0.05,
+                ease: "power2.out"
+            }, "-=0.1");
+
+        // Hover animations for each feature card
+        document.querySelectorAll('.gsap-feature-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                gsap.to(card, {
+                    y: -5,
+                    duration: 0.3,
+                    ease: "power1.out"
+                });
+                gsap.to(card.querySelector('.gsap-feature-icon'), {
+                    rotate: 5,
+                    duration: 0.3,
+                    ease: "power1.out"
+                });
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, {
+                    y: 0,
+                    duration: 0.3,
+                    ease: "power1.out"
+                });
+                gsap.to(card.querySelector('.gsap-feature-icon'), {
+                    rotate: 0,
+                    duration: 0.3,
+                    ease: "power1.out"
+                });
+            });
+        });
+    } else {
+        console.warn("GSAP not loaded - showing features without animation");
+        // Fallback: Show all content immediately
+        document.querySelectorAll('[class*="gsap-"]').forEach(el => {
+            el.style.opacity = 1;
+            el.style.transform = 'none';
+        });
+    }
 });
 </script>
   </body>
