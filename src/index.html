@@ -61,6 +61,19 @@
         .pause-marquee:hover .marquee-content {
             animation-play-state: paused;
         }
+        .gsap-service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gsap-service-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Smooth transition for all hover effects */
+      .gsap-service-card * {
+          transition: all 0.3s ease;
+      }
     </style>
   </head>
   <body class="bg-white overflow-x-hidden">
@@ -166,260 +179,280 @@
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-8">
         <!-- Service 1 -->
-        <div data-aos="fade-up-right" class="relative flex flex-col justify-center overflow-hidden py-2">
-          <div
-            class="group relative rounded-xl cursor-pointer overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
-          >
-            <span
-              class="absolute top-10 z-0 h-20 w-20 rounded-full bg-primary transition-all duration-300 group-hover:scale-[10]"
-            ></span>
-            <div class="relative z-10 mx-auto max-w-md">
-              <span
-                class="grid h-20 w-20 place-items-center rounded-full bg-primary transition-all duration-300 group-hover:bg-[#1E3347]"
-              >
-                <div class="mx-auto">
-                  <i class="fas fa-warehouse text-2xl text-secondary"></i>
-                </div>
-              </span>
-              <h3 class="text-xl font-bold my-4 group-hover:text-white/90">
-                Warehousing Services
-              </h3>
-              <div
-                class="space-y-6 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90"
-              >
-                <p>
-                  Our warehouses provide secure, climate-controlled storage for
+        <div data-aos="fade-up-right" class="relative flex flex-col justify-center overflow-hidden py-2 gsap-service-card">
+    <div class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+        <!-- Background circle that expands on hover -->
+        <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-primary transition-all duration-500 group-hover:scale-[10] group-hover:bg-primary"></span>
+        
+        <div class="relative z-10 mx-auto max-w-md">
+            <a href="../src/page/services.html" class="group-hover:text-white">
+                <!-- Icon container with hover effects -->
+                <span class="grid h-20 w-20 place-items-center rounded-full bg-primary transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-lg group-hover:bg-[#1E3347]">
+                    <div class="mx-auto transition-transform duration-500 group-hover:scale-110">
+                        <i class="fas fa-warehouse text-2xl text-secondary"></i>
+                    </div>
+                </span>
+                
+                <!-- Title with hover effect -->
+                <h3 class="text-xl font-bold my-4 transition-colors duration-500 text-gray-900 group-hover:text-white">
+                     Warehousing Services
+                </h3>
+                
+                <!-- Description with hover effect -->
+                <div class="space-y-6 text-base leading-7 transition-colors duration-500 text-gray-600 group-hover:text-white/90">
+                    <p>
+                        Our warehouses provide secure, climate-controlled storage for
                   your products with advanced inventory management.
-                </p>
-              </div>
-              <div class="pt-5 text-base font-semibold leading-7">
-                <p>
-                  <a href="#" class="text-secondary transition-all duration-300"
-                    >Read More &rarr;
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
+                    </p>
+                </div>
+                
+                <!-- Read More button with enhanced hover animation -->
+                <div class="pt-5 text-base font-semibold leading-7 transition-all duration-500">
+                    <p class="inline-flex items-center">
+                        <span class="text-secondary transition-all duration-300 group-hover:font-bold">Read More</span>
+                        <span class="ml-2 inline-block transition-all duration-300 transform group-hover:translate-x-2">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary">
+                                <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
         </div>
 
         <!-- Service 2 -->
-        <div data-aos="fade-up" class="relative flex flex-col justify-center overflow-hidden py-2">
-          <div
-            class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
-          >
-            <span
-              class="absolute top-10 z-0 h-20 w-20 rounded-full bg-primary transition-all duration-300 group-hover:scale-[10]"
-            ></span>
-            <div class="relative z-10 mx-auto max-w-md">
-              <span
-                class="grid h-20 w-20 place-items-center rounded-full bg-primary transition-all duration-300 group-hover:bg-[#1E3347]"
-              >
-                <div class="mx-auto">
-                  <i class="fas fa-plane text-2xl text-secondary"></i>
+        <div data-aos="fade-up" class="relative flex flex-col justify-center overflow-hidden py-2 gsap-service-card">
+    <div class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+        <!-- Background circle that expands on hover -->
+        <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-primary transition-all duration-500 group-hover:scale-[10] group-hover:bg-primary"></span>
+        
+        <div class="relative z-10 mx-auto max-w-md">
+            <a href="../src/page/services.html" class="group-hover:text-white">
+                <!-- Icon container with hover effects -->
+                <span class="grid h-20 w-20 place-items-center rounded-full bg-primary transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-lg group-hover:bg-[#1E3347]">
+                    <div class="mx-auto transition-transform duration-500 group-hover:scale-110">
+                        <i class="fas fa-plane text-2xl text-secondary"></i>
+                    </div>
+                </span>
+                
+                <!-- Title with hover effect -->
+                <h3 class="text-xl font-bold my-4 transition-colors duration-500 text-gray-900 group-hover:text-white">
+                    Flight Freight
+                </h3>
+                
+                <!-- Description with hover effect -->
+                <div class="space-y-6 text-base leading-7 transition-colors duration-500 text-gray-600 group-hover:text-white/90">
+                    <p>
+                        Expedited air shipping solutions with tracking capabilities
+                        for time-sensitive international deliveries.
+                    </p>
                 </div>
-              </span>
-              <h3 class="text-xl font-bold my-4 group-hover:text-white/90">
-                Flight Freight
-              </h3>
-              <div
-                class="space-y-6 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90"
-              >
-                <p>
-                  Expedited air shipping solutions with tracking capabilities
-                  for time-sensitive international deliveries.
-                </p>
-              </div>
-              <div class="pt-5 text-base font-semibold leading-7">
-                <p>
-                  <a href="#" class="text-secondary transition-all duration-300"
-                    >Read More &rarr;
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
+                
+                <!-- Read More button with enhanced hover animation -->
+                <div class="pt-5 text-base font-semibold leading-7 transition-all duration-500">
+                    <p class="inline-flex items-center">
+                        <span class="text-secondary transition-all duration-300 group-hover:font-bold">Read More</span>
+                        <span class="ml-2 inline-block transition-all duration-300 transform group-hover:translate-x-2">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary">
+                                <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                    </p>
+                </div>
+            </a>
         </div>
+    </div>
+        </div>
+      
+
 
         <!-- Service 3 -->
-      <div data-aos="fade-up-left" class="relative flex flex-col justify-center overflow-hidden py-2">
-        <div
-          class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
-        >
-          <span
-            class="absolute top-10 z-0 h-20 w-20 rounded-full bg-primary transition-all duration-300 group-hover:scale-[10]"
-          ></span>
-          <div class="relative z-10 mx-auto max-w-md">
-            <span
-              class="grid h-20 w-20 place-items-center rounded-full bg-primary transition-all duration-300 group-hover:bg-[#1E3347]"
-            >
-              <div class="mx-auto">
-                <i class="fas fa-ship text-2xl text-secondary"></i>
-              </div>
-            </span>
-            <h3 class="text-xl font-bold my-4 group-hover:text-white/90">
-              Ocean Freight
-            </h3>
-            <div
-              class="space-y-6 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90"
-            >
-              <p>
-                Full-scale ocean freight solutions with cost-effective container
+       <div data-aos="fade-up-left" class="relative flex flex-col justify-center overflow-hidden py-2 gsap-service-card">
+    <div class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+        <!-- Background circle that expands on hover -->
+        <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-primary transition-all duration-500 group-hover:scale-[10] group-hover:bg-primary"></span>
+        
+        <div class="relative z-10 mx-auto max-w-md">
+            <a href="../src/page/services.html" class="group-hover:text-white">
+                <!-- Icon container with hover effects -->
+                <span class="grid h-20 w-20 place-items-center rounded-full bg-primary transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-lg group-hover:bg-[#1E3347]">
+                    <div class="mx-auto transition-transform duration-500 group-hover:scale-110">
+                         <i class="fas fa-ship text-2xl text-secondary"></i>
+                    </div>
+                </span>
+                
+                <!-- Title with hover effect -->
+                <h3 class="text-xl font-bold my-4 transition-colors duration-500 text-gray-900 group-hover:text-white">
+                    Ocean Freight
+                </h3>
+                
+                <!-- Description with hover effect -->
+                <div class="space-y-6 text-base leading-7 transition-colors duration-500 text-gray-600 group-hover:text-white/90">
+                    <p>
+                        Full-scale ocean freight solutions with cost-effective container
                 shipping options for high-volume international shipments.
-              </p>
-            </div>
-            <div class="pt-5 text-base font-semibold leading-7">
-              <p>
-                <a href="#" class="text-secondary transition-all duration-300"
-                  >Read More &rarr;
-                </a>
-              </p>
-            </div>
-          </div>
+                    </p>
+                </div>
+                
+                <!-- Read More button with enhanced hover animation -->
+                <div class="pt-5 text-base font-semibold leading-7 transition-all duration-500">
+                    <p class="inline-flex items-center">
+                        <span class="text-secondary transition-all duration-300 group-hover:font-bold">Read More</span>
+                        <span class="ml-2 inline-block transition-all duration-300 transform group-hover:translate-x-2">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary">
+                                <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                    </p>
+                </div>
+            </a>
         </div>
-      </div>
+    </div>
+        </div>
     </section>
 
     <!-- Core Features Section -->
-   <section class="py-16 bg-primary text-white overflow-hidden">
-    <div class="container mx-auto px-4">
-        <!-- Animated Section Header -->
-        <div class="flex justify-center items-center gsap-features-header">
-            <h2 class="relative flex justify-center items-center text-center text-3xl font-bold mb-8 pb-2">
-                <span class="text-secondary gsap-features-title">Core <span class="text-white">Features</span></span> 
-                <span class="absolute bottom-0 h-1 w-16 bg-white transition-all duration-500 group-hover:w-24 gsap-features-underline"></span>
-            </h2>
-        </div>
-        
-        <!-- Features Grid with Staggered Animations -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 gsap-features-container">
-            <!-- Feature 1 -->
-            <div class="p-6 rounded-lg gsap-feature-card">
-                <div class="flex items-center mb-4 gsap-feature-header">
-                    <img src="../assets/image/home/svg/box.svg" alt="Fastest Transit Times" class="w-10 h-10 gsap-feature-icon">
-                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">Fastest Transit Times</h3>
-                </div>
-                <p class="text-gray-300 mb-4 gsap-feature-desc">
-                    We optimize your goods with competitive transit times through
-                    strategic partnerships and optimized routing.
-                </p>
-                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
-                    <span class="text-secondary uppercase">Read more</span>
-                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                </button>
-            </div>
+    <section class="py-16 bg-primary text-white overflow-hidden">
+      <div class="container mx-auto px-4">
+          <!-- Animated Section Header -->
+          <div class="flex justify-center items-center gsap-features-header">
+              <h2 class="relative flex justify-center items-center text-center text-3xl font-bold mb-8 pb-2">
+                  <span class="text-secondary gsap-features-title">Core <span class="text-white">Features</span></span> 
+                  <span class="absolute bottom-0 h-1 w-16 bg-white transition-all duration-500 group-hover:w-24 gsap-features-underline"></span>
+              </h2>
+          </div>
+          
+          <!-- Features Grid with Staggered Animations -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 gsap-features-container">
+              <!-- Feature 1 -->
+              <a href="../src/page/services.html" class="p-6 rounded-lg gsap-feature-card cursor-pointer">
+                  <div class="flex items-center mb-4 gsap-feature-header">
+                      <img src="../assets/image/home/svg/box.svg" alt="Fastest Transit Times" class="w-10 h-10 gsap-feature-icon">
+                      <h3 class="pl-5 text-xl font-bold gsap-feature-title">Fastest Transit Times</h3>
+                  </div>
+                  <p class="text-gray-300 mb-4 gsap-feature-desc">
+                      We optimize your goods with competitive transit times through
+                      strategic partnerships and optimized routing.
+                  </p>
+                  <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                      <span class="text-secondary uppercase">Read more</span>
+                      <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                              <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                          </svg>
+                      </div>
+                  </button>
+              </a>
 
-            <!-- Feature 2 -->
-            <div class="p-6 rounded-lg gsap-feature-card">
-                <div class="flex items-center mb-4 gsap-feature-header">
-                    <img src="../assets/image/home/svg/flammable.svg" alt="Security & Protection" class="w-10 h-10 gsap-feature-icon">
-                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">Security & Protection</h3>
-                </div>
-                <p class="text-gray-300 mb-4 gsap-feature-desc">
-                    Your commodities are protected with advanced security protocols
-                    and GPS tracking throughout the journey.
-                </p>
-                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
-                    <span class="text-secondary uppercase">Read more</span>
-                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                </button>
-            </div>
+              <!-- Feature 2 -->
+              <a href="../src/page/services.html" class="p-6 rounded-lg gsap-feature-card cursor-pointer">
+                  <div class="flex items-center mb-4 gsap-feature-header">
+                      <img src="../assets/image/home/svg/flammable.svg" alt="Security & Protection" class="w-10 h-10 gsap-feature-icon">
+                      <h3 class="pl-5 text-xl font-bold gsap-feature-title">Security & Protection</h3>
+                  </div>
+                  <p class="text-gray-300 mb-4 gsap-feature-desc">
+                      Your commodities are protected with advanced security protocols
+                      and GPS tracking throughout the journey.
+                  </p>
+                  <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                      <span class="text-secondary uppercase">Read more</span>
+                      <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                              <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                          </svg>
+                      </div>
+                  </button>
+              </a>
 
-            <!-- Feature 3 -->
-            <div class="p-6 rounded-lg gsap-feature-card">
-                <div class="flex items-center mb-4 gsap-feature-header">
-                    <img src="../assets/image/home/svg/do-not-tilt.svg" alt="Zero Risk" class="w-10 h-10 gsap-feature-icon">
-                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">Zero Risk</h3>
-                </div>
-                <p class="text-gray-300 mb-4 gsap-feature-desc">
-                    We cover the responsibility for the safety of your products and
-                    transparency in our operations.
-                </p>
-                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
-                    <span class="text-secondary uppercase">Read more</span>
-                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                </button>
-            </div>
+              <!-- Feature 3 -->
+              <a href="../src/page/services.html" class="p-6 rounded-lg gsap-feature-card cursor-pointer">
+                  <div class="flex items-center mb-4 gsap-feature-header">
+                      <img src="../assets/image/home/svg/do-not-tilt.svg" alt="Zero Risk" class="w-10 h-10 gsap-feature-icon">
+                      <h3 class="pl-5 text-xl font-bold gsap-feature-title">Zero Risk</h3>
+                  </div>
+                  <p class="text-gray-300 mb-4 gsap-feature-desc">
+                      We cover the responsibility for the safety of your products and
+                      transparency in our operations.
+                  </p>
+                  <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                      <span class="text-secondary uppercase">Read more</span>
+                      <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                              <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                          </svg>
+                      </div>
+                  </button>
+              </a>
 
-            <!-- Feature 4 -->
-            <div class="p-6 rounded-lg gsap-feature-card">
-                <div class="flex items-center mb-4 gsap-feature-header">
-                    <img src="../assets/image/home/svg/recycle.svg" alt="Sustainable Travel" class="w-10 h-10 gsap-feature-icon">
-                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">Sustainable Travel</h3>
-                </div>
-                <p class="text-gray-300 mb-4 gsap-feature-desc">
-                    Our logistics solutions are designed to minimize environmental
-                    impact while providing efficient shipping solutions.
-                </p>
-                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
-                    <span class="text-secondary uppercase">Read more</span>
-                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                </button>
-            </div>
+              <!-- Feature 4 -->
+              <a href="../src/page/services.html" class="p-6 rounded-lg gsap-feature-card cursor-pointer">
+                  <div class="flex items-center mb-4 gsap-feature-header">
+                      <img src="../assets/image/home/svg/recycle.svg" alt="Sustainable Travel" class="w-10 h-10 gsap-feature-icon">
+                      <h3 class="pl-5 text-xl font-bold gsap-feature-title">Sustainable Travel</h3>
+                  </div>
+                  <p class="text-gray-300 mb-4 gsap-feature-desc">
+                      Our logistics solutions are designed to minimize environmental
+                      impact while providing efficient shipping solutions.
+                  </p>
+                  <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                      <span class="text-secondary uppercase">Read more</span>
+                      <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                              <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                          </svg>
+                      </div>
+                  </button>
+              </a>
 
-            <!-- Feature 5 -->
-            <div class="p-6 rounded-lg gsap-feature-card">
-                <div class="flex items-center mb-4 gsap-feature-header">
-                    <img src="../assets/image/home/svg/delivery-truck.svg" alt="Guaranteed Delivery" class="w-10 h-10 gsap-feature-icon">
-                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">Guaranteed Delivery</h3>
-                </div>
-                <p class="text-gray-300 mb-4 gsap-feature-desc">
-                    We promise your delivery will arrive on time, every time, with
-                    real-time tracking and immediate notifications.
-                </p>
-                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
-                    <span class="text-secondary uppercase">Read more</span>
-                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                </button>
-            </div>
+              <!-- Feature 5 -->
+              <a href="../src/page/services.html" class="p-6 rounded-lg gsap-feature-card cursor-pointer">
+                  <div class="flex items-center mb-4 gsap-feature-header">
+                      <img src="../assets/image/home/svg/delivery-truck.svg" alt="Guaranteed Delivery" class="w-10 h-10 gsap-feature-icon">
+                      <h3 class="pl-5 text-xl font-bold gsap-feature-title">Guaranteed Delivery</h3>
+                  </div>
+                  <p class="text-gray-300 mb-4 gsap-feature-desc">
+                      We promise your delivery will arrive on time, every time, with
+                      real-time tracking and immediate notifications.
+                  </p>
+                  <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                      <span class="text-secondary uppercase">Read more</span>
+                      <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                              <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                          </svg>
+                      </div>
+                  </button>
+              </a>
 
-            <!-- Feature 6 -->
-            <div class="p-6 rounded-lg gsap-feature-card">
-                <div class="flex items-center mb-4 gsap-feature-header">
-                    <img src="../assets/image/home/svg/logistics.svg" alt="No Hidden Costs" class="w-10 h-10 gsap-feature-icon">
-                    <h3 class="pl-5 text-xl font-bold gsap-feature-title">No Hidden Costs</h3>
-                </div>
-                <p class="text-gray-300 mb-4 gsap-feature-desc">
-                    Our pricing is clear, simple, and competitive with no hidden fees
-                    or surprises when it's time to pay.
-                </p>
-                <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
-                    <span class="text-secondary uppercase">Read more</span>
-                    <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
-                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </div>
-  </section>
+              <!-- Feature 6 -->
+              <a href="../src/page/services.html" class="p-6 rounded-lg gsap-feature-card cursor-pointer">
+                  <div class="flex items-center mb-4 gsap-feature-header">
+                      <img src="../assets/image/home/svg/logistics.svg" alt="No Hidden Costs" class="w-10 h-10 gsap-feature-icon">
+                      <h3 class="pl-5 text-xl font-bold gsap-feature-title">No Hidden Costs</h3>
+                  </div>
+                  <p class="text-gray-300 mb-4 gsap-feature-desc">
+                      Our pricing is clear, simple, and competitive with no hidden fees
+                      or surprises when it's time to pay.
+                  </p>
+                  <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md pr-6 font-medium text-neutral-200 gsap-feature-btn">
+                      <span class="text-secondary uppercase">Read more</span>
+                      <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                              <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="var(--color-secondary)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                          </svg>
+                      </div>
+                  </button>
+              </a>
+          </div>
+      </div>
+    </section>
 
     <!-- Operation Mode Section -->
    <section class="py-16 container mx-auto px-4 sm:px-6">
   <div class="flex justify-center items-center">
-    <h2 class="relative flex justify-center items-center text-center text-3xl font-bold mb-8 pb-2">
+    <h2 data-aos="fade-up" class="relative flex justify-center items-center text-center text-3xl font-bold mb-8 pb-2">
       <span class="text-secondary">Operation <span class="text-primary">Mode</span></span> 
       <span class="absolute bottom-0 h-1 w-16 bg-primary transition-all duration-500 group-hover:w-24"></span>
     </h2>
@@ -427,7 +460,7 @@
 
   <!-- Step 1 -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 items-center">
-    <div class="order-1">
+    <div data-aos="fade-right" class="order-1">
       <h3 class="flex items-center">
         <span class="bg-primary text-white rounded-full w-10 h-10 text-lg font-bold flex items-center justify-center mr-3">1</span>
         <span class="text-2xl font-bold text-secondary">Connect</span>
@@ -438,7 +471,7 @@
         pickup.
       </p>
     </div>
-    <div class="order-2 flex justify-center">
+    <div data-aos="fade-left" class="order-2 flex justify-center">
         <dotlottie-player
     src="https://lottie.host/fbc27460-57a8-4913-8ef7-d6c948d830d1/Wg7TGu6Xxg.lottie"
     background="transparent"
@@ -452,7 +485,7 @@
 
   <!-- Step 2 -->
   <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 items-center">
-    <div class="order-2 md:order-1 flex justify-center">
+    <div data-aos="fade-up" class="order-2 md:order-1 flex justify-center">
       <dotlottie-player
       src="https://lottie.host/3bb25778-a51c-4dc9-92a7-c66743d25f08/kiwGJzmSWL.lottie"
       background="transparent"
@@ -463,7 +496,7 @@
     ></dotlottie-player>
     </div>
     <img src="../assets/image/home/img/line.png" alt="line" class="hidden md:block absolute left-1/2 transform -translate-x-1/2 z-0 h-auto lg:h-[35rem] w-3/4 lg:w-[50rem]"/>
-    <div class="order-1 md:order-2">
+    <div data-aos="fade-left" class="order-1 md:order-2">
       <h3 class="flex items-center">
         <span class="bg-primary text-white rounded-full w-10 h-10 text-lg font-bold flex items-center justify-center mr-3">2</span>
         <span class="text-2xl font-bold text-secondary">Store</span>
@@ -477,7 +510,7 @@
 
   <!-- Step 3 -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-    <div class="order-1">
+    <div data-aos="fade-right" class="order-1">
       <h3 class="flex items-center">
         <span class="bg-primary text-white rounded-full w-10 h-10 text-lg font-bold flex items-center justify-center mr-3">3</span>
         <span class="text-2xl font-bold text-secondary">Ship</span>
@@ -487,7 +520,7 @@
         and budget, with real-time tracking every step of the journey.
       </p>
     </div>
-    <div class="order-2 flex justify-center">
+    <div data-aos="fade-left" class="order-2 flex justify-center">
       <!-- <img src="../assets/image/home/img/ship.png" alt="Ship" class="rounded-lg w-full max-w-md" /> -->
       <!-- <dotlottie-player
   src="https://lottie.host/9f66ac0c-5d8b-4982-a1b2-9afcc4248f6b/p9dbrGygU3.lottie"
@@ -513,19 +546,19 @@
     <section class="py-16 bg-gray-100">
       <div class="container mx-auto px-4">
          <div class="flex justify-center items-center">
-       <h2 class="relative flex justify-center items-center text-center text-3xl font-bold mb-8 pb-2">
+       <h2 data-aos="fade-up" class="relative flex justify-center items-center text-center text-3xl font-bold mb-8 pb-2">
       <span class="text-secondary">Our <span class="text-primary">Clients</span></span> 
       <span class="absolute bottom-0 h-1 w-16 bg-primary transition-all duration-500 group-hover:w-24"></span>
       </h2>
       </div>
-        <div class="pause-marquee relative overflow-hidden mb-10 before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:w-[100px] before:z-[2] before:pointer-events-none before:bg-gradient-to-r before:from-gray-50 before:to-transparent after:content-[''] after:absolute after:top-0 after:bottom-0 after:right-0 after:w-[100px] after:z-[2] after:pointer-events-none after:bg-gradient-to-l after:from-gray-50 after:to-transparent">
+        <div data-aos="zoom-in" class="pause-marquee relative overflow-hidden mb-10 before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:w-[100px] before:z-[2] before:pointer-events-none before:bg-gradient-to-r before:from-gray-50 before:to-transparent after:content-[''] after:absolute after:top-0 after:bottom-0 after:right-0 after:w-[100px] after:z-[2] after:pointer-events-none after:bg-gradient-to-l after:from-gray-50 after:to-transparent">
             <div class="marquee-content flex w-max gap-6 animate-[scroll-right_35s_linear_infinite]">
                 <!-- Testimonials will be inserted here by JavaScript -->
             </div>
         </div>
         
         <!-- Second Marquee Row (Left) -->
-        <div class="pause-marquee relative overflow-hidden before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:w-[100px] before:z-[2] before:pointer-events-none before:bg-gradient-to-r before:from-gray-50 before:to-transparent after:content-[''] after:absolute after:top-0 after:bottom-0 after:right-0 after:w-[100px] after:z-[2] after:pointer-events-none after:bg-gradient-to-l after:from-gray-50 after:to-transparent">
+        <div data-aos="zoom-in" class="pause-marquee relative overflow-hidden before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:w-[100px] before:z-[2] before:pointer-events-none before:bg-gradient-to-r before:from-gray-50 before:to-transparent after:content-[''] after:absolute after:top-0 after:bottom-0 after:right-0 after:w-[100px] after:z-[2] after:pointer-events-none after:bg-gradient-to-l after:from-gray-50 after:to-transparent">
             <div class="marquee-content flex w-max gap-6 animate-[scroll-left_40s_linear_infinite]">
                 <!-- Testimonials will be inserted here by JavaScript -->
             </div>
@@ -535,11 +568,12 @@
 
     <!-- Newsletter Section -->
     <section class="relative py-16 mt-0 lg:mt-96 text-black bg-cover bg-center" style="background-image: url(../assets/image/home/img/Bg.png);">
-  <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4">
       <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
         <!-- Image Column - Hidden on smallest screens -->
         <div class="hidden lg:block lg:w-1/4 flex-shrink-0">
           <img
+          data-aos="zoom-in-up"
             src="../assets/image/home/img/delivery.png"
             alt="Delivery Person"
             class="w-full h-auto max-w-[430px] mx-auto absolute bottom-0"
@@ -547,12 +581,12 @@
         </div>
         
         <!-- Content Column -->
-        <div class="w-full lg:w-3/4 text-center md:text-left">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6">
+        <div  class="w-full lg:w-3/4 text-center md:text-left">
+          <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-4 md:mb-6">
             Subscribe for <span>exclusive</span> offers and news
           </h2>
           
-          <div class="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto md:mx-0">
+          <div data-aos="fade-up" class="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto md:mx-0">
             <input
               type="email"
               placeholder="Your email address"
@@ -574,7 +608,7 @@
       </button>
           </div>
           
-          <p class="text-sm text-gray-600 mt-3">
+          <p data-aos="fade-up" class="text-sm text-gray-600 mt-3">
             We'll never share your email. Unsubscribe anytime.
           </p>
         </div>
@@ -746,228 +780,228 @@
   src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
   type="module">
     </script>
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 550,
-    });
-  </script>
-<!-- gsap Animation -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Check if GSAP is loaded
-  if (typeof gsap !== 'undefined') {
-    // Faster timeline with quicker animations
-    const heroTimeline = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.5 } });
-
-    // Initial setup - hide elements before animation
-    gsap.set(".gsap-video-bg", { opacity: 0, scale: 1.1 });
-    gsap.set(".gsap-overlay", { opacity: 0 });
-    gsap.set([".gsap-tagline", ".gsap-headline-1", ".gsap-headline-2", ".gsap-headline-3", 
-               ".gsap-subtext", ".gsap-cta", ".gsap-phone", ".gsap-trust-text", ".gsap-logo"], 
-               { opacity: 0, y: 10 });
-
-    // Faster animation sequence
-    heroTimeline
-      // Background elements (faster)
-      .to(".gsap-video-bg", { opacity: 1, scale: 1, duration: 0.8 })
-      .to(".gsap-overlay", { opacity: 1, duration: 0.5 }, "-=0.6")
-      
-      // Content elements (faster stagger)
-      .to(".gsap-tagline", { opacity: 1, y: 0, duration: 0.4 })
-      .to(".gsap-underline", { scaleX: 1, transformOrigin: "left center", duration: 0.5 }, "-=0.2")
-      
-      // Headline animation (faster staggered)
-      .to(".gsap-headline-1", { opacity: 1, y: 0 })
-      .to(".gsap-headline-2", { opacity: 1, y: 0 }, "-=0.2")
-      .to(".gsap-headline-3", { 
-        opacity: 1, 
-        y: 0,
-        onComplete: () => {
-          gsap.to(".gsap-headline-3 .text-secondary", {
-            scale: 1.2,
-            repeat: 1,
-            yoyo: true,
-            duration: 0.2
-          });
-        }
-      }, "-=0.2")
-      
-      // Subtext and CTA (faster)
-      .to(".gsap-subtext", { opacity: 1, y: 0 }, "-=0.2")
-      .to(".gsap-cta", { opacity: 1, y: 0 }, "-=0.2")
-      .to(".gsap-phone", { 
-        opacity: 1, 
-        y: 0,
-        onComplete: () => {
-          gsap.to(".gsap-phone .animate-pulse", {
-            scale: 1.05,
-            repeat: -1,
-            yoyo: true,
-            duration: 1,
-            ease: "sine.inOut"
-          });
-        }
-      }, "-=0.2")
-      
-      // Trust indicators (fixed targeting)
-      .to(".gsap-trust-text", { opacity: 1, y: 0 })
-      .to(".gsap-logo", { 
-        opacity: 1, 
-        y: 0, 
-        stagger: 0.1,
-        onComplete: () => {
-          gsap.to(".gsap-logo", {
-            x: "+=3",
-            repeat: -1,
-            yoyo: true,
-            duration: 2,
-            ease: "sine.inOut"
-          });
-        }
-      }, "-=0.2")
-      
-      // Scroll indicator
-      .to(".gsap-scroll-indicator", { opacity: 1, y: 0 }, "-=0.2");
-
-    // Hover effects for CTA button
-    const ctaButton = document.querySelector('.gsap-cta a');
-    if (ctaButton) {
-      ctaButton.addEventListener('mouseenter', () => {
-        gsap.to(".gsap-cta a", { scale: 1.03, duration: 0.2 });
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 600,
       });
-      ctaButton.addEventListener('mouseleave', () => {
-        gsap.to(".gsap-cta a", { scale: 1, duration: 0.2 });
-      });
-    }
-  } else {
-    console.error("GSAP is not loaded. Animations will not work.");
-    // Fallback: Show all content immediately if GSAP fails
-    document.querySelectorAll('[class*="gsap-"]').forEach(el => {
-      el.style.opacity = 1;
-      el.style.transform = 'none';
-    });
-  }
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Only run if GSAP is loaded
-    if (typeof gsap !== 'undefined') {
-        // Register ScrollTrigger plugin if needed
-        if (typeof ScrollTrigger !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger);
-        }
+    </script>
+    <!-- gsap Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check if GSAP is loaded
+      if (typeof gsap !== 'undefined') {
+        // Faster timeline with quicker animations
+        const heroTimeline = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.4 } });
 
-        // Initial setup - hide animated elements
-        gsap.set(".gsap-features-header", { opacity: 0, y: 30 });
-        gsap.set(".gsap-features-underline", { scaleX: 0 });
-        gsap.set(".gsap-feature-card", { opacity: 0, y: 30 });
-        gsap.set([".gsap-feature-icon", ".gsap-feature-title", ".gsap-feature-desc", ".gsap-feature-btn"], { opacity: 0, y: 10 });
+        // Initial setup - hide elements before animation
+        gsap.set(".gsap-video-bg", { opacity: 0, scale: 1.1 });
+        gsap.set(".gsap-overlay", { opacity: 0 });
+        gsap.set([".gsap-tagline", ".gsap-headline-1", ".gsap-headline-2", ".gsap-headline-3", 
+                  ".gsap-subtext", ".gsap-cta", ".gsap-phone", ".gsap-trust-text", ".gsap-logo"], 
+                  { opacity: 0, y: 10 });
 
-        // Create a timeline with scroll trigger
-        const featuresTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".gsap-features-container",
-                start: "top 60%",
-               toggleActions: "restart none none reset"
+        // Faster animation sequence
+        heroTimeline
+          // Background elements (faster)
+          .to(".gsap-video-bg", { opacity: 1, scale: 1, duration: 0.8 })
+          .to(".gsap-overlay", { opacity: 1, duration: 0.5 }, "-=0.6")
+          
+          // Content elements (faster stagger)
+          .to(".gsap-tagline", { opacity: 1, y: 0, duration: 0.4 })
+          .to(".gsap-underline", { scaleX: 1, transformOrigin: "left center", duration: 0.5 }, "-=0.2")
+          
+          // Headline animation (faster staggered)
+          .to(".gsap-headline-1", { opacity: 1, y: 0 })
+          .to(".gsap-headline-2", { opacity: 1, y: 0 }, "-=0.2")
+          .to(".gsap-headline-3", { 
+            opacity: 1, 
+            y: 0,
+            onComplete: () => {
+              gsap.to(".gsap-headline-3 .text-secondary", {
+                scale: 1.2,
+                repeat: 1,
+                yoyo: true,
+                duration: 0.2
+              });
             }
+          }, "-=0.2")
+          
+          // Subtext and CTA (faster)
+          .to(".gsap-subtext", { opacity: 1, y: 0 }, "-=0.2")
+          .to(".gsap-cta", { opacity: 1, y: 0 }, "-=0.2")
+          .to(".gsap-phone", { 
+            opacity: 1, 
+            y: 0,
+            onComplete: () => {
+              gsap.to(".gsap-phone .animate-pulse", {
+                scale: 1.05,
+                repeat: -1,
+                yoyo: true,
+                duration: 1,
+                ease: "sine.inOut"
+              });
+            }
+          }, "-=0.2")
+          
+          // Trust indicators (fixed targeting)
+          .to(".gsap-trust-text", { opacity: 1, y: 0 })
+          .to(".gsap-logo", { 
+            opacity: 1, 
+            y: 0, 
+            stagger: 0.1,
+            onComplete: () => {
+              gsap.to(".gsap-logo", {
+                x: "+=3",
+                repeat: -1,
+                yoyo: true,
+                duration: 2,
+                ease: "sine.inOut"
+              });
+            }
+          }, "-=0.2")
+          
+          // Scroll indicator
+          .to(".gsap-scroll-indicator", { opacity: 1, y: 0 }, "-=0.2");
+
+        // Hover effects for CTA button
+        const ctaButton = document.querySelector('.gsap-cta a');
+        if (ctaButton) {
+          ctaButton.addEventListener('mouseenter', () => {
+            gsap.to(".gsap-cta a", { scale: 1.03, duration: 0.2 });
+          });
+          ctaButton.addEventListener('mouseleave', () => {
+            gsap.to(".gsap-cta a", { scale: 1, duration: 0.2 });
+          });
+        }
+      } else {
+        console.error("GSAP is not loaded. Animations will not work.");
+        // Fallback: Show all content immediately if GSAP fails
+        document.querySelectorAll('[class*="gsap-"]').forEach(el => {
+          el.style.opacity = 1;
+          el.style.transform = 'none';
         });
+      }
+    });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Only run if GSAP is loaded
+        if (typeof gsap !== 'undefined') {
+            // Register ScrollTrigger plugin if needed
+            if (typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+            }
 
-        // Animation sequence
-        featuresTimeline
-            // Header animation
-            .to(".gsap-features-header", { 
-                opacity: 1, 
-                y: 0, 
-                duration: 0.4, 
-                ease: "power2.out" 
-            })
-            .to(".gsap-features-underline", { 
-                scaleX: 1, 
-                duration: 0.6, 
-                ease: "power3.out" 
-            }, "-=0.3")
-            
-            // Cards animation (staggered)
-            .to(".gsap-feature-card", { 
-                opacity: 1, 
-                y: 0, 
-                duration: 0.4, 
-                stagger: 0.1, 
-                ease: "power2.out" 
-            })
-            
-            // Inner elements animation (staggered per card)
-            .to(".gsap-feature-icon", {
-                opacity: 1,
-                y: 0,
-                duration: 0.3,
-                stagger: 0.05,
-                ease: "power2.out"
-            }, "-=0.4")
-            .to(".gsap-feature-title", {
-                opacity: 1,
-                y: 0,
-                duration: 0.3,
-                stagger: 0.05,
-                ease: "power2.out"
-            }, "-=0.3")
-            .to(".gsap-feature-desc", {
-                opacity: 1,
-                y: 0,
-                duration: 0.3,
-                stagger: 0.05,
-                ease: "power2.out"
-            }, "-=0.2")
-            .to(".gsap-feature-btn", {
-                opacity: 1,
-                y: 0,
-                duration: 0.3,
-                stagger: 0.05,
-                ease: "power2.out"
-            }, "-=0.1");
+            // Initial setup - hide animated elements
+            gsap.set(".gsap-features-header", { opacity: 0, y: 30 });
+            gsap.set(".gsap-features-underline", { scaleX: 0 });
+            gsap.set(".gsap-feature-card", { opacity: 0, y: 30 });
+            gsap.set([".gsap-feature-icon", ".gsap-feature-title", ".gsap-feature-desc", ".gsap-feature-btn"], { opacity: 0, y: 10 });
 
-        // Hover animations for each feature card
-        document.querySelectorAll('.gsap-feature-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                gsap.to(card, {
-                    y: -5,
-                    duration: 0.3,
-                    ease: "power1.out"
-                });
-                gsap.to(card.querySelector('.gsap-feature-icon'), {
-                    rotate: 5,
-                    duration: 0.3,
-                    ease: "power1.out"
-                });
+            // Create a timeline with scroll trigger
+            const featuresTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".gsap-features-container",
+                    start: "top 60%",
+                  toggleActions: "restart none none reset"
+                }
             });
-            
-            card.addEventListener('mouseleave', () => {
-                gsap.to(card, {
+
+            // Animation sequence
+            featuresTimeline
+                // Header animation
+                .to(".gsap-features-header", { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 0.3, 
+                    ease: "power2.out" 
+                })
+                .to(".gsap-features-underline", { 
+                    scaleX: 1, 
+                    duration: 0.4, 
+                    ease: "power3.out" 
+                }, "-=0.3")
+                
+                // Cards animation (staggered)
+                .to(".gsap-feature-card", { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 0.4, 
+                    stagger: 0.1, 
+                    ease: "power2.out" 
+                })
+                
+                // Inner elements animation (staggered per card)
+                .to(".gsap-feature-icon", {
+                    opacity: 1,
                     y: 0,
                     duration: 0.3,
-                    ease: "power1.out"
-                });
-                gsap.to(card.querySelector('.gsap-feature-icon'), {
-                    rotate: 0,
+                    stagger: 0.05,
+                    ease: "power2.out"
+                }, "-=0.4")
+                .to(".gsap-feature-title", {
+                    opacity: 1,
+                    y: 0,
                     duration: 0.3,
-                    ease: "power1.out"
+                    stagger: 0.05,
+                    ease: "power2.out"
+                }, "-=0.3")
+                .to(".gsap-feature-desc", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.3,
+                    stagger: 0.05,
+                    ease: "power2.out"
+                }, "-=0.2")
+                .to(".gsap-feature-btn", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.3,
+                    stagger: 0.05,
+                    ease: "power2.out"
+                }, "-=0.1");
+
+            // Hover animations for each feature card
+            document.querySelectorAll('.gsap-feature-card').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    gsap.to(card, {
+                        y: -5,
+                        duration: 0.3,
+                        ease: "power1.out"
+                    });
+                    gsap.to(card.querySelector('.gsap-feature-icon'), {
+                        rotate: 5,
+                        duration: 0.3,
+                        ease: "power1.out"
+                    });
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    gsap.to(card, {
+                        y: 0,
+                        duration: 0.3,
+                        ease: "power1.out"
+                    });
+                    gsap.to(card.querySelector('.gsap-feature-icon'), {
+                        rotate: 0,
+                        duration: 0.3,
+                        ease: "power1.out"
+                    });
                 });
             });
-        });
-    } else {
-        console.warn("GSAP not loaded - showing features without animation");
-        // Fallback: Show all content immediately
-        document.querySelectorAll('[class*="gsap-"]').forEach(el => {
-            el.style.opacity = 1;
-            el.style.transform = 'none';
-        });
-    }
-});
-</script>
+        } else {
+            console.warn("GSAP not loaded - showing features without animation");
+            // Fallback: Show all content immediately
+            document.querySelectorAll('[class*="gsap-"]').forEach(el => {
+                el.style.opacity = 1;
+                el.style.transform = 'none';
+            });
+        }
+    });
+    </script>
   </body>
 </html>
