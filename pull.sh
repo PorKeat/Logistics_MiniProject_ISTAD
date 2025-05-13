@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Get current branch name
-current_branch=$(git rev-parse --abbrev-ref HEAD)
+# Get current BRANCH name
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-# Fetch all branches from origin
+# Fetch all BRANCHes from origin
 git fetch origin
 
-# Loop through all remote branches except current and main
-for branch in $(git branch -r | grep 'origin/' | grep -v 'origin/main' | grep -v "origin/$current_branch" | sed 's|origin/||'); do
-  echo "Merging $branch into $current_branch..."
-  git merge origin/$branch --no-edit
+# Loop through all remote BRANCHes except current and main
+for BRANCH in $(git BRANCH -r | grep 'origin/' | grep -v 'origin/main' | grep -v "origin/$CURRENT_BRANCH" | sed 's|origin/||'); do
+  echo "Merging $BRANCH into $CURRENT_BRANCH..."
+  git merge origin/$BRANCH --no-edit
 done
 
-echo "✅ All branches merged into $current_branch (except main)."
+echo "✅ All BRANCHes merged into $CURRENT_BRANCH (except main)."
