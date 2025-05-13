@@ -48,12 +48,12 @@
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         transform: translateY(-5px);
       }
-        @keyframes scroll-right {
+      @keyframes scroll-right {
             0% { transform: translateX(-50%); }
             100% { transform: translateX(0%); }
         }
         
-        @keyframes scroll-left {
+      @keyframes scroll-left {
             0% { transform: translateX(0%); }
             100% { transform: translateX(-50%); }
         }
@@ -62,12 +62,11 @@
             animation-play-state: paused;
         }
         .gsap-service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
       .gsap-service-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       }
 
       /* Smooth transition for all hover effects */
@@ -266,8 +265,6 @@
     </div>
         </div>
       
-
-
         <!-- Service 3 -->
        <div data-aos="fade-up-left" class="relative flex flex-col justify-center overflow-hidden py-2 gsap-service-card">
     <div class="group relative cursor-pointer rounded-xl overflow-hidden px-6 py-9 shadow-lg transition-all duration-300 sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
