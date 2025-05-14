@@ -1,71 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer</title>
-    <link rel="stylesheet" href="../src/output.css">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Footer</title>
+  <link rel="stylesheet" href="../src/output.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-<body>
-    <footer>
- <section class="bg-[#0f1123] text-white py-20 px-6 font-[Poppins]">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-7 text-[22px]">
-    <div>
-      <img src="https://cdn.prod.website-files.com/5dd7315081d3e97c21e69c0f/5dd7c04c4e896a0ca249c4cd_logo-white.png" alt="Avast Logo" class="h-10 mb-2">
-      <p class="mb-1 font-normal hover:text-[#fcb621]"> Cambodia</p>
-    
-      <div class="space-y-1">
-        <p class="flex items-center gap-2 font-normal">
-          <i class="fa-regular fa-envelope"></i><a href="mailto:info@example.com" class="text-yellow-400 hover:text-[#fcb621]">info.istad@gmail.com</a>
-        </p>
-        <p class="flex items-center gap-2 font-normal">
-          <i class="fa-regular fa-comments"></i> <a href="#" class="text-yellow-400 hover:text-[#fcb621]">Livechat</a>
-        </p>
+<body class="bg-gray-100">
+  <footer>
+    <section class="bg-[#0f1123] text-white py-16 px-6 font-serif">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-base md:text-[18px]">
+        <!-- Column 1 -->
+        <div>
+          <img src="https://cdn.prod.website-files.com/5dd7315081d3e97c21e69c0f/5dd7c04c4e896a0ca249c4cd_logo-white.png" alt="Logo" class="h-10 mb-4"/>
+          <p class="mb-2 font-normal hover:text-[#fcb621]">Cambodia</p>
+          <div class="space-y-2">
+            <p class="flex items-center gap-2 font-normal">
+              <i class="fa-regular fa-envelope"></i>
+              <a href="mailto:info@example.com" class="text-yellow-400 hover:text-[#fcb621]">info.istad@gmail.com</a>
+            </p>
+            <p class="flex items-center gap-2 font-normal">
+              <i class="fa-regular fa-comments"></i>
+              <a href="#" class="text-yellow-400 hover:text-[#fcb621]">Livechat</a>
+            </p>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold text-white mb-4">Company</h3>
+          <ul class="space-y-2 text-gray-300 font-normal">
+            <li><a href="#" class="hover:text-[#fcb621]">Home</a></li>
+            <li><a href="#" class="hover:text-[#fcb621]">Blog</a></li>
+            <li><a href="#" class="hover:text-[#fcb621]">Contact</a></li>
+            <li><a href="#" class="hover:text-[#fcb621]">About Us</a></li>
+            <li><a href="#" class="hover:text-[#fcb621]">Service</a></li>
+            <li><a href="#" class="hover:text-[#fcb621]">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-white mb-4">Services</h3>
+          <ul class="space-y-2 text-gray-300 font-normal">
+            <li><a href="#" class="hover:text-[#fcb621]">Sea Freight</a></li>
+            <li><a href="#" class="hover:text-[#fcb621]">Train Freight</a></li>
+            <li><a href="#" class="hover:text-[#fcb621]">Air Freight</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-white mb-4">Contact</h3>
+          <ul class="space-y-3 text-gray-300 font-normal">
+            <li>
+              <p class="font-medium flex items-center"><i class="fa-solid fa-phone mr-2"></i> +8558123456</p>
+            </li>
+            <li>
+              <p class="font-medium flex items-center"><i class="fa-solid fa-envelope mr-2"></i> info.istad@gmail.com</p>
+            </li>
+            <li>
+              <p class="font-medium flex items-center"><i class="fa-solid fa-location-dot mr-2"></i> Phnom Penh</p>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  <div>
-    <h3 class="font-bold text-white mb-3">Company</h3>
-    <ul class="space-y-1 text-gray-300 font-normal">
-      <li><a href="#" class="hover:text-[#fcb621]">Home</a></li>
-      <li><a href="#" class="hover:text-[#fcb621]">Blog</a></li>
-      <li><a href="#" class="hover:text-[#fcb621]">Contact</a></li>
-      <li><a href="#" class="hover:text-[#fcb621]">About Us</a></li>
-      <li><a href="#" class="hover:text-[#fcb621]">Service</a></li>
-      <li><a href="#" class="hover:text-[#fcb621]">FAQ</a></li>
-    </ul>
-  </div>
-    <div>
-      <h3 class="font-bold text-white mb-3">Services</h3>
-      <ul class="space-y-1 text-gray-300 font-normal">
-        <li><a href="#" class="hover:text-[#fcb621]">Sea Freight</a></li>
-        <li><a href="#" class="hover:text-[#fcb621]">Train Freight</a></li>
-        <li><a href="#" class="hover:text-[#fcb621]">Air Freight</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="font-bold text-white mb-3">Company</h3>
-      <ul class="space-y-3 text-gray-300 font-normal">
-       <li>
-        <p class="font-medium">
-        <i class="fa-solid fa-phone mr-2"></i> +8558123456
-        </p>
-    </li>
-        <li>
-          <p class="font-medium">
-            <i class="fa-solid fa-envelope mr-2"></i>
-            info.istad@gmail.com</p>
-        </li>
-        <li>
-          <p class="font-medium">
-            <i class="fa-solid fa-location-dot mr-2"></i>
-            Phnom Penh</p>
-        </li>
-      </ul>
-    </div>
-    </div>
-  </section>
-</footer>
+    </section>
+  </footer>
 </body>
 </html>
