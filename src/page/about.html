@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
     <link rel="stylesheet" href="../output.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -27,7 +28,7 @@
           />
         </div>
         <div
-          class="w-[587px] flex flex-col items-center justify-center text-center text-white absolute gap-[20px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          class="w-[187px] sm:w-[287px] md:w-[387px] xl:w-[587px] lg:w-[587px] flex flex-col items-center justify-center text-center text-white absolute gap-[20px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         >
           <h1 class="text-[36px] font-bold text-[#FCB621]">
             Driven by Precision. Powered by People.
@@ -41,7 +42,7 @@
           <button
             class="px-4 py-2 border-1 text-white rounded-md hover:bg-[#FCB621] ease-in-out duration-300 hover:border-[#FCB621]"
           >
-            Get Started
+            <a id="navi" href="#navi">Get Started</a>
           </button>
         </div>
       </section>
@@ -49,34 +50,109 @@
     <main>
       <section>
         <div class="mt-[100px]">
-          <h2 class="text-[32px] font-bold text-[#FCB621] text-center">
+          <h2
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            class="text-[32px] font-bold text-[#FCB621] text-center"
+          >
             Our Services
           </h2>
         </div>
         <div
           class="flex flex-row flex-wrap items-center justify-center gap-[100px] p-2.5 mt-[50px]"
         >
-          <img
-            src="../../assets/imageAbout/air-servcies (3).png"
-            class="items-center rounded-md"
-            alt=""
-          />
-
-          <img
-            src="../../assets/imageAbout/ship-servcies (2).png"
-            class="items-center rounded-md"
-            alt=""
-          />
-
-          <img
-            src="../../assets/imageAbout/truck-servcies (1).png"
-            class="items-center rounded-md"
-            alt=""
-          />
+          <div
+            data-aos="fade-up-right"
+            data-aos-easing="linear"
+            duration="1000"
+            class="group/item relative"
+          >
+            <img
+              src="../../assets/imageAbout/air-servcies (3).png"
+              class="items-center rounded-md w-[300px]"
+              alt=""
+            />
+            <div
+              class="group/item rounded-md flex flex-col items-center justify-center opacity-0 hover:opacity-100 w-[300px] h-[385.71px] backdrop-blur-md absolute top-0 ease-in-out transition-all duration-300"
+            >
+              <i class="fa-solid text-4xl text-secondary fa-plane"></i>
+              <h3
+                class="text-primary text-xl font-bold text-center mt-4 group-hover:text-[#FCB621] ease-in-out duration-300"
+              >
+                Air Transport
+              </h3>
+              <p class="text-white text-center w-[200px]">
+                Fast and reliable air transport services to meet your urgent
+                shipping needs.
+              </p>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            duration="1000"
+            class="group/item relative"
+            duration="1000"
+            class="group/item relative"
+          >
+            <div>
+              <img
+                src="../../assets/imageAbout/ship-servcies (2).png"
+                class="items-center rounded-md w-[300px] h-[385.71px]"
+                alt=""
+              />
+              <div
+                class="group/item rounded-md flex flex-col items-center justify-center opacity-0 hover:opacity-100 w-[300px] h-[385.71px] backdrop-blur-md absolute top-0 ease-in-out duration-300"
+              >
+                <i class="fa-solid text-4xl text-secondary fa-ship"></i>
+                <h3
+                  class="text-primary text-xl font-bold text-center mt-4 group-hover:text-[#FCB621] ease-in-out duration-300"
+                >
+                  Ship Transport
+                </h3>
+                <p class="text-white text-center w-[200px]">
+                  Reliable and cost-effective shipping solutions for your cargo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up-left"
+            data-aos-easing="linear"
+            duration="1000"
+            class="group/item relative"
+          >
+            <div>
+              <img
+                src="../../assets/imageAbout/truck-servcies (1).png"
+                class="items-center rounded-md w-[300px] h-[385.71px]"
+                alt=""
+              />
+              <div
+                class="group/item rounded-md flex flex-col items-center justify-center opacity-0 hover:opacity-100 w-[300px] h-[385.71px] backdrop-blur-md absolute top-0 ease-in-out duration-300"
+              >
+                <i class="fa-solid text-4xl text-secondary fa-truck"></i>
+                <h3
+                  class="text-primary text-xl font-bold text-center mt-4 group-hover:text-[#FCB621] ease-in-out duration-300"
+                >
+                  Truck Transport
+                </h3>
+                <p class="text-white text-center w-[200px]">
+                  Reliable and cost-effective trucking solutions for your cargo.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section>
-        <div>
+        <div
+          data-aos="zoom-down"
+          data-aos-easing="ease-in"
+          duration="1000"
+          id="navi"
+        >
           <h2
             class="text-[32px] font-bold text-[#FCB621] text-center mt-[50px]"
           >
@@ -84,46 +160,85 @@
           </h2>
         </div>
         <div
-          class="flex flex-row gap-[100px] items-center justify-center mt-[50px]"
+          class="flex flex-row flex-wrap gap-[100px] items-center justify-center mt-[50px]"
         >
           <div
-            class="flex flex-col items-center justify-center border-2 border-white w-[350px] h-[350px] rounded-md p-4"
+            data-aos="zoom-in-right"
+            data-aos-easing="ease-in"
+            duration="1000"
+            class="group flex flex-col items-center justify-center hover:justify-start transition-all duration-500 ease-in-out border-2 hover:bg-white border-white w-[300px] h-[300px] rounded-xl p-4"
           >
             <i
-              class="fa-solid text-secondary border-2 border-white rounded-full p-3.5 text-6xl mb-5 fa-truck-fast"
+              class="fa-solid text-secondary group-hover:rounded-none group-hover:ease-in-out border-2 duration-500 border-white rounded-full p-3.5 text-6xl mb-5 fa-truck-fast"
             ></i>
-            <h3 class="text-secondary text-xl mt-4 font-bold">
+            <h3
+              class="text-secondary group-hover:hidden block text-[18px] mt-4 font-bold"
+            >
               Fast & Reliable Delivery
             </h3>
+            <p
+              class="text-primary hidden group-hover:block ease-in-out w-[250px] opacity-0 group-hover:opacity-100 duration-500 text-center"
+            >
+              We ensure your goods arrive on time, every time. Our efficient
+              routing and real-time tracking systems guarantee speed and
+              reliability, no matter the distance.
+            </p>
           </div>
           <div
-            class="flex flex-col items-center justify-center border-2 border-white w-[350px] h-[350px] rounded-md p-4"
+            data-aos="zoom-in"
+            data-aos-easing="ease-in"
+            duration="1000"
+            class="flex flex-col group hover:justify-start transition-all duration-500 ease-in-out hover:bg-white items-center justify-center border-2 border-white w-[300px] h-[300px] rounded-xl p-4"
           >
             <i
-              class="fa-solid text-secondary border-2 border-white rounded-full p-3.5 text-6xl mb-5 fa-globe"
+              class="fa-solid text-secondary group-hover:rounded-none group-hover:ease-in-out border-2 duration-500 border-white rounded-full p-3.5 text-6xl mb-5 fa-globe"
             ></i>
-            <h3 class="text-secondary text-xl mt-4 font-bold">
+            <h3
+              class="text-secondary group-hover:hidden block text-[18px] mt-4 font-bold"
+            >
               Global Reach, Local Expertise
             </h3>
+            <p
+              class="text-primary hidden group-hover:block ease-in-out w-[250px] opacity-0 group-hover:opacity-100 duration-500 text-center"
+            >
+              From local deliveries to international freight, our network spans
+              across borders with dedicated teams who understand regional
+              logistics and compliance.
+            </p>
           </div>
           <div
-            class="flex flex-col items-center justify-center border-2 border-white w-[350px] h-[350px] rounded-md p-4"
+            data-aos="zoom-in-left"
+            data-aos-easing="ease-in"
+            duration="1000"
+            class="flex flex-col group hover:bg-white hover:justify-start transition-all duration-500 ease-in-out items-center justify-center border-2 border-white w-[300px] h-[300px] rounded-xl p-4"
           >
             <i
-              class="fa-solid text-secondary border-2 border-white rounded-full p-3.5 text-6xl mb-5 fa-gear"
+              class="fa-solid text-secondary group-hover:rounded-none group-hover:ease-in-out border-2 duration-500 border-white rounded-full p-3.5 text-6xl mb-5 fa-gear"
             ></i>
-            <h3 class="text-secondary text-xl mt-4 font-bold">
+            <h3
+              class="text-secondary group-hover:hidden block text-[18px] mt-4 font-bold"
+            >
               Smart Logistics Technology
             </h3>
+            <p
+              class="text-primary hidden group-hover:block ease-in-out w-[250px] opacity-0 group-hover:opacity-100 duration-500 text-center"
+            >
+              Our advanced technology solutions optimize supply chain
+              operations, enhance visibility, and improve decision-making for
+              our clients.
+            </p>
           </div>
         </div>
       </section>
-      <section>
+      <section class="mt-[100px] overflow-x-hidden">
         <div
-          class="flex flex-row gap-[100px] items-center justify-center mt-[50px]"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+          class="flex flex-row flex-wrap gap-[100px] items-center justify-center mt-[50px]"
         >
           <div class="w-[400px]">
-            <h2 class="text-secondary">Our Mission</h2>
+            <h2 class="text-secondary mb-6 font-bold text-2xl">Our Mission</h2>
             <p class="text-white">
               To deliver reliable, efficient, and innovative logistics solutions
               that empower businesses and connect people globally. We are
@@ -137,13 +252,16 @@
           </div>
         </div>
         <div
-          class="flex flex-row gap-[100px] items-center justify-center mt-[50px]"
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+          class="flex flex-row-reverse flex-wrap-reverse gap-[100px] items-center justify-center mt-[50px]"
         >
           <div>
             <img src="../../assets/imageAbout/data-analysis-45 1.png" alt="" />
           </div>
           <div class="w-[400px]">
-            <h2 class="text-secondary">Our Vision</h2>
+            <h2 class="text-secondary mb-6 font-bold text-2xl">Our Vision</h2>
             <p class="text-white">
               To be the most trusted logistics partner worldwide, setting the
               standard for quality, sustainability, and technological
@@ -152,13 +270,14 @@
           </div>
         </div>
       </section>
+
       <search>
         <div class="text-center text-3xl font-bold text-secondary mt-[100px]">
           <h2>Our Instructor</h2>
         </div>
-        <div>
+        <div class="p-2.5">
           <img
-            class="m-auto mt-11"
+            class="m-auto w-auto mt-11"
             src="../../assets/imageAbout/ourInsructor.png"
             alt=""
           />
@@ -169,27 +288,274 @@
         <div
           class="text-white flex flex-row text-4xl gap-[50px] items-center justify-center mt-[50px]"
         >
-          <i class="fa-brands fa-github"></i>
-          <i class="fa-brands fa-telegram"></i>
-          <i class="fa-brands fa-linkedin"></i>
+          <a href="https://github.com/ingdavann" target="_blank">
+            <i
+              class="fa-brands hover:text-secondary ease-in duration-300 fa-github"
+            ></i>
+          </a>
+          <a href="https://t.me/ingdavann" target="_blank">
+            <i
+              class="fa-brands hover:text-secondary ease-in duration-300 fa-telegram"
+            ></i>
+          </a>
+          <a href=" www.linkedin.com/in/ing-davann-0617b32a3" target="_blank">
+            <i
+              class="fa-brands hover:text-secondary ease-in duration-300 fa-linkedin"
+            ></i>
+          </a>
         </div>
       </search>
-      <section>
-        <div>
-          <h2>Our Team</h2>
+
+      <section class="mt-[400px]">
+        <div class="relative">
+          <img
+            src="../../assets/imageAbout/Vector (1).svg"
+            class="w-auto h-auto sm:w-auto sm:h-auto md:w-auto md:h-auto xl:w-full lg:w-full absolute text-[#f5f5f5] -bottom-1 -z-10"
+            alt=""
+          />
         </div>
-        <div>
+        <section class="bg-[#F5F5F5]">
           <div>
-            <img src="" alt="" />
-            <h3></h3>
-            <div>
-              <i class="fa-brands fa-github"></i>
-              <i class="fa-brands fa-telegram"></i>
-              <i class="fa-brands fa-linkedin"></i>
+            <h2 class="text-3xl text-center text-secondary font-bold">
+              Our Team
+            </h2>
+          </div>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 lg:grid-cols-3 items-center justify-center"
+          >
+            <div
+              class="flex flex-col m-auto items-center justify-center bg-white gap-4 w-[300px] h-[400px] rounded-xl border-primary border-2 p-3.5 mt-10"
+            >
+              <img
+                src="../../assets/imageAbout/porkeat.png"
+                class="rounded-full"
+                alt=""
+              />
+              <h3 class="text-2xl text-primary font-semibold">Seng PorKeat</h3>
+              <hr class="w-[209px] border-[1px]" />
+              <div
+                class="text-2xl text-primary flex flex-row items-center justify-center gap-6"
+              >
+                <a target="_blank" href="https://github.com/PorKeat">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-github"
+                  ></i
+                ></a>
+                <a href="https://t.me/porkeat" target="_blank">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-telegram"
+                  ></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/por-keat-06202134b"
+                  target="_blank"
+                >
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-linkedin"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="flex flex-col m-auto items-center justify-center bg-white gap-4 w-[300px] h-[400px] rounded-xl border-primary border-2 p-3.5 mt-10"
+            >
+              <img
+                src="../../assets/imageAbout/eric.png"
+                class="rounded-full"
+                alt=""
+              />
+              <h3 class="text-2xl text-primary font-semibold">Va Eric</h3>
+              <hr class="w-[209px] border-[1px]" />
+              <div
+                class="text-2xl text-primary flex flex-row items-center justify-center gap-6"
+              >
+                <a target="_blank" href="https://github.com/ericva01">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-github"
+                  ></i
+                ></a>
+                <a target="_blank" href="https://t.me/eric_1968_va">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-telegram"
+                  ></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/eric-va-b38456303/"
+                >
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-linkedin"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="flex flex-col m-auto items-center justify-center bg-white gap-4 w-[300px] h-[400px] rounded-xl border-primary border-2 p-3.5 mt-10"
+            >
+              <img
+                src="../../assets/imageAbout/vuthy.png"
+                class="rounded-full"
+                alt=""
+              />
+              <h3 class="text-2xl text-primary font-semibold">Tourn Vuthy</h3>
+              <hr class="w-[209px] border-[1px]" />
+              <div
+                class="text-2xl text-primary flex flex-row items-center justify-center gap-6"
+              >
+                <a target="_blank" href="https://github.com/Vuthy-Tourn">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-github"
+                  ></i
+                ></a>
+                <a target="_blank" href="https://t.me/Vuthy_Tourn">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-telegram"
+                  ></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/vuthy-tourn-14ab38354/"
+                >
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-linkedin"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="flex flex-col m-auto items-center justify-center bg-white gap-4 w-[300px] h-[400px] rounded-xl border-primary border-2 p-3.5 mt-10"
+            >
+              <img
+                src="../../assets/imageAbout/theara.png"
+                class="rounded-full"
+                alt=""
+              />
+              <h3 class="text-2xl text-primary font-semibold">Chim Theara</h3>
+              <hr class="w-[209px] border-[1px]" />
+              <div
+                class="text-2xl text-primary flex flex-row items-center justify-center gap-6"
+              >
+                <a target="_blank" href="https://github.com/theara24">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-github"
+                  ></i
+                ></a>
+                <a target="_blank" href="https://t.me/chim_theara">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-telegram"
+                  ></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/theara-chim-867481349/"
+                >
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-linkedin"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="flex flex-col m-auto items-center justify-center bg-white gap-4 w-[300px] h-[400px] rounded-xl border-primary border-2 p-3.5 mt-10"
+            >
+              <img
+                src="../../assets/imageAbout/baikimhouy.png"
+                class="rounded-full"
+                alt=""
+              />
+              <h3 class="text-2xl text-primary font-semibold">Bai KimHouy</h3>
+              <hr class="w-[209px] border-[1px]" />
+              <div
+                class="text-2xl text-primary flex flex-row items-center justify-center gap-6"
+              >
+                <a target="_blank" href="https://github.com/baikimhouy">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-github"
+                  ></i
+                ></a>
+                <a target="_blank" href="https://t.me/Jianggzz">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-telegram"
+                  ></i>
+                </a>
+                <a target="_blank" href="">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-linkedin"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="flex flex-col m-auto items-center justify-center bg-white gap-4 w-[300px] h-[400px] rounded-xl border-primary border-2 p-3.5 mt-10"
+            >
+              <img
+                src="../../assets/imageAbout/hav.png"
+                class="rounded-full"
+                alt=""
+              />
+              <h3 class="text-2xl text-primary font-semibold">Ho Hav</h3>
+              <hr class="w-[209px] border-[1px]" />
+              <div
+                class="text-2xl text-primary flex flex-row items-center justify-center gap-6"
+              >
+                <a target="_blank" href="https://github.com/Hohav502">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-github"
+                  ></i
+                ></a>
+                <a target="_blank" href="https://t.me/lhavl">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-telegram"
+                  ></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=hav-ho-224765334"
+                >
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-linkedin"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="flex flex-col m-auto col-span-1 sm:col-span-2 md:col-span-2 xl:col-span-3 lg:col-span-3 items-center justify-center bg-white gap-4 w-[300px] h-[400px] rounded-xl border-primary border-2 p-3.5 mt-10"
+            >
+              <img
+                src="../../assets/imageAbout/taiyi.png"
+                class="rounded-full"
+                alt=""
+              />
+              <h3 class="text-2xl text-primary font-semibold">Korm Taiyi</h3>
+              <hr class="w-[209px] border-[1px]" />
+              <div
+                class="text-2xl text-primary flex flex-row items-center justify-center gap-6"
+              >
+                <a target="_blank" href="https://github.com/KormTaiyi">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-github"
+                  ></i
+                ></a>
+                <a target="_blank" href="https://t.me/taiyi289">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-telegram"
+                  ></i>
+                </a>
+                <a target="_blank" href="#">
+                  <i
+                    class="fa-brands text-primary hover:text-secondary ease-in duration-300 fa-linkedin"
+                  ></i>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </section>
     </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
