@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../output.css">
 </head>
 <body class="grid place-content-center w-full min-h-screen bg-center bg-no-repeat bg-cover bg-gray-100 p-1 sm:p-0" style="background-image: url('../../assets/image/login_register/bg-2.png')">
-  <main class="bg-black bg-opacity-75 text-white rounded-xl p-4 sm:p-6 w-full max-w-md shadow-lg">
+  <main class="bg-black bg-opacity-25 text-white rounded-xl p-4 sm:p-6 sm:w-[330px] w-[300px] shadow-lg">
     <header class="mb-4 text-center flex flex-col justify-center items-center">
       <img src="../../assets/image/logo.png" alt="" class="w-[130px]">
-      <h1 class="text-2xl font-semibold">Sign in</h1>
-      <p class="text-(--color-description) mt-1">We recommend signing in with <br> your email address.</p>
+      <h1 class="text-2xl sm:text-3xl font-semibold">Sign in</h1>
+      <p class=" mt-1">We recommend signing in with <br> your email address.</p>
     </header>
     <section>
       <form class="space-y-2" aria-label="Sign in form">
@@ -23,7 +24,7 @@
           <span class="sr-only">Password</span>
           <input type="password" name="password" placeholder="Password" required class="w-full p-2 rounded-md border border-gray-200 bg-transparent placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500"/>
         </label>
-        <button type="submit" class="w-full bg-(--color-secondary) text-(--color-secondary) border py-2 rounded-md transition">Continue
+        <button type="submit" class="w-full bg-[#fcb621] py-2 rounded-md transition">Continue
         </button>
       </form>
     </section>
@@ -44,10 +45,10 @@
       </button>
     </section>
   </main>
-  <footer class="mt-2 text-center">
+  <footer class=" text-center">
     <p class="text-sm text-gray-200">
       Don’t have an account? 
-      <a href="./register.html" class="text-(--color-secondary) font-semibold hover:underline text-base">Sign Up</a>
+      <a href="./register.html" class="text-[#fcb621] font-semibold hover:underline text-base">Sign Up</a>
     </p>
   </footer>
 </body>

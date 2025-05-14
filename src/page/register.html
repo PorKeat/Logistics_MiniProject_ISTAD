@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="../output.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen w-full bg-center bg-no-repeat bg-cover p-1" style="background-image: url('../../assets/image/login_register/bg-1.png')">
-  <main class="flex items-center justify-center h-full">
+<body class="grid place-content-center min-h-screen w-full bg-center bg-no-repeat bg-cover p-1" style="background-image: url('../../assets/image/login_register/bg-1.png')">
+  <main class="h-full">
     <section class="bg-black text-center bg-opacity-50 text-white p-4 pt-10 rounded-xl w-full max-w-md">
       <div class="flex flex-col items-center mb-6 mt-6">
         <img src="../../assets/image/logo.png" alt="Logo" class="w-[130px]">
         <h1 class="text-2xl sm:text-3xl">Create your account</h1>
       </div>
       <form action="" class="space-y-3">
-        <input type="text" placeholder="First Name" class="w-full p-2 rounded border-none outline-none text-black">
-        <input type="text" placeholder="Last Name" class="w-full p-2 rounded border-none outline-none text-black">
-        <input type="password" placeholder="Password" class="w-full p-2 rounded border-none outline-none text-black">
-        <button type="submit" class="w-full bg-secondary text-secondary text-lg border py-2 rounded">Sign up</button>
+        <input type="text" placeholder="First Name" class="w-full p-2 rounded border outline-none text-[#d8d9de]">
+        <input type="text" placeholder="Last Name" class="w-full p-2 rounded border outline-none text-[#d8d9de]">
+        <input type="password" placeholder="Password" class="w-full p-2 rounded border outline-none text-[#d8d9de]">
+        <button type="submit" class="w-full bg-[#fcb621] text-lg py-2 rounded">Sign up</button>
       </form>
 
       <div class="flex items-center justify-between gap-2 my-4 px-2">
@@ -27,7 +28,7 @@
       </div>
 
       <div class="flex justify-between gap-2 flex-col sm:flex-row p-1">
-        <button class="flex-1 flex items-center justify-center gap-2 border border-white rounded text-sm py-3 px-2">
+        <button class="flex-1 flex items-center justify-center gap-2 border border-white rounded text-sm py-2 sm:py-3 px-1 sm:px-2">
           <img src="../../assets/image/login_register/google-icon-logo.svg" alt="" class="w-6"> Continue with Google
         </button>
         <button class="flex-1 flex items-center justify-center gap-2 border border-white rounded text-sm py-3 px-2">
@@ -36,7 +37,7 @@
       </div>
 
       <p class="mt-6 text-center text-sm">Already have an account? 
-        <a href="./login.html" class="text-(--color-secondary) font-semibold text-base">Sign in</a>
+        <a href="./login.html" class="text-[#fcb621] hover:underline font-semibold text-base">Sign in</a>
       </p>
     </section>
   </main>
