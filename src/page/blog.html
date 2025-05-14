@@ -31,30 +31,29 @@
       </section>
     </header>
     <main class="h-[200vh]">
-      <section class="w-[80%] mx-auto mt-[60px]">
+      <section class="w-[90%] max-w-7xl mx-auto mt-[60px] px-4">
+        <!-- Header -->
         <div class="relative flex items-center h-[30px]">
-          <hr class="w-full border-t-5 border-black" />
+          <hr class="w-full border-t-4 border-black" />
           <span
-            class="absolute text-[16px] font-semibold text-white bg-secondary not-italic px-6 left-[-2px] py-2 transform -skew-x-12 rounded-[3px]"
+            class="absolute text-[16px] font-semibold text-white bg-secondary not-italic px-6 py-2 transform -skew-x-12 rounded-[3px] left-[-2px]"
           >
             Trending Logistics News
           </span>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-          <div class="border-r-2 border-primary">
-            <a
-              href="#"
-              class="w-[620px] h-[550px] block group transition-transform duration-300"
-            >
-              <div class="relative">
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10">
+          <!-- Left Column (Main Card) -->
+          <div class="lg:border-r-2 border-primary pr-0 lg:pr-6">
+            <a href="#" class="block group transition-transform duration-300">
+              <div class="relative w-full">
                 <img
                   src="../../assets/image/blog/mainCard.avif"
                   alt="ship"
-                  class="h-[380px] w-full object-cover rounded-[6px] brightness-60 group-hover:brightness-80 group-hover:scale-105 transition duration-300"
+                  class="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[380px] object-cover rounded-[6px] brightness-60 group-hover:brightness-80 group-hover:scale-105 transition duration-300"
                 />
-                <div
-                  class="absolute inset-0 m-auto flex items-center justify-center"
-                >
+                <div class="absolute inset-0 flex items-center justify-center">
                   <div
                     class="absolute bg-white w-[60px] h-[60px] rounded-full opacity-50 group-hover:opacity-80 group-hover:shadow-xl transition duration-300"
                   ></div>
@@ -63,149 +62,167 @@
                   ></i>
                 </div>
               </div>
-              <div class="mt-[20px]">
+              <div class="mt-5">
                 <small
                   class="uppercase bg-secondary p-1 text-[12px] rounded-[2px] text-white"
                   >Shipping</small
                 >
-                <h3 class="font-bold text-[28px] my-[20px] leading-9">
+                <h3
+                  class="font-bold text-[22px] md:text-[26px] lg:text-[28px] my-[20px] leading-8 md:leading-9"
+                >
                   Revolutionizing Global Freight With Smarter Sea Routes
                 </h3>
-                <div class="flex items-center gap-5">
+                <div class="flex flex-wrap items-center gap-5">
                   <small
                     class="uppercase font-medium text-description text-[13px]"
-                    ><i class="fa-regular fa-circle-user"></i> by admin</small
                   >
+                    <i class="fa-regular fa-circle-user"></i> by admin
+                  </small>
                   <small
                     class="uppercase font-medium text-description text-[13px]"
-                    ><i class="fa-regular fa-calendar"></i> 05 May, 2025</small
                   >
+                    <i class="fa-regular fa-calendar"></i> 05 May, 2025
+                  </small>
                 </div>
               </div>
             </a>
           </div>
-          <div
-            class="w-[620px] h-[550px] ml-auto flex flex-col justify-between"
-          >
+
+          <!-- Right Column (Sub Cards) -->
+          <div class="flex flex-col gap-6">
+            <!-- Sub Card Item -->
             <a href="#" class="group">
-              <div class="flex items-center">
-                <div class="relative w-[220px] h-[160px]">
+              <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="relative w-full sm:w-[220px] h-[160px] shrink-0">
                   <img
                     src="../../assets/image/blog/subCardOne.jpg"
                     alt="subCardOne"
                     class="object-cover w-full h-full rounded-[6px] brightness-60 group-hover:brightness-80 group-hover:scale-105 transition duration-300"
                   />
                   <div
-                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
+                    class="absolute inset-0 flex items-center justify-center"
                   >
                     <div
                       class="bg-white w-[40px] h-[40px] rounded-full opacity-50 group-hover:opacity-80 group-hover:shadow-xl transition duration-300 absolute"
                     ></div>
                     <i
-                      class="fa-solid fa-play text-[16px] text-white z-10 absolute group-hover:text-secondary"
+                      class="fa-solid fa-play text-[16px] text-white z-10 group-hover:text-secondary absolute"
                     ></i>
                   </div>
                 </div>
-                <div class="ml-[20px] w-full">
+                <div class="w-full">
                   <small
                     class="uppercase bg-secondary p-1 text-[12px] rounded-[2px] text-white"
-                    >WAREHOUSING</small
+                    >Warehousing</small
                   >
-                  <h3 class="font-bold text-[22px] leading-9 my-[10px]">
+                  <h3
+                    class="font-bold text-[20px] md:text-[22px] leading-7 md:leading-9 my-2"
+                  >
                     Optimizing Inventory Flow With Automated Storage Solutions
                   </h3>
-                  <div class="flex items-center gap-5">
+                  <div class="flex flex-wrap items-center gap-5">
                     <small
                       class="uppercase font-medium text-description text-[13px]"
-                      ><i class="fa-regular fa-circle-user"></i> by admin</small
                     >
+                      <i class="fa-regular fa-circle-user"></i> by admin
+                    </small>
                     <small
                       class="uppercase font-medium text-description text-[13px]"
-                      ><i class="fa-regular fa-calendar"></i> 05 May,
-                      2025</small
                     >
+                      <i class="fa-regular fa-calendar"></i> 05 May, 2025
+                    </small>
                   </div>
                 </div>
               </div>
             </a>
+
+            <!-- Repeat for subCardTwo -->
             <a href="#" class="group">
-              <div class="flex items-center">
-                <div class="relative w-[220px] h-[160px]">
+              <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="relative w-full sm:w-[220px] h-[160px] shrink-0">
                   <img
                     src="../../assets/image/blog/subCardTwo.avif"
-                    alt="subCardOne"
+                    alt="subCardTwo"
                     class="object-cover w-full h-full rounded-[6px] brightness-60 group-hover:brightness-80 group-hover:scale-105 transition duration-300"
                   />
                   <div
-                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
+                    class="absolute inset-0 flex items-center justify-center"
                   >
                     <div
                       class="bg-white w-[40px] h-[40px] rounded-full opacity-50 group-hover:opacity-80 group-hover:shadow-xl transition duration-300 absolute"
                     ></div>
                     <i
-                      class="fa-solid fa-play text-[16px] text-white z-10 absolute group-hover:text-secondary"
+                      class="fa-solid fa-play text-[16px] text-white z-10 group-hover:text-secondary absolute"
                     ></i>
                   </div>
                 </div>
-                <div class="ml-[20px] w-full">
+                <div class="w-full">
                   <small
                     class="uppercase bg-secondary p-1 text-[12px] rounded-[2px] text-white"
-                    >action</small
+                    >Action</small
                   >
-                  <h3 class="font-bold text-[22px] leading-9 my-[10px]">
+                  <h3
+                    class="font-bold text-[20px] md:text-[22px] leading-7 md:leading-9 my-2"
+                  >
                     Solving the Final Delivery Puzzle With Real-Time Tracking
                   </h3>
-                  <div class="flex items-center gap-5">
+                  <div class="flex flex-wrap items-center gap-5">
                     <small
                       class="uppercase font-medium text-description text-[13px]"
-                      ><i class="fa-regular fa-circle-user"></i> by admin</small
                     >
+                      <i class="fa-regular fa-circle-user"></i> by admin
+                    </small>
                     <small
                       class="uppercase font-medium text-description text-[13px]"
-                      ><i class="fa-regular fa-calendar"></i> 05 May,
-                      2025</small
                     >
+                      <i class="fa-regular fa-calendar"></i> 05 May, 2025
+                    </small>
                   </div>
                 </div>
               </div>
             </a>
+
+            <!-- Repeat for subCardThree -->
             <a href="#" class="group">
-              <div class="flex items-center">
-                <div class="relative w-[220px] h-[160px]">
+              <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="relative w-full sm:w-[220px] h-[160px] shrink-0">
                   <img
                     src="../../assets/image/blog/subCardThree.avif"
-                    alt="subCardOne"
+                    alt="subCardThree"
                     class="object-cover w-full h-full rounded-[6px] brightness-60 group-hover:brightness-80 group-hover:scale-105 transition duration-300"
                   />
                   <div
-                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
+                    class="absolute inset-0 flex items-center justify-center"
                   >
                     <div
                       class="bg-white w-[40px] h-[40px] rounded-full opacity-50 group-hover:opacity-80 group-hover:shadow-xl transition duration-300 absolute"
                     ></div>
                     <i
-                      class="fa-solid fa-play text-[16px] text-white z-10 absolute group-hover:text-secondary"
+                      class="fa-solid fa-play text-[16px] text-white z-10 group-hover:text-secondary absolute"
                     ></i>
                   </div>
                 </div>
-                <div class="ml-[20px] w-full">
+                <div class="w-full">
                   <small
                     class="uppercase bg-secondary p-1 text-[12px] rounded-[2px] text-white"
-                    >supply chain</small
+                    >Supply Chain</small
                   >
-                  <h3 class="font-bold text-[22px] leading-9 my-[10px]">
+                  <h3
+                    class="font-bold text-[20px] md:text-[22px] leading-7 md:leading-9 my-2"
+                  >
                     Deploying Digital Maps To Enhance Route Planning
                   </h3>
-                  <div class="flex items-center gap-5">
+                  <div class="flex flex-wrap items-center gap-5">
                     <small
                       class="uppercase font-medium text-description text-[13px]"
-                      ><i class="fa-regular fa-circle-user"></i> by admin</small
                     >
+                      <i class="fa-regular fa-circle-user"></i> by admin
+                    </small>
                     <small
                       class="uppercase font-medium text-description text-[13px]"
-                      ><i class="fa-regular fa-calendar"></i> 05 May,
-                      2025</small
                     >
+                      <i class="fa-regular fa-calendar"></i> 05 May, 2025
+                    </small>
                   </div>
                 </div>
               </div>
@@ -213,6 +230,7 @@
           </div>
         </div>
       </section>
+
       <section class="w-[80%] mx-auto mt-[60px]">
         <div class="relative flex items-center h-[30px]">
           <hr class="w-full border-t-5 border-black" />
