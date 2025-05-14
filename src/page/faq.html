@@ -6,14 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="../output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Top Hero Section -->
   <section class="bg-cover bg-center text-white h-[50vh] sm:h-[60vh] lg:h-[70vh] flex items-center justify-center" 
            style="background-image: linear-gradient(rgba(10, 27, 43, 0.47), rgba(10, 27, 43, 0.98) 70%, #0a1b2b), url('https://assets-global.website-files.com/5dd7315081d3e97c21e69c0f/5dd87523967a3b57f6267029_blog_hero_04.jpg');">
-    <div class="text-center px-4">
-      <p class="text-[#FCB621] font-semibold mb-2 uppercase tracking-wide">FAQ</p>
+    <div class="text-center px-4 " data-aos="zoom-in-up">
+      <p class="text-[#FCB621] font-semibold mb-2 uppercase tracking-wide ">FAQ</p>
       <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold">
         Clear your doubts and keep turning the page — FAQs made simple.
       </h1>
@@ -22,7 +22,7 @@
 
   <!-- FAQ Header -->
   <section class="text-center py-10 mt-10">
-    <h2 class="text-5xl lg:text-6xl sm:text-4xl font-bold text-[#000000]">
+    <h2 class="text-5xl lg:text-6xl sm:text-4xl font-bold text-[#000000]" data-aos="zoom-out-up">
       Frequently Asked Questions
     </h2>
   </section>
@@ -31,7 +31,7 @@
   <section class="py-10 px-6 lg:px-32">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 font-serif mb-6 mt-4">
       <!-- Left Column -->
-      <div>
+      <div  data-aos="fade-right">
         <h3 class="text-5xl font-bold lg:text-6xl sm:text-4xl text-[#FCB621] mb-6 mt-4">Question</h3>
         <p class="mb-6 text-gray-700 text-xl font-semibold ">
           Need help using our logistics platform? Find quick answers to common
@@ -52,7 +52,7 @@
       </div>
 
       <!-- Right Column (FAQs) -->
-      <div class="space-y-4">
+      <div class="space-y-4" data-aos="fade-left">
         <!-- FAQ Item 1 -->
         <div class="bg-white shadow p-4 rounded flex justify-between items-center cursor-pointer" onclick="toggleAccordion(0)">
           <span class="text-[#fcb621] font-semibold text-xl">How can I track the status of my shipment?</span>
@@ -114,6 +114,10 @@
   }
 </script>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 
 </html>
