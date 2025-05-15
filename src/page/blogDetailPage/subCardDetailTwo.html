@@ -11,46 +11,72 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../../output.css" />
   </head>
   <body class="font-mukta overflow-x-hidden">
-    <header class="relative h-[840px] flex items-center">
-      <div
-        class="absolute inset-0 bg-[url('../../../assets/image/blog/subCardTwo.avif')] bg-cover bg-center z-0"
-      ></div>
-      <div class="absolute inset-0 bg-black/60 z-0"></div>
-
-      <nav id="navbar" class="relative z-10"></nav>
-
+    <header id="navbar"></header>
+    <main>
       <section
-        class="relative z-10 pl-[85px] w-[80%] top-[260px] mx-auto select-none sm:top-[180px] sm:w-[90%] md:top-[220px] lg:top-[240px] xl:top-[260px]"
+        class="relative h-[840px] flex items-center"
+        data-aos="fade-up"
+        data-aos-duration="1000"
       >
-        <h1
-          class="text-white font-bold leading-[48px] text-[36px] sm:text-[40px] sm:leading-[48px] md:text-[48px] md:leading-[56px] lg:text-[56px] lg:leading-[64px] xl:text-[64px] xl:leading-[80px]"
-        >
-          Solving the Final Delivery Puzzle<br />
-          <span class="text-secondary">With Real-Time Tracking</span>.
-        </h1>
-      </section>
-    </header>
+        <div
+          class="absolute inset-0 bg-[url('../../../assets/image/blog/subCardTwo.avif')] bg-cover bg-center z-0"
+        ></div>
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
 
-    <main class="w-[80%] mx-auto py-10">
-      <section class="mt-10">
-        <h2 class="text-[24px] font-bold text-gray-800">
+        <nav id="navbar" class="relative z-10"></nav>
+
+        <section
+          class="relative z-10 pl-[85px] w-[80%] top-[260px] mx-auto select-none sm:top-[180px] sm:w-[90%] md:top-[220px] lg:top-[240px] xl:top-[260px]"
+        >
+          <h1
+            class="text-white font-bold leading-[48px] text-[36px] sm:text-[40px] sm:leading-[48px] md:text-[48px] md:leading-[56px] lg:text-[56px] lg:leading-[64px] xl:text-[64px] xl:leading-[80px]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Solving the Final Delivery Puzzle<br />
+            <span class="text-secondary">With Real-Time Tracking</span>.
+          </h1>
+        </section>
+      </section>
+      <section class="mt-10 w-[80%] mx-auto">
+        <h2
+          class="text-[24px] font-bold text-gray-800"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        >
           Enhanced Customer Experience
         </h2>
-        <p class="mt-4 text-[20px] text-gray-600">
+        <p
+          class="mt-4 text-[20px] text-gray-600"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="100"
+        >
           Real-time tracking provides customers with live updates on their
           package’s location, estimated arrival time, and delivery status. This
           transparency builds trust and reduces the need for customer service
           inquiries.
         </p>
 
-        <h3 class="text-[24px] font-bold text-gray-700 mt-6">
+        <h3
+          class="text-[24px] font-bold text-gray-700 mt-6"
+          data-aos="fade-right"
+          data-aos-duration="800"
+          data-aos-delay="200"
+        >
           Improved Operational Efficiency
         </h3>
-        <p class="mt-2 text-[20px] text-gray-600">
+        <p
+          class="mt-2 text-[20px] text-gray-600"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="300"
+        >
           Dispatchers and fleet managers can monitor delivery routes, identify
           delays, and optimize operations on the fly. Real-time data helps
           reroute drivers to avoid traffic or prioritize urgent deliveries.
@@ -60,12 +86,27 @@
           src="../../../assets/image/blog/subCardDetail2.1.jpg"
           alt="Map of Sea Routes"
           class="mt-4 w-full h-full object-cover"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="400"
         />
       </section>
 
-      <section class="mt-10">
-        <h2 class="text-[24px] font-bold text-gray-800">Reduced Labor Costs</h2>
-        <p class="mt-4 text-gray-600 text-[20px]">
+      <section class="mt-10 w-[80%] mx-auto">
+        <h2
+          class="text-[24px] font-bold text-gray-800"
+          data-aos="fade-right"
+          data-aos-duration="800"
+          data-aos-delay="500"
+        >
+          Reduced Labor Costs
+        </h2>
+        <p
+          class="mt-4 text-gray-600 text-[20px]"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="600"
+        >
           With accurate tracking, businesses can ensure drivers reach the
           correct address and customers are available to receive packages,
           minimizing failed delivery attempts.
@@ -74,10 +115,16 @@
           src="../../../assets/image/blog/subCardDetail2.2.jpg"
           alt="AI and Big Data"
           class="mt-4 w-full h-full object-cover"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="700"
         />
       </section>
       <section
-        class="mt-[60px] flex flex-col md:flex-row items-center gap-6 md:gap-10 px-4 md:px-0"
+        class="mt-[60px] flex flex-col md:flex-row items-center gap-6 md:gap-10 px-4 md:px-0 w-[80%] mx-auto"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="800"
       >
         <div
           class="w-40 h-40 md:w-[250px] md:h-[250px] flex-shrink-0 flex items-center justify-center"
@@ -122,5 +169,11 @@
         </div>
       </section>
     </main>
+    <footer id="footer" class="mt-20"></footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="../../js/script.js" type="module"></script>
   </body>
 </html>

@@ -12,7 +12,7 @@ export default function renderFooter() {
     if (path === "index.html") {
       return `/src/index.html`;
     }
-    return `/src/pages/${path}`;
+    return `/src/page/${path}`;
   };
 
   const footerHTML = `
@@ -61,13 +61,13 @@ export default function renderFooter() {
           <h3 class="font-bold text-white mb-4">Services</h3>
           <ul class="space-y-2 text-gray-300 font-normal">
             <li><a href="${getPageHref(
-              "sea-freight.html"
+              "serviceDetailPage/seaFreight.html"
             )}" class="hover:text-[#fcb621]">Sea Freight</a></li>
             <li><a href="${getPageHref(
-              "train-freight.html"
+              "serviceDetailPage/trainFreight.html"
             )}" class="hover:text-[#fcb621]">Train Freight</a></li>
             <li><a href="${getPageHref(
-              "air-freight.html"
+              "serviceDetailPage/airFreight.html"
             )}" class="hover:text-[#fcb621]">Air Freight</a></li>
           </ul>
         </div>

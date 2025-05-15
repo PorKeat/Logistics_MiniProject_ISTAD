@@ -3,7 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Dashboard</title>
+    <title>Sea Freight</title>
+    <link
+      rel="icon"
+      href="../../../assets/image/home/svg/do-not-tilt.svg"
+      sizes="any"
+    />
+    <link
+      rel="icon"
+      href="../../../assets/image/home/svg/do-not-tilt.svg"
+      type="image/svg+xml"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../output.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
@@ -25,6 +36,9 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       /* Only keeping necessary custom styles, using Tailwind classes for colors */
       :root {
         --header-height: 4rem;
@@ -76,9 +90,7 @@
     </style>
   </head>
   <body class="min-h-screen overflow-x-hidden">
-    <header
-      class="fixed w-full bg-white text-[#FCB621] z-50 shadow-lg animate-slide-down"
-    ></header>
+    <header id="navbar"></header>
     <!-- Hero Section -->
     <section>
       <div
@@ -101,15 +113,17 @@
             Delivering your goods with speed, safety, and precision.
           </p>
           <a
-            href="#"
-            class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
-            >Explore Services</a
+            href="#air"
+            class="inline-block px-4 py-2 bg-yellow-500 text-white font-bold rounded hover:bg-yellow-600 transition-colors"
           >
+            Explore Services
+          </a>
         </div>
       </div>
     </section>
-    <div class="pt-16 max-w-7xl mx-auto flex">
+    <div id="air" class="pt-16 max-w-7xl mx-auto flex">
       <aside
+        data-aos="fade-right"
         class="sidebar fixed lg:static w-[240px] h-[calc(100vh-4rem)] lg:h-auto transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-45 overflow-y-auto p-4"
       >
         <div
@@ -268,7 +282,7 @@
 
       <main class="flex-1 p-4">
         <!-- image -->
-        <section>
+        <section data-aos="fade-up">
           <div>
             <img
               class="w-[1000px]"
@@ -278,7 +292,7 @@
           </div>
         </section>
         <!-- contents -->
-        <section>
+        <section data-aos="fade-right">
           <div class="mt-[50px]">
             <h3 class="text-[36px] font-bold text-[#FCB621]">Sea Freight</h3>
             <p class="text-[16px] text-gray-400 mt-[3px]">
@@ -302,7 +316,7 @@
           </div>
         </section>
         <section class="rounded-lg">
-          <div class="mb-6 mt-[50px]">
+          <div data-aos="fade-left" class="mb-6 mt-[50px]">
             <h3 class="text-[36px] font-bold text-[#FCB621]">
               Benefits of Our Services
             </h3>
@@ -322,15 +336,19 @@
               <li>Government services, including defense and administration</li>
             </ul>
           </div>
-          <div class="border mt-[50px] rounded-lg overflow-hidden shadow-md">
-            <div class="flex justify-between">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            class="border mt-[50px] rounded-lg overflow-hidden shadow-md"
+          >
+            <div class="flex flex-col lg:flex-row gap-4">
               <img
-                class="w-[460px] h-[432px] object-cover"
+                class="w-full lg:w-1/2 h-auto object-cover rounded-lg"
                 src="../../../assets/image/service/sea2.jpg"
                 alt="air2"
               />
               <img
-                class="w-[460px] h-[432px] object-cover"
+                class="w-full lg:w-1/2 h-auto object-cover rounded-lg"
                 src="../../../assets/image/service/sea3.jpg"
                 alt="air3"
               />
@@ -348,6 +366,7 @@
           <div class="flex flex-row gap-6">
             <!-- Card 1 -->
             <div
+              data-aos="fade-right"
               class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 ease-in-out max-w-sm"
             >
               <img
@@ -367,6 +386,7 @@
 
             <!-- Card 2 -->
             <div
+              data-aos="fade-left"
               class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 ease-in-out max-w-sm"
             >
               <img
@@ -387,32 +407,40 @@
         </section>
       </main>
     </div>
-
-    <script>
+    <footer>
+      <div id="footer"></div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module">
+      AOS.init();
+      import NavbarScript from "../../../components/navbar.js";
+      import footerHTML from "../../../components/footer.js";
+      NavbarScript();
+      footerHTML();
       // Mobile menu functionality
-      const mobileMenuButton = document.querySelector('.mobile-menu-button');
-      const sidebar = document.querySelector('.sidebar');
-      const overlay = document.querySelector('.overlay');
+      const mobileMenuButton = document.querySelector(".mobile-menu-button");
+      const sidebar = document.querySelector(".sidebar");
+      const overlay = document.querySelector(".overlay");
 
       function toggleMobileMenu() {
-        sidebar.classList.toggle('translate-x-0');
-        overlay.classList.toggle('hidden');
-        setTimeout(() => overlay.classList.toggle('opacity-0'), 0);
+        sidebar.classList.toggle("translate-x-0");
+        overlay.classList.toggle("hidden");
+        setTimeout(() => overlay.classList.toggle("opacity-0"), 0);
         document.body.style.overflow = sidebar.classList.contains(
-          'translate-x-0'
+          "translate-x-0"
         )
-          ? 'hidden'
-          : '';
+          ? "hidden"
+          : "";
       }
 
-      mobileMenuButton.addEventListener('click', toggleMobileMenu);
-      overlay.addEventListener('click', toggleMobileMenu);
+      mobileMenuButton.addEventListener("click", toggleMobileMenu);
+      overlay.addEventListener("click", toggleMobileMenu);
 
       // Close mobile menu on window resize if open
-      window.addEventListener('resize', () => {
+      window.addEventListener("resize", () => {
         if (
           window.innerWidth >= 1024 &&
-          sidebar.classList.contains('translate-x-0')
+          sidebar.classList.contains("translate-x-0")
         ) {
           toggleMobileMenu();
         }
@@ -420,12 +448,13 @@
 
       // Notification animation
       const notificationIcon = document.querySelector(
-        '.material-icons-outlined:nth-child(2)'
+        ".material-icons-outlined:nth-child(2)"
       );
       setInterval(() => {
-        notificationIcon.classList.add('scale-110');
-        setTimeout(() => notificationIcon.classList.remove('scale-110'), 200);
+        notificationIcon.classList.add("scale-110");
+        setTimeout(() => notificationIcon.classList.remove("scale-110"), 200);
       }, 5000);
     </script>
+    <script src="../../js/script.js" type="module"></script>
   </body>
 </html>

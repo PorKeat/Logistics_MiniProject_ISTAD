@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Service Page</title>
+    <!-- Favicon Links -->
+    <link
+      rel="icon"
+      href="../../assets/image/home/svg/do-not-tilt.svg"
+      sizes="any"
+    />
+    <link
+      rel="icon"
+      href="../../assets/image/home/svg/do-not-tilt.svg"
+      type="image/svg+xml"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../output.css" />
     <link
       rel="stylesheet"
@@ -19,9 +37,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body>
-    <header></header>
+    <header id="navbar"></header>
     <main>
       <!-- Hero Section -->
       <section>
@@ -45,18 +68,23 @@
               Delivering your goods with speed, safety, and precision.
             </p>
             <a
-              href="#"
-              class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
-              >Explore Services</a
+              href="#Hero"
+              class="inline-block px-4 py-2 bg-yellow-500 text-white font-bold rounded hover:bg-yellow-600 transition-colors"
             >
+              Explore Services
+            </a>
           </div>
         </div>
       </section>
       <!-- Our Services -->
       <section
+        id="Hero"
+        data-aos="fade-up"
+        data-aos-duration="3000"
         class="mt-[120px] block justify-items-center justify-center items-center"
       >
-        <div class="flex">
+        <!-- Section Header -->
+        <div class="flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24px"
@@ -72,234 +100,207 @@
             Our Services
           </h6>
         </div>
+
+        <!-- Title -->
         <div class="text-center text-[40px] font-bold leading-none mt-[20px]">
           <h2 class="text-[#0C1B2B]">Logistics Solution</h2>
           <h2>and <span class="text-[#fcb621]"> Services</span></h2>
         </div>
+
         <!-- Service Cards -->
-        <div>
-          <div class="container mx-auto px-4 py-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <!-- Service Block -->
-              <!-- Card1 -->
-              <div class="w-[380px] h-[406px]">
+        <div class="container mx-auto px-4 py-12">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
+          >
+            <!-- Card Template Start -->
+            <!-- Copy and replace content for each card -->
+            <div class="w-[380px] h-[406px]">
+              <div
+                class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
+                style="
+                  background-image: url('../../assets/image/service/Air Freight.jpg');
+                "
+              >
                 <div
-                  href="#"
-                  class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
-                  style="
-                    background-image: url('../../assets/image/service/Air Freight.jpg');
-                  "
-                >
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
+                ></div>
+                <div class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20">
                   <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
-                  ></div>
-
-                  <div
-                    class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20"
+                    class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
                   >
-                    <div
-                      class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
+                    <h3 class="text-[24px] font-bold leading-none">
+                      Air Freight
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Fastest shipping method for urgent or long-distance
+                      deliveries. Ideal for lightweight, high-value....
+                    </p>
+                    <a
+                      class="text-[#fcb621]"
+                      href="serviceDetailPage/airFreight.html"
+                      ><u>Read more</u></a
                     >
-                      <h3 class="text-[24px] font-bold leading-none">
-                        Air Freight
-                      </h3>
-                      <p class="text-sm mb-2">
-                        Fastest shipping method for urgent or long-distance
-                        deliveries. Ideal for lightweight, high-value....
-                      </p>
-                      <a
-                        class="text-[#fcb621]"
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer text-secondary"
-                        ><u>Read more</u></a
-                      >
-                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Card2 -->
-              <div class="w-[380px] h-[406px]">
-                <div
-                  href="#"
-                  class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
-                  style="
-                    background-image: url('../../assets/image/service/Train\ Freight.webp');
-                  "
-                >
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
-                  ></div>
+            </div>
+            <!-- Card Template End -->
 
+            <!-- Card 2 -->
+            <div class="w-[380px] h-[406px]">
+              <div
+                class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
+                style="
+                  background-image: url('../../assets/image/service/Train Freight.webp');
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
+                ></div>
+                <div class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20">
                   <div
-                    class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20"
+                    class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
                   >
-                    <div
-                      class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
+                    <h3 class="text-[24px] font-bold leading-none">
+                      Train Freight
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Cost-effective and eco-friendly transport for bulk cargo
+                      over long land routes. Reliable ....
+                    </p>
+                    <a
+                      class="text-[#fcb621]"
+                      href="serviceDetailPage/trainFreight.html"
+                      ><u>Read more</u></a
                     >
-                      <h3 class="text-[24px] font-bold leading-none">
-                        Train Freight
-                      </h3>
-                      <p class="text-sm mb-2">
-                        Cost-effective and eco-friendly transport for bulk cargo
-                        over long land routes. Reliable ....
-                      </p>
-                      <a
-                        class="text-[#fcb621]"
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer text-secondary"
-                        ><u>Read more</u></a
-                      >
-                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Card3 -->
-              <div class="w-[380px] h-[406px]">
-                <div
-                  href="#"
-                  class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
-                  style="
-                    background-image: url('../../assets/image/service/Sea\ Freight.jpg');
-                  "
-                >
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
-                  ></div>
+            </div>
 
+            <!-- Card 3 -->
+            <div class="w-[380px] h-[406px]">
+              <div
+                class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
+                style="
+                  background-image: url('../../assets/image/service/Sea Freight.jpg');
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
+                ></div>
+                <div class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20">
                   <div
-                    class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20"
+                    class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
                   >
-                    <div
-                      class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
+                    <h3 class="text-[24px] font-bold leading-none">
+                      Sea Freight
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Best for heavy and large-volume shipments. Efficient for
+                      international trade with containerized cargo...
+                    </p>
+                    <a
+                      class="text-[#fcb621]"
+                      href="serviceDetailPage/seaFreight.html"
+                      ><u>Read more</u></a
                     >
-                      <h3 class="text-[24px] font-bold leading-none">
-                        Sea Freight
-                      </h3>
-                      <p class="text-sm mb-2">
-                        Best for heavy and large-volume shipments. Efficient for
-                        international trade with containerized cargo...
-                      </p>
-                      <a
-                        class="text-[#fcb621]"
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer text-secondary"
-                        ><u>Read more</u></a
-                      >
-                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Card4 -->
-              <div class="w-[380px] h-[406px]">
-                <div
-                  href="#"
-                  class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
-                  style="
-                    background-image: url('../../assets/image/service/Road\ Freight.webp');
-                  "
-                >
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
-                  ></div>
+            </div>
 
+            <!-- Card 4 -->
+            <div class="w-[380px] h-[406px]">
+              <div
+                class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
+                style="
+                  background-image: url('../../assets/image/service/Road Freight.webp');
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
+                ></div>
+                <div class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20">
                   <div
-                    class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20"
+                    class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
                   >
-                    <div
-                      class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
+                    <h3 class="text-[24px] font-bold leading-none">
+                      Road Freight
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Flexible and accessible delivery by trucks or vans.
+                      Suitable for short to medium distances ....
+                    </p>
+                    <a
+                      class="text-[#fcb621]"
+                      href="serviceDetailPage/roadFreight.html"
+                      ><u>Read more</u></a
                     >
-                      <h3 class="text-[24px] font-bold leading-none">
-                        Road Freight
-                      </h3>
-                      <p class="text-sm mb-2">
-                        Flexible and accessible delivery by trucks or vans.
-                        Suitable for short to medium distances ....
-                      </p>
-                      <a
-                        class="text-[#fcb621]"
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer text-secondary"
-                        ><u>Read more</u></a
-                      >
-                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Card5 -->
-              <div class="w-[380px] h-[406px]">
-                <div
-                  href="#"
-                  class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
-                  style="
-                    background-image: url('../../assets/image/service/Stow\ Ability.jpg');
-                  "
-                >
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
-                  ></div>
+            </div>
 
+            <!-- Card 5 -->
+            <div class="w-[380px] h-[406px]">
+              <div
+                class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
+                style="
+                  background-image: url('../../assets/image/service/Stow Ability.jpg');
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
+                ></div>
+                <div class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20">
                   <div
-                    class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20"
+                    class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
                   >
-                    <div
-                      class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
+                    <h3 class="text-[24px] font-bold leading-none">
+                      Stowability
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Optimizing cargo arrangement for safe and efficient
+                      transport. Focused on space usage....
+                    </p>
+                    <a
+                      class="text-[#fcb621]"
+                      href="serviceDetailPage/stowAbility.html"
+                      ><u>Read more</u></a
                     >
-                      <h3 class="text-[24px] font-bold leading-none">
-                        Stowability
-                      </h3>
-                      <p class="text-sm mb-2">
-                        Optimizing cargo arrangement for safe and efficient
-                        transport. Focused on space usage....
-                      </p>
-                      <a
-                        class="text-[#fcb621]"
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer text-secondary"
-                        ><u>Read more</u></a
-                      >
-                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Card6 -->
-              <div class="w-[380px] h-[406px]">
-                <div
-                  href="#"
-                  class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
-                  style="
-                    background-image: url('../../assets/image/service/Handling\ Freight.jpg');
-                  "
-                >
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
-                  ></div>
+            </div>
 
+            <!-- Card 6 -->
+            <div class="w-[380px] h-[406px]">
+              <div
+                class="relative group block w-full h-full rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
+                style="
+                  background-image: url('../../assets/image/service/Handling Freight.jpg');
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
+                ></div>
+                <div class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20">
                   <div
-                    class="absolute inset-0 mb-5 flex items-end ml-5 p-4 z-20"
+                    class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
                   >
-                    <div
-                      class="text-white translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
+                    <h3 class="text-[24px] font-bold leading-none">
+                      Handling Freight
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Proper cargo loading, unloading, and movement processes to
+                      prevent damage and ensure safety....
+                    </p>
+                    <a
+                      class="text-[#fcb621]"
+                      href="serviceDetailPage/handlingFreight.html"
+                      ><u>Read more</u></a
                     >
-                      <h3 class="text-[24px] font-bold leading-none">
-                        Handling Freight
-                      </h3>
-                      <p class="text-sm mb-2">
-                        Specialized care in loading, unloading, and transferring
-                        cargo. Ensures goods are moved securely ....
-                      </p>
-                      <a
-                        class="text-[#fcb621]"
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer text-secondary"
-                        ><u>Read more</u></a
-                      >
-                    </div>
                   </div>
                 </div>
               </div>
@@ -307,8 +308,11 @@
           </div>
         </div>
       </section>
+
       <!-- Our Packages -->
       <section
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
         class="justify-items-center justify-center items-center p-4 md:p-8"
       >
         <div class="container mx-auto mt-32 p-4">
@@ -318,6 +322,7 @@
             </h2>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Premium Package -->
             <div
               class="bg-white border-2 border-gray-200 rounded-lg p-6 text-center hover:border-yellow-500 hover:shadow-lg transition-all"
             >
@@ -345,11 +350,14 @@
                 </li>
               </ul>
               <a
-                href="#"
+                href="../page/login.html"
                 class="inline-block px-4 py-2 bg-yellow-500 text-white font-bold rounded hover:bg-yellow-600 transition-colors"
-                >Get Start</a
               >
+                Get Start
+              </a>
             </div>
+
+            <!-- Standard Package -->
             <div
               class="bg-white border-2 border-gray-200 rounded-lg p-6 text-center hover:border-yellow-500 hover:shadow-lg transition-all"
             >
@@ -378,11 +386,14 @@
                 </li>
               </ul>
               <a
-                href="#"
+                href="../page/login.html"
                 class="inline-block px-4 py-2 bg-yellow-500 text-white font-bold rounded hover:bg-yellow-600 transition-colors"
-                >Get Start</a
               >
+                Get Start
+              </a>
             </div>
+
+            <!-- Basic Package -->
             <div
               class="bg-white border-2 border-gray-200 rounded-lg p-6 text-center hover:border-yellow-500 hover:shadow-lg transition-all"
             >
@@ -409,64 +420,73 @@
                 </li>
               </ul>
               <a
-                href="#"
+                href="../page/login.html"
                 class="inline-block px-4 py-2 bg-yellow-500 text-white font-bold rounded hover:bg-yellow-600 transition-colors"
-                >Get Start</a
               >
+                Get Start
+              </a>
             </div>
           </div>
         </div>
       </section>
+
       <!-- Section 1: 3 Reasons Why You Should Choose Us -->
-      <section class="bg-gray-900 text-white py-16 mt-[100px]">
-        <div class="container mx-auto px-4">
-          <div class="text-center mb-[50px]">
-            <h2 class="text-[40px] font-bold leading-none text-white">
-              3 Reasons Why
-            </h2>
-            <h2 class="text-white text-[40px] font-bold">
+      <section
+        data-aos="flip-up"
+        class="bg-gray-900 text-white py-16 mt-[100px]"
+      >
+        <div class="max-w-screen-xl mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="text-[40px] font-bold leading-none">3 Reasons Why</h2>
+            <h2 class="text-[40px] font-bold">
               You Should <span class="text-yellow-400">Choose Us</span>
             </h2>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mx-[120px]">
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Reason 1 -->
             <div class="text-center">
               <div
                 class="w-12 h-12 bg-yellow-500 rounded-full mx-auto mb-4 flex items-center justify-center"
               >
                 <i class="fas fa-truck text-xl text-white"></i>
               </div>
-              <h3 class="text-[32px] font-bold mb-2">
+              <h3 class="text-[28px] md:text-[32px] font-bold mb-2">
                 Reliable & On-Time Delivery
               </h3>
-              <p class="text-gray-300 text-[20px]">
+              <p class="text-gray-300 text-[18px] md:text-[20px] px-2 md:px-4">
                 We guarantee timely shipments with real-time tracking to ensure
                 your goods arrive as planned — every time.
               </p>
             </div>
+
+            <!-- Reason 2 -->
             <div class="text-center">
               <div
                 class="w-12 h-12 bg-yellow-500 rounded-full mx-auto mb-4 flex items-center justify-center"
               >
                 <i class="fas fa-briefcase text-xl text-white"></i>
               </div>
-              <h3 class="text-[32px] font-bold mb-2">
+              <h3 class="text-[28px] md:text-[32px] font-bold mb-2">
                 End-to-End Logistics Solutions
               </h3>
-              <p class="text-gray-300 text-[20px]">
+              <p class="text-gray-300 text-[18px] md:text-[20px] px-2 md:px-4">
                 From warehousing to last-mile delivery, we offer complete,
                 flexible services tailored to your business needs.
               </p>
             </div>
+
+            <!-- Reason 3 -->
             <div class="text-center">
               <div
                 class="w-12 h-12 bg-yellow-500 rounded-full mx-auto mb-4 flex items-center justify-center"
               >
                 <i class="fas fa-users text-xl text-white"></i>
               </div>
-              <h3 class="text-[32px] font-bold mb-2">
+              <h3 class="text-[28px] md:text-[32px] font-bold mb-2">
                 Trusted by Businesses Nationwide
               </h3>
-              <p class="text-gray-300 text-[20px]">
+              <p class="text-gray-300 text-[18px] md:text-[20px] px-2 md:px-4">
                 With years of experience and a solid reputation, we are the
                 go-to logistics partner for businesses across the country.
               </p>
@@ -474,25 +494,29 @@
           </div>
         </div>
       </section>
+
       <!-- Section 2: Simplify Your Shipping Experience -->
-      <section class="mt-[100px] py-16">
-        <div class="flex mx-[120px]">
+      <section data-aos="fade-up-right" class="mt-[80px] md:mt-[100px] py-16">
+        <!-- Top Content -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-10 mx-4 md:mx-[120px]"
+        >
           <img
-            class="mr-[54px] w-[506px]"
+            class="w-full md:w-[506px] rounded-lg"
             src="../../assets/image/service/logistics-service-provider.jpg"
             alt="logistic"
           />
           <div>
-            <h6
-              class="text-[16px] font-bold leading-none text-[#FCB621] mb-[16px]"
-            >
+            <h6 class="text-[16px] font-bold text-[#FCB621] mb-4">
               How It Works
             </h6>
-            <h2 class="text-[40px] font-bold m-auto">
+            <h2
+              class="text-[28px] sm:text-[32px] md:text-[40px] font-bold mb-4"
+            >
               Simplify Your Shipping Experience with Our
               <span class="text-[#FCB621]">Easy Step Process</span>
             </h2>
-            <p class="text-[20px] text-gray-600">
+            <p class="text-[16px] md:text-[20px] text-gray-600">
               At FastGo, we believe in providing our clients with personalized
               and efficient logistics solutions that meet their unique needs.
               With years of experience and a team of experts, we are dedicated
@@ -500,27 +524,33 @@
             </p>
           </div>
         </div>
+
+        <!-- Divider -->
         <hr
-          class="border-t-2 border-dashed border-gray-400 w-[85%] mx-auto mt-[56px]"
+          class="border-t-2 border-dashed border-gray-400 w-[90%] md:w-[85%] mx-auto mt-14"
         />
-        <div class="mt-[56px] grid grid-cols-1 md:grid-cols-3 gap-8 mx-[120px]">
-          <!-- Item 1 -->
+
+        <!-- Steps Grid -->
+        <div
+          class="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-4 md:mx-[120px]"
+        >
+          <!-- Step Item -->
           <div
             class="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
           >
             <div
-              class="mb-[12px] flex items-center text-gray-400 border border-gray-300 py-[4px] px-[16px] gap-2 rounded-4xl inline-flex items-center"
+              class="mb-3 inline-flex items-center text-gray-400 border border-gray-300 py-1 px-4 gap-2 rounded-full"
             >
               <span>Step 1</span>
             </div>
             <div
-              class="w-32 h-32 bg-yellow-500 rounded-lg mx-auto mb-4 flex items-center justify-center"
+              class="w-24 h-24 sm:w-32 sm:h-32 bg-yellow-500 rounded-lg mx-auto mb-4 flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="68px"
+                height="48"
                 viewBox="0 -960 960 960"
-                width="68px"
+                width="48"
                 fill="#FFFFFF"
               >
                 <path
@@ -528,32 +558,32 @@
                 />
               </svg>
             </div>
-            <h3 class="text-[24px] font-bold leading-none mb-3 text-gray-800">
+            <h3 class="text-[20px] sm:text-[24px] font-bold mb-3 text-gray-800">
               Request a Quote
             </h3>
-            <p class="text-gray-500 text-[18px]">
-              At FastGo, we believe in providing our clients with personalized
-              and efficient logistics solutions that meet their unique needs.
+            <p class="text-gray-500 text-[16px] sm:text-[18px]">
+              Get a personalized quote for your shipping needs in just a few
+              clicks.
             </p>
           </div>
 
-          <!-- Item 2 -->
+          <!-- Step 2 -->
           <div
             class="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
           >
             <div
-              class="mb-[12px] flex items-center text-gray-400 border border-gray-300 py-[4px] px-[16px] gap-2 rounded-4xl inline-flex items-center"
+              class="mb-3 inline-flex items-center text-gray-400 border border-gray-300 py-1 px-4 gap-2 rounded-full"
             >
               <span>Step 2</span>
             </div>
             <div
-              class="w-32 h-32 bg-yellow-500 rounded-lg mx-auto mb-4 flex items-center justify-center"
+              class="w-24 h-24 sm:w-32 sm:h-32 bg-yellow-500 rounded-lg mx-auto mb-4 flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="68px"
+                height="48"
                 viewBox="0 -960 960 960"
-                width="68px"
+                width="48"
                 fill="#FFFFFF"
               >
                 <path
@@ -561,32 +591,32 @@
                 />
               </svg>
             </div>
-            <h3 class="text-[24px] font-bold leading-none mb-3 text-gray-800">
+            <h3 class="text-[20px] sm:text-[24px] font-bold mb-3 text-gray-800">
               Provide Details
             </h3>
-            <p class="text-gray-500 text-[18px]">
-              At FastGo, we believe in providing our clients with personalized
-              and efficient logistics solutions that meet their unique needs.
+            <p class="text-gray-500 text-[16px] sm:text-[18px]">
+              Share your shipment details and requirements so we can handle the
+              rest.
             </p>
           </div>
 
-          <!-- Item 3 -->
+          <!-- Step 3 -->
           <div
             class="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
           >
             <div
-              class="mb-[12px] flex items-center text-gray-400 border border-gray-300 py-[4px] px-[16px] gap-2 rounded-4xl inline-flex items-center"
+              class="mb-3 inline-flex items-center text-gray-400 border border-gray-300 py-1 px-4 gap-2 rounded-full"
             >
               <span>Step 3</span>
             </div>
             <div
-              class="w-32 h-32 bg-yellow-500 rounded-lg mx-auto mb-4 flex items-center justify-center"
+              class="w-24 h-24 sm:w-32 sm:h-32 bg-yellow-500 rounded-lg mx-auto mb-4 flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="68px"
+                height="48"
                 viewBox="0 -960 960 960"
-                width="68px"
+                width="48"
                 fill="#FFFFFF"
               >
                 <path
@@ -594,18 +624,21 @@
                 />
               </svg>
             </div>
-            <h3 class="text-[24px] font-bold leading-none mb-3 text-gray-800">
+            <h3 class="text-[20px] sm:text-[24px] font-bold mb-3 text-gray-800">
               Schedule Pick-Up
             </h3>
-            <p class="text-gray-500 text-[18px]">
-              At FastGo, we believe in providing our clients with personalized
-              and efficient logistics solutions that meet their unique needs.
+            <p class="text-gray-500 text-[16px] sm:text-[18px]">
+              Choose your preferred pick-up time and we’ll handle the logistics.
             </p>
           </div>
         </div>
       </section>
+
       <!-- Section 3: Delivering Trust, Speed, and Reliability -->
-      <section class="overflow-hidden bg-white py-8 sm:py-16 mt-[100px]">
+      <section
+        data-aos="fade-up-left"
+        class="overflow-hidden bg-white py-8 sm:py-16 mt-[100px]"
+      >
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div
             class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:max-w-none lg:grid-cols-2 lg:items-stretch"
@@ -634,71 +667,85 @@
                 <dl
                   class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none"
                 >
+                  <!-- Feature 1 -->
                   <div class="flex gap-4 items-start">
-                    <span class="text-violet-600 bg-[#FCB621] p-3 rounded-full">
+                    <span class="text-white bg-[#FCB621] p-3 rounded-full">
+                      <!-- Truck Icon -->
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#FFFFFF"
+                        fill="currentColor"
+                        height="24"
+                        width="24"
+                        viewBox="0 0 24 24"
                       >
+                        <path d="M3 6h13v13H3z" fill="none" />
                         <path
-                          d="M280-160q-50 0-85-35t-35-85H60l18-80h113q17-19 40-29.5t49-10.5q26 0 49 10.5t40 29.5h167l84-360H182l4-17q6-28 27.5-45.5T264-800h456l-37 160h117l120 160-40 200h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85H400q0 50-35 85t-85 35Zm357-280h193l4-21-74-99h-95l-28 120Zm-19-273 2-7-84 360 2-7 34-146 46-200ZM20-427l20-80h220l-20 80H20Zm80-146 20-80h260l-20 80H100Zm180 333q17 0 28.5-11.5T320-280q0-17-11.5-28.5T280-320q-17 0-28.5 11.5T240-280q0 17 11.5 28.5T280-240Zm400 0q17 0 28.5-11.5T720-280q0-17-11.5-28.5T680-320q-17 0-28.5 11.5T640-280q0 17 11.5 28.5T680-240Z"
-                        /></svg
-                    ></span>
+                          d="M21 16v-5l-4-5H3v11h2a3 3 0 1 0 6 0h4a3 3 0 1 0 6 0h-2zm-5 0V8h2.34L19 10.34V16h-3zM7 19a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm10-1a1 1 0 1 1-.001-2.001A1 1 0 0 1 17 18z"
+                        />
+                      </svg>
+                    </span>
                     <div>
-                      <h3 class="text-[24px] font-bold">Fully Responsive</h3>
-                      <p class="mt-1 text-[20px] text-gray-500">
-                        With mobile, tablet &amp; desktop support it doesn't
-                        matter what device you're using. This plugin is
-                        responsive in all browsers.
-                      </p>
+                      <dt class="font-semibold text-gray-900 text-[20px]">
+                        Reliable Fleet
+                      </dt>
+                      <dd>
+                        Our modern fleet ensures every delivery is safe and on
+                        time, no matter the distance.
+                      </dd>
                     </div>
                   </div>
 
+                  <!-- Feature 2 -->
                   <div class="flex gap-4 items-start">
-                    <span class="text-violet-600 bg-[#FCB621] p-3 rounded-full">
+                    <span class="text-white bg-[#FCB621] p-3 rounded-full">
+                      <!-- Shield Icon -->
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#FFFFFF"
+                        fill="currentColor"
+                        height="24"
+                        width="24"
+                        viewBox="0 0 24 24"
                       >
                         <path
-                          d="M216-176q-45-45-70.5-104T120-402q0-63 24-124.5T222-642q35-35 86.5-60t122-39.5Q501-756 591.5-759t202.5 7q8 106 5 195t-16.5 160.5q-13.5 71.5-38 125T684-182q-53 53-112.5 77.5T450-80q-65 0-127-25.5T216-176Zm112-16q29 17 59.5 24.5T450-160q46 0 91-18.5t86-59.5q18-18 36.5-50.5t32-85Q709-426 716-500.5t2-177.5q-49-2-110.5-1.5T485-670q-61 9-116 29t-90 55q-45 45-62 89t-17 85q0 59 22.5 103.5T262-246q42-80 111-153.5T534-520q-72 63-125.5 142.5T328-192Zm0 0Zm0 0Z"
-                        /></svg
-                    ></span>
+                          d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"
+                        />
+                      </svg>
+                    </span>
                     <div>
-                      <h3 class="text-[24px] font-bold">Fully Responsive</h3>
-                      <p class="mt-1 text-[20px] text-gray-500">
-                        With mobile, tablet &amp; desktop support it doesn't
-                        matter what device you're using. This plugin is
-                        responsive in all browsers.
-                      </p>
+                      <dt class="font-semibold text-gray-900 text-[20px]">
+                        Secure Handling
+                      </dt>
+                      <dd>
+                        We prioritize the safety of your packages with advanced
+                        tracking and security protocols.
+                      </dd>
                     </div>
                   </div>
+
+                  <!-- Feature 3 -->
                   <div class="flex gap-4 items-start">
-                    <span class="text-violet-600 bg-[#FCB621] p-3 rounded-full">
+                    <span class="text-white bg-[#FCB621] p-3 rounded-full">
+                      <!-- Speed Icon -->
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#FFFFFF"
+                        fill="currentColor"
+                        height="24"
+                        width="24"
+                        viewBox="0 0 24 24"
                       >
                         <path
-                          d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80-28-28q-6-6-9-13t-3-15v-224q-33 0-56.5-23.5T360-520v-40L235-685q-35 42-55 94t-20 111q0 134 93 227t227 93Zm40-2q119-15 199.5-105T800-480q0-133-93.5-226.5T480-800q-44 0-84.5 11.5T320-757v77h142q18 0 34.5 8t27.5 22l56 70h60q17 0 28.5 11.5T680-540v42q0 9-2.5 17t-7.5 16L520-240v78Z"
-                        /></svg
-                    ></span>
+                          d="M20.38 8.59l-8.49 8.49-4.59-4.59L8 11l3 3 7.59-7.59L20.38 8.59z"
+                        />
+                      </svg>
+                    </span>
                     <div>
-                      <h3 class="text-[24px] font-bold">Fully Responsive</h3>
-                      <p class="mt-1 text-[20px] text-gray-500">
-                        With mobile, tablet &amp; desktop support it doesn't
-                        matter what device you're using. This plugin is
-                        responsive in all browsers.
-                      </p>
+                      <dt class="font-semibold text-gray-900 text-[20px]">
+                        Nationwide Coverage
+                      </dt>
+                      <dd>
+                        From urban hubs to remote towns, our network spans the
+                        entire country to serve your needs.
+                      </dd>
                     </div>
                   </div>
                 </dl>
@@ -707,7 +754,107 @@
           </div>
         </div>
       </section>
+
+      <!-- Newsletter Section -->
+      <section
+        class="relative py-16 mt-0 lg:mt-96 text-black bg-cover bg-center"
+        style="background-image: url(../../assets/image/home/img/Bg.png)"
+      >
+        <div class="container mx-auto px-10">
+          <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <!-- Image Column - Hidden on smallest screens -->
+            <div class="hidden lg:block lg:w-1/4 flex-shrink-0">
+              <img
+                data-aos="zoom-in-up"
+                src="../../assets/image/home/img/delivery.png"
+                alt="Delivery Person"
+                class="w-full h-auto max-w-[430px] mx-auto absolute bottom-0"
+              />
+            </div>
+
+            <!-- Content Column -->
+            <div class="w-full lg:w-3/4 text-center md:text-left">
+              <h2
+                data-aos="fade-up"
+                class="text-3xl md:text-4xl font-bold mb-4 md:mb-6"
+              >
+                Subscribe for <span>exclusive</span> offers and news
+              </h2>
+
+              <div
+                data-aos="fade-up"
+                class="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto md:mx-0"
+              >
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  class="flex-grow px-5 py-3 rounded-lg border border-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                />
+                <button
+                  class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-black hover:bg-gray-800 px-6 font-medium text-neutral-200 duration-500"
+                >
+                  <div
+                    class="relative inline-flex -translate-x-0 items-center transition group-hover:translate-x-6"
+                  >
+                    <div
+                      class="absolute -translate-x-4 opacity-0 transition group-hover:-translate-x-6 group-hover:opacity-100"
+                    >
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                      >
+                        <path
+                          d="M6.97942 1.25171L6.9585 1.30199L5.58662 4.60039C5.54342 4.70426 5.44573 4.77523 5.3336 4.78422L1.7727 5.0697L1.71841 5.07405L1.38687 5.10063L1.08608 5.12475C0.820085 5.14607 0.712228 5.47802 0.914889 5.65162L1.14406 5.84793L1.39666 6.06431L1.43802 6.09974L4.15105 8.42374C4.23648 8.49692 4.2738 8.61176 4.24769 8.72118L3.41882 12.196L3.40618 12.249L3.32901 12.5725L3.25899 12.866C3.19708 13.1256 3.47945 13.3308 3.70718 13.1917L3.9647 13.0344L4.24854 12.861L4.29502 12.8326L7.34365 10.9705C7.43965 10.9119 7.5604 10.9119 7.6564 10.9705L10.705 12.8326L10.7515 12.861L11.0354 13.0344L11.2929 13.1917C11.5206 13.3308 11.803 13.1256 11.7411 12.866L11.671 12.5725L11.5939 12.249L11.5812 12.196L10.7524 8.72118C10.7263 8.61176 10.7636 8.49692 10.849 8.42374L13.562 6.09974L13.6034 6.06431L13.856 5.84793L14.0852 5.65162C14.2878 5.47802 14.18 5.14607 13.914 5.12475L13.6132 5.10063L13.2816 5.07405L13.2274 5.0697L9.66645 4.78422C9.55432 4.77523 9.45663 4.70426 9.41343 4.60039L8.04155 1.30199L8.02064 1.25171L7.89291 0.944609L7.77702 0.665992C7.67454 0.419604 7.32551 0.419604 7.22303 0.665992L7.10715 0.944609L6.97942 1.25171ZM7.50003 2.60397L6.50994 4.98442C6.32273 5.43453 5.89944 5.74207 5.41351 5.78103L2.84361 5.98705L4.8016 7.66428C5.17183 7.98142 5.33351 8.47903 5.2204 8.95321L4.62221 11.461L6.8224 10.1171C7.23842 9.86302 7.76164 9.86302 8.17766 10.1171L10.3778 11.461L9.77965 8.95321C9.66654 8.47903 9.82822 7.98142 10.1984 7.66428L12.1564 5.98705L9.58654 5.78103C9.10061 5.74207 8.67732 5.43453 8.49011 4.98442L7.50003 2.60397Z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                    <span class="pr-6">Subscribe</span>
+                    <div
+                      class="absolute right-0 translate-x-0 opacity-100 transition group-hover:translate-x-4 group-hover:opacity-0"
+                    >
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                      >
+                        <path
+                          d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+
+              <p data-aos="fade-up" class="text-sm text-gray-600 mt-3">
+                We'll never share your email. Unsubscribe anytime.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer id="footer"></footer>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/script.js" type="module"></script>
+    <script type="module">
+      AOS.init({
+        duration: 600,
+      });
+    </script>
   </body>
 </html>
