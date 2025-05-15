@@ -852,15 +852,16 @@
     <footer id="footer"></footer>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="module" src="../../components/Footer.js"></script>
+    <script type="module">
+      import NavbarScript from "../../components/navbar.js";
+      import footerHTML from "../../components/footer.js";
+      NavbarScript();
+      footerHTML();
+    </script>
     <script type="module">
       AOS.init({
         duration: 600,
       });
-      import NavbarScript from '../../components/navbar.js';
-      import footerHTML from '../../components/footer.js';
-      NavbarScript();
-      footerHTML();
     </script>
   </body>
 </html>
