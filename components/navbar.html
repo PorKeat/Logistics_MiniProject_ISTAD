@@ -6,9 +6,9 @@
   <title>Navbar</title>
   <link rel="stylesheet" href="../src/output.css"/>
 </head>
-<body class="bg-black">
-  <header class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<body>
+  <nav class="fixed top-0 left-0 w-full z-50 bg-[#1e33472e] backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl  mx-auto px-6 py-4 flex items-center justify-between">
 
       <!-- Logo -->
       <div class="flex items-center gap-2">
@@ -20,14 +20,14 @@
       </div>
 
       <!-- Center Nav - Desktop -->
-      <nav class="hidden md:flex justify-end w-full max-w-5xl gap-7 text-white text-lg font-normal">
-        <a href="#" class="hover:text-[#fcb621] transition">Home</a>
-        <a href="#" class="hover:text-[#fcb621] transition">Services</a>
-        <a href="#" class="hover:text-[#fcb621] transition">Blog</a>
-        <a href="#" class="hover:text-[#fcb621] transition">Contact</a>
-        <a href="#" class="hover:text-[#fcb621] transition">About Us</a>
-        <a href="#" class="hover:text-[#fcb621] transition">FAQ</a>
-      </nav>
+      <div class="hidden md:flex justify-end w-full max-w-5xl gap-7 text-white text-lg font-normal">
+        <a href="../src/index.html" class="hover:text-[#fcb621] transition">Home</a>
+        <a href="../src/page/services.html" class="hover:text-[#fcb621] transition">Services</a>
+        <a href="../src/page/blog.html" class="hover:text-[#fcb621] transition">Blog</a>
+        <a href="../src/page/contact.html" class="hover:text-[#fcb621] transition">Contact</a>
+        <a href="../src/page/about.html" class="hover:text-[#fcb621] transition">About Us</a>
+        <a href="../src/page/faq.html" class="hover:text-[#fcb621] transition">FAQ</a>
+      </div>
 
       <!-- Login Button - Desktop -->
       <div class="hidden md:block">
@@ -62,7 +62,7 @@
         </li>
       </ul>
     </div>
-  </header>
+  </nav>
 
   <!-- JavaScript for toggle -->
   <script>
