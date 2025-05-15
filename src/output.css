@@ -666,6 +666,7 @@
   .flex-grow {
     flex-grow: 1;
   }
+
   .-translate-x-0 {
     --tw-translate-x: calc(var(--spacing) * -0);
     translate: var(--tw-translate-x) var(--tw-translate-y);
