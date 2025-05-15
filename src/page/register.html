@@ -1,50 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="../output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avast</title>
+    <link
+      rel="icon"
+      href="../../assets/image/home/svg/do-not-tilt.svg"
+      sizes="any"
+    />
+    <link
+      rel="icon"
+      href="../../assets/image/home/svg/do-not-tilt.svg"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="../output.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body class="grid place-content-center min-h-screen w-full bg-center bg-no-repeat bg-cover p-1" style="background-image: url('../../assets/image/login_register/bg-1.png')">
-  <div class="absolute left-7 top-7">
-    <a href="../index.html" class="text-xl px-3 py-1 rounded-lg text-gray-500 bg-[#fcb621] hover:text-black"><i class="fa-solid fa-arrow-left" class=""></i></a>
-  </div>
-  <main class="h-full">
-    <section class="bg-black text-center bg-opacity-50 text-white p-2 sm:p-4 pt-10 rounded-xl w-[300px] sm:w-full max-w-md ">
-      <div class="flex flex-col items-center mb-6 mt-6">
-        <img src="../../assets/image/logo.png" alt="Logo" class="w-[130px]">
-        <h1 class="text-2xl sm:text-3xl">Create your account</h1>
-      </div>
-      <form action="" class="space-y-3">
-        <input type="text" placeholder="First Name" class="text-sm sm:text-base w-full p-2 rounded border outline-none text-[#d8d9de]">
-        <input type="text" placeholder="Last Name" class="text-sm sm:text-base w-full p-2 rounded border outline-none text-[#d8d9de]">
-        <input type="password" placeholder="Password" class="text-sm sm:text-base w-full p-2 rounded border outline-none text-[#d8d9de]">
-        <button type="submit" class="text-sm sm:text-base w-full bg-[#fcb621] py-2 rounded">Sign up</button>
-      </form>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body
+    class="grid place-content-center min-h-screen w-full bg-center bg-no-repeat bg-cover p-1"
+    style="background-image: url('../../assets/image/login_register/bg-1.png')"
+  >
+    <div class="absolute left-7 top-7">
+      <a
+        href="../index.html"
+        class="text-xl px-3 py-1 rounded-lg text-gray-500 bg-[#fcb621] hover:text-black"
+        ><i class="fa-solid fa-arrow-left" class=""></i
+      ></a>
+    </div>
+    <main class="h-full">
+      <section
+        class="bg-black text-center bg-opacity-50 text-white p-2 sm:p-4 pt-10 rounded-xl w-[300px] sm:w-full max-w-md"
+      >
+        <div class="flex flex-col items-center mb-6 mt-6">
+          <img src="../../assets/image/logo.png" alt="Logo" class="w-[130px]" />
+          <h1 class="text-2xl sm:text-3xl">Create your account</h1>
+        </div>
+        <form action="" class="space-y-3">
+          <input
+            type="text"
+            placeholder="First Name"
+            class="text-sm sm:text-base w-full p-2 rounded border outline-none text-[#d8d9de]"
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            class="text-sm sm:text-base w-full p-2 rounded border outline-none text-[#d8d9de]"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            class="text-sm sm:text-base w-full p-2 rounded border outline-none text-[#d8d9de]"
+          />
+          <button
+            type="submit"
+            class="text-sm sm:text-base w-full bg-[#fcb621] py-2 rounded"
+          >
+            Sign up
+          </button>
+        </form>
 
-      <div class="flex items-center justify-between gap-2 my-4 px-1">
-        <hr class="w-1/2 border-gray-300">
-        <span class="text-sm">OR</span>
-        <hr class="w-1/2 border-gray-300">
-      </div>
+        <div class="flex items-center justify-between gap-2 my-4 px-1">
+          <hr class="w-1/2 border-gray-300" />
+          <span class="text-sm">OR</span>
+          <hr class="w-1/2 border-gray-300" />
+        </div>
 
-      <div class="flex justify-between gap-1 flex-col sm:flex-row p-1">
-        <button class="flex-1 flex items-center justify-center gap-2 border border-white rounded py-2 sm:py-3 px-1">
-          <img src="../../assets/image/login_register/google-icon-logo.svg" alt="" class="w-7"> Continue with Google
-        </button>
-        <button class="flex-1 flex items-center justify-center gap-2 border border-white rounded py-2 sm:py-3 px-1">
-          <img src="../../assets/image/login_register/Facebook_icon.svg.png" alt="" class="w-7"> Continue with GitHub
-        </button>
-      </div>
+        <div class="flex justify-between gap-1 flex-col sm:flex-row p-1">
+          <button
+            class="flex-1 flex items-center justify-center gap-2 border border-white rounded py-2 sm:py-3 px-1"
+          >
+            <img
+              src="../../assets/image/login_register/google-icon-logo.svg"
+              alt=""
+              class="w-7"
+            />
+            Continue with Google
+          </button>
+          <button
+            class="flex-1 flex items-center justify-center gap-2 border border-white rounded py-2 sm:py-3 px-1"
+          >
+            <img
+              src="../../assets/image/login_register/Facebook_icon.svg.png"
+              alt=""
+              class="w-7"
+            />
+            Continue with GitHub
+          </button>
+        </div>
 
-      <p class="mt-6 text-center text-sm">Already have an account? 
-        <a href="./login.html" class="text-[#fcb621] hover:underline font-semibold text-base">Sign in</a>
-      </p>
-    </section>
-  </main>
-</body>
-
+        <p class="mt-6 text-center text-sm">
+          Already have an account?
+          <a
+            href="./login.html"
+            class="text-[#fcb621] hover:underline font-semibold text-base"
+            >Sign in</a
+          >
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
