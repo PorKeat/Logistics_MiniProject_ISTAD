@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="/src/input.css">
     <link rel="stylesheet" href="/src/output.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -12,7 +11,7 @@
     <style>
         
         .hero-section {
-            height: 40vh;
+            height: 60vh;
             background-image: url('/assets/image/contact/freepik__adjust__8135.png');
             background-size: cover;
             background-position: center;
@@ -31,7 +30,9 @@
 </head>
 <body class="min-h-screen flex flex-col bg-gray-50 font-mukta">
     <!-- Navbar -->
-   
+    <header>
+        <nav id="navbar"></nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero-section flex items-center justify-center" data-aos="fade">
@@ -151,8 +152,15 @@
         </section>
     </div>
     
-    <!-- Footer -->
-    
+    <footer id="footer"></footer>
+
+    <script type="module">
+        import NavbarScript from '/components/Navbar.js';
+        import renderFooter from '/components/Footer.js';
+        
+        NavbarScript();
+        renderFooter();
+    </script>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

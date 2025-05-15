@@ -3,18 +3,473 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link href="../output.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Blog</title>
   </head>
-  <body>
+  <body class="font-mukta">
     <header
-      class="bg-[url('../../assets/image/blog/heroSection.png')] bg-cover bg-center h-[840px] flex items-center justify-center"
+      class="bg-[url('../../assets/image/blog/heroSection.png')] bg-cover bg-center h-[840px] flex items-center"
     >
       <nav id="navbar"></nav>
+      <section class="w-[80%] mx-auto select-none">
+        <small class="text-secondary text-[16px] block mb-[30px]"
+          >Blog Post</small
+        >
+        <h1 class="text-[64px] text-white font-bold leading-[80px]">
+          Smarter Shipping <br /><span class="text-secondary"
+            >The Way it Should Be</span
+          >.
+        </h1>
+      </section>
     </header>
-    <main>
-        <h1 class="font-mukta text-secondary font-black bg-primary">Hello</h1>
+    <main class="h-[200vh]">
+      <section class="w-[90%] max-w-7xl mx-auto mt-[60px] px-4">
+        <div class="relative flex items-center h-[30px]">
+          <hr class="w-full border-t-4 border-black" />
+          <span
+            class="absolute text-[16px] font-semibold text-white bg-secondary not-italic px-6 py-2 transform -skew-x-12 rounded-[3px] left-[-2px]"
+          >
+            Trending Logistics News
+          </span>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10">
+          <div class="lg:border-r-2 border-primary pr-0 lg:pr-6">
+            <a
+              href="./blogDetailPage/mainCardDetail.html"
+              class="block group transition-transform duration-300"
+            >
+              <div class="relative w-full">
+                <img
+                  src="../../assets/image/blog/mainCard.avif"
+                  alt="ship"
+                  class="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[380px] object-cover rounded-[6px] brightness-60 group-hover:brightness-80 group-hover:scale-105 transition duration-300"
+                />
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div
+                    class="absolute bg-white w-[60px] h-[60px] rounded-full opacity-50 group-hover:opacity-80 group-hover:shadow-xl transition duration-300"
+                  ></div>
+                  <i
+                    class="fa-solid fa-play text-[24px] text-white z-10 group-hover:text-secondary ml-1"
+                  ></i>
+                </div>
+              </div>
+              <div class="mt-5">
+                <small
+                  class="uppercase bg-secondary p-1 text-[12px] rounded-[2px] text-white"
+                  >Shipping</small
+                >
+                <h3
+                  class="font-bold text-[22px] md:text-[26px] lg:text-[28px] my-[20px] leading-8 md:leading-9"
+                >
+                  Revolutionizing Global Freight With Smarter Sea Routes
+                </h3>
+                <div class="flex flex-wrap items-center gap-5">
+                  <small
+                    class="uppercase font-medium text-description text-[13px]"
+                  >
+                    <i class="fa-regular fa-circle-user"></i> by admin
+                  </small>
+                  <small
+                    class="uppercase font-medium text-description text-[13px]"
+                  >
+                    <i class="fa-regular fa-calendar"></i> 05 May, 2025
+                  </small>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="flex flex-col gap-6">
+            <a
+              href="../page/blogDetailPage/subCardDetailOne.html"
+              class="group"
+            >
+              <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="relative w-full sm:w-[220px] h-[160px] shrink-0">
+                  <img
+                    src="../../assets/image/blog/subCardOne.jpg"
+                    alt="subCardOne"
+                    class="object-cover w-full h-full rounded-[6px] brightness-60 group-hover:brightness-80 group-hover:scale-105 transition duration-300"
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <div
+                      class="bg-white w-[40px] h-[40px] rounded-full opacity-50 group-hover:opacity-80 group-hover:shadow-xl transition duration-300 absolute"
+                    ></div>
+                    <i
+                      class="fa-solid fa-play text-[16px] text-white z-10 group-hover:text-secondary absolute"
+                    ></i>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <small
+                    class="uppercase bg-secondary p-1 text-[12px] rounded-[2px] text-white"
+                    >Warehousing</small
+                  >
+                  <h3
+                    class="font-bold text-[20px] md:text-[22px] leading-7 md:leading-9 my-2"
+                  >
+                    Optimizing Inventory Flow With Automated Storage Solutions
+                  </h3>
+                  <div class="flex flex-wrap items-center gap-5">
+                    <small
+                      class="uppercase font-medium text-description text-[13px]"
+                    >
+                      <i class="fa-regular fa-circle-user"></i> by admin
+                    </small>
+                    <small
+                      class="uppercase font-medium text-description text-[13px]"
+                    >
+                      <i class="fa-regular fa-calendar"></i> 05 May, 2025
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./blogDetailPage/subCardDetailTwo.html" class="group">
+              <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="relative w-full sm:w-[220px] h-[160px] shrink-0">
+                  <img
+                    src="../../assets/image/blog/subCardTwo.avif"
+                    alt="subCardTwo"
+                    class="object-cover w-full h-full rounded-[6px] brightness-60 group-hover:brightness-80 group-hover:scale-105 transition duration-300"
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <div
+                      class="bg-white w-[40px] h-[40px] rounded-full opacity-50 group-hover:opacity-80 group-hover:shadow-xl transition duration-300 absolute"
+                    ></div>
+                    <i
+                      class="fa-solid fa-play text-[16px] text-white z-10 group-hover:text-secondary absolute"
+                    ></i>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <small
+                    class="uppercase bg-secondary p-1 text-[12px] rounded-[2px] text-white"
+                    >Action</small
+                  >
+                  <h3
+                    class="font-bold text-[20px] md:text-[22px] leading-7 md:leading-9 my-2"
+                  >
+                    Solving the Final Delivery Puzzle With Real-Time Tracking
+                  </h3>
+                  <div class="flex flex-wrap items-center gap-5">
+                    <small
+                      class="uppercase font-medium text-description text-[13px]"
+                    >
+                      <i class="fa-regular fa-circle-user"></i> by admin
+                    </small>
+                    <small
+                      class="uppercase font-medium text-description text-[13px]"
+                    >
+                      <i class="fa-regular fa-calendar"></i> 05 May, 2025
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./blogDetailPage/subCardDetailThree.html" class="group">
+              <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="relative w-full sm:w-[220px] h-[160px] shrink-0">
+                  <img
+                    src="../../assets/image/blog/subCardThree.avif"
+                    alt="subCardThree"
+                    class="object-cover w-full h-full rounded-[6px] brightness-60 group-hover:brightness-80 group-hover:scale-105 transition duration-300"
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <div
+                      class="bg-white w-[40px] h-[40px] rounded-full opacity-50 group-hover:opacity-80 group-hover:shadow-xl transition duration-300 absolute"
+                    ></div>
+                    <i
+                      class="fa-solid fa-play text-[16px] text-white z-10 group-hover:text-secondary absolute"
+                    ></i>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <small
+                    class="uppercase bg-secondary p-1 text-[12px] rounded-[2px] text-white"
+                    >Supply Chain</small
+                  >
+                  <h3
+                    class="font-bold text-[20px] md:text-[22px] leading-7 md:leading-9 my-2"
+                  >
+                    Deploying Digital Maps To Enhance Route Planning
+                  </h3>
+                  <div class="flex flex-wrap items-center gap-5">
+                    <small
+                      class="uppercase font-medium text-description text-[13px]"
+                    >
+                      <i class="fa-regular fa-circle-user"></i> by admin
+                    </small>
+                    <small
+                      class="uppercase font-medium text-description text-[13px]"
+                    >
+                      <i class="fa-regular fa-calendar"></i> 05 May, 2025
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-[80%] mx-auto mt-[60px]">
+        <div class="relative flex items-center h-[30px]">
+          <hr class="w-full border-t-5 border-black" />
+          <span
+            class="absolute text-[16px] font-semibold text-white bg-secondary not-italic px-6 left-[-2px] py-2 transform -skew-x-12 rounded-[3px]"
+          >
+            Last Post
+          </span>
+        </div>
+        <div class="mt-[80px] flex flex-wrap justify-around gap-y-10">
+          <div
+            class="bg-[#f5f5f5] w-[380px] h-auto rounded-[12px] transition-all duration-500 ease-in-out will-change-transform hover:-translate-y-3 shadow-[4px_2px_7px_0px_rgba(0,0,0,0.14)] hover:shadow-[8px_4px_15px_0px_rgba(0,0,0,0.14)] cursor-pointer"
+          >
+            <a href="./blogDetailPage/lastPostOne.html">
+              <div class="relative">
+                <img
+                  src="../../assets/image/blog/lastPostOne.png"
+                  alt="lastPostOne"
+                  class="rounded-[12px] w-full object-cover"
+                />
+                <span
+                  class="absolute bottom-0 right-0 bg-secondary w-[40px] h-[25px] flex items-center justify-center rounded-tl-[6px]"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </div>
+              <div class="p-4 flex flex-col gap-3">
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-secondary bg-primary px-6 py-1 rounded-full text-[10px] font-semibold"
+                    >New</span
+                  ><small
+                    class="uppercase font-medium text-description text-[12px]"
+                    ><i class="fa-regular fa-calendar"></i> 05 May, 2025</small
+                  >
+                </div>
+                <h3 class="text-[16px] font-black line-clamp-2">
+                  Global Supply Chain Disruptions Adapting to an Era of Constant
+                  Change
+                </h3>
+                <p class="text-[14px] font-[400px] text-description">
+                  International trade is evolving rapidly, reshaping supply
+                  networks worldwide.
+                </p>
+                <small class="uppercase font-medium text-black text-[13px]"
+                  ><i class="fa-regular fa-circle-user"></i> by admin</small
+                >
+              </div>
+            </a>
+          </div>
+          <div
+            class="bg-[#f5f5f5] w-[380px] h-auto rounded-[12px] transition-all duration-500 ease-in-out will-change-transform hover:-translate-y-3 shadow-[4px_2px_7px_0px_rgba(0,0,0,0.14)] hover:shadow-[8px_4px_15px_0px_rgba(0,0,0,0.14)] cursor-pointer"
+          >
+            <a href="./blogDetailPage/lastPostTwo.html">
+              <div class="relative">
+                <img
+                  src="../../assets/image/blog/lastPostTwo.png"
+                  alt="lastPostOne"
+                  class="rounded-[12px] w-full object-cover"
+                />
+                <span
+                  class="absolute bottom-0 right-0 bg-secondary w-[40px] h-[25px] flex items-center justify-center rounded-tl-[6px]"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </div>
+              <div class="p-4 flex flex-col gap-3">
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-secondary bg-primary px-6 py-1 rounded-full text-[10px] font-semibold"
+                    >New</span
+                  ><small
+                    class="uppercase font-medium text-description text-[12px]"
+                    ><i class="fa-regular fa-calendar"></i> 05 May, 2025</small
+                  >
+                </div>
+                <h3 class="text-[16px] font-black line-clamp-2">
+                  Automation in Modern Warehouses Transforming Operations with
+                  Robotics
+                </h3>
+                <p class="text-[14px] font-[400px] text-description">
+                  AI and automation enhance productivity and reduce human error
+                  in fulfillment centers.
+                </p>
+                <small class="uppercase font-medium text-black text-[13px]"
+                  ><i class="fa-regular fa-circle-user"></i> by admin</small
+                >
+              </div>
+            </a>
+          </div>
+          <div
+            class="bg-[#f5f5f5] w-[380px] h-auto rounded-[12px] transition-all duration-500 ease-in-out will-change-transform hover:-translate-y-3 shadow-[4px_2px_7px_0px_rgba(0,0,0,0.14)] hover:shadow-[8px_4px_15px_0px_rgba(0,0,0,0.14)] cursor-pointer"
+          >
+            <a href="./blogDetailPage/lastPostThree.html">
+              <div class="relative">
+                <img
+                  src="../../assets/image/blog/lastPostThree.png"
+                  alt="lastPostOne"
+                  class="rounded-[12px] w-full object-cover"
+                />
+                <span
+                  class="absolute bottom-0 right-0 bg-secondary w-[40px] h-[25px] flex items-center justify-center rounded-tl-[6px]"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </div>
+              <div class="p-4 flex flex-col gap-3">
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-secondary bg-primary px-6 py-1 rounded-full text-[10px] font-semibold"
+                    >New</span
+                  ><small
+                    class="uppercase font-medium text-description text-[12px]"
+                    ><i class="fa-regular fa-calendar"></i> 05 May, 2025</small
+                  >
+                </div>
+                <h3 class="text-[16px] font-black line-clamp-2">
+                  The Impact of Port Congestion Bottlenecks
+                </h3>
+                <p class="text-[14px] font-[400px] text-description">
+                  From delays to rising costs, congestion at ports disrupts
+                  supply chain efficiency.
+                </p>
+                <small class="uppercase font-medium text-black text-[13px]"
+                  ><i class="fa-regular fa-circle-user"></i> by admin</small
+                >
+              </div>
+            </a>
+          </div>
+          <div
+            class="bg-[#f5f5f5] w-[380px] h-auto rounded-[12px] transition-all duration-500 ease-in-out will-change-transform hover:-translate-y-3 shadow-[4px_2px_7px_0px_rgba(0,0,0,0.14)] hover:shadow-[8px_4px_15px_0px_rgba(0,0,0,0.14)] cursor-pointer"
+          >
+            <a href="./blogDetailPage/lastPostFour.html">
+              <div class="relative">
+                <img
+                  src="../../assets/image/blog/lastPostFour.png"
+                  alt="lastPostOne"
+                  class="rounded-[12px] w-full object-cover"
+                />
+                <span
+                  class="absolute bottom-0 right-0 bg-secondary w-[40px] h-[25px] flex items-center justify-center rounded-tl-[6px]"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </div>
+              <div class="p-4 flex flex-col gap-3">
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-secondary bg-primary px-6 py-1 rounded-full text-[10px] font-semibold"
+                    >New</span
+                  ><small
+                    class="uppercase font-medium text-description text-[12px]"
+                    ><i class="fa-regular fa-calendar"></i> 05 May, 2025</small
+                  >
+                </div>
+                <h3 class="text-[16px] font-black line-clamp-2">
+                  Smart Tracking with IoT Devices Visibility from Source to
+                  Destination
+                </h3>
+                <p class="text-[14px] font-[400px] text-description">
+                  Connected sensors provide real-time data, improving route
+                  planning.
+                </p>
+                <small class="uppercase font-medium text-black text-[13px]"
+                  ><i class="fa-regular fa-circle-user"></i> by admin</small
+                >
+              </div>
+            </a>
+          </div>
+          <div
+            class="bg-[#f5f5f5] w-[380px] h-auto rounded-[12px] transition-all duration-500 ease-in-out will-change-transform hover:-translate-y-3 shadow-[4px_2px_7px_0px_rgba(0,0,0,0.14)] hover:shadow-[8px_4px_15px_0px_rgba(0,0,0,0.14)] cursor-pointer"
+          >
+            <a href="./blogDetailPage/lastPostFive.html">
+              <div class="relative">
+                <img
+                  src="../../assets/image/blog/lastPostFive.png"
+                  alt="lastPostOne"
+                  class="rounded-[12px] w-full object-cover"
+                />
+                <span
+                  class="absolute bottom-0 right-0 bg-secondary w-[40px] h-[25px] flex items-center justify-center rounded-tl-[6px]"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </div>
+              <div class="p-4 flex flex-col gap-3">
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-secondary bg-primary px-6 py-1 rounded-full text-[10px] font-semibold"
+                    >New</span
+                  ><small
+                    class="uppercase font-medium text-description text-[12px]"
+                    ><i class="fa-regular fa-calendar"></i> 05 May, 2025</small
+                  >
+                </div>
+                <h3 class="text-[16px] font-black line-clamp-2">
+                  Tackling the Driver Shortage Crisis Workforce Challenges
+                </h3>
+                <p class="text-[14px] font-[400px] text-description">
+                  Aging demographics and high turnover put pressure on delivery
+                  timelines.
+                </p>
+                <small class="uppercase font-medium text-black text-[13px]"
+                  ><i class="fa-regular fa-circle-user"></i> by admin</small
+                >
+              </div>
+            </a>
+          </div>
+          <div
+            class="bg-[#f5f5f5] w-[380px] h-auto rounded-[12px] transition-all duration-500 ease-in-out will-change-transform hover:-translate-y-3 shadow-[4px_2px_7px_0px_rgba(0,0,0,0.14)] hover:shadow-[8px_4px_15px_0px_rgba(0,0,0,0.14)] cursor-pointer"
+          >
+            <a href="./blogDetailPage/lastPostSix.html">
+              <div class="relative">
+                <img
+                  src="../../assets/image/blog/lastPostSix.png"
+                  alt="lastPostOne"
+                  class="rounded-[12px] w-full object-cover"
+                />
+                <span
+                  class="absolute bottom-0 right-0 bg-secondary w-[40px] h-[25px] flex items-center justify-center rounded-tl-[6px]"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </div>
+              <div class="p-4 flex flex-col gap-3">
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-secondary bg-primary px-6 py-1 rounded-full text-[10px] font-semibold"
+                    >New</span
+                  ><small
+                    class="uppercase font-medium text-description text-[12px]"
+                    ><i class="fa-regular fa-calendar"></i> 05 May, 2025</small
+                  >
+                </div>
+                <h3 class="text-[16px] font-black line-clamp-2">
+                  Sustainable Logistics Solutions Greener Paths for Global
+                  Transport
+                </h3>
+                <p class="text-[14px] font-[400px] text-description">
+                  Companies embrace eco-friendly practices to cut emissions and
+                  meet regulations.
+                </p>
+                <small class="uppercase font-medium text-black text-[13px]"
+                  ><i class="fa-regular fa-circle-user"></i> by admin</small
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
     <footer id="footer"></footer>
   </body>
