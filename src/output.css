@@ -418,6 +418,9 @@
   .mt-\[20px\] {
     margin-top: 20px;
   }
+  .mt-\[40px\] {
+    margin-top: 40px;
+  }
   .mt-\[50px\] {
     margin-top: 50px;
   }
@@ -1162,9 +1165,6 @@
   }
   .bg-\[url\(\'\.\.\/\.\.\/\.\.\/assets\/image\/blog\/lastPostFive\.png\'\)\] {
     background-image: url('../../../assets/image/blog/lastPostFive.png');
-  }
-  .bg-\[url\(\'\.\.\/\.\.\/\.\.\/assets\/image\/blog\/lastPostFour\.png\'\)\] {
-    background-image: url('../../../assets/image/blog/lastPostFour.png');
   }
   .bg-\[url\(\'\.\.\/\.\.\/\.\.\/assets\/image\/blog\/lastPostOne\.png\'\)\] {
     background-image: url('../../../assets/image/blog/lastPostOne.png');
