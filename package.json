@@ -1,7 +1,11 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.1.6",
+<<<<<<< HEAD
     "concurrently": "^9.1.2",
+=======
+    "aos": "^2.3.4",
+>>>>>>> ab987692c4785da6c9d31d0fd2876c63b105b173
     "tailwindcss": "^4.1.6"
   },
   "scripts": {
