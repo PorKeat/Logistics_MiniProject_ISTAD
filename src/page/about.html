@@ -13,7 +13,9 @@
   </head>
   <body class="bg-[#0C1B2B] font-mukta">
     <header>
-      <nav></nav>
+      <nav>
+        <div id="navbar"></div>
+      </nav>
       <section class="relative">
         <div
           class="bg-[rgba(1,26,47,0.3)] backdrop-blur-md w-full h-[826px] -z-10"
@@ -556,6 +558,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script type="module">
+      import NavbarScript from "../../components/navbar.js";
+      NavbarScript();
     </script>
   </body>
 </html>

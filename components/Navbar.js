@@ -1,0 +1,79 @@
+// navbar.js
+const NavbarComponent = () => {
+  return `
+    <header class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img 
+            src="https://cdn.prod.website-files.com/5dd7315081d3e97c21e69c0f/5dd7c04c4e896a0ca249c4cd_logo-white.png" 
+            alt="Logo" 
+            class="h-8"
+          >
+        </div>
+
+        <!-- Center Nav - Desktop -->
+        <nav class="hidden md:flex justify-evenly w-full max-w-5xl gap-7 text-white text-lg font-normal">
+          <a href="#" class="hover:text-[#fcb621] transition">Home</a>
+          <a href="#" class="hover:text-[#fcb621] transition">Services</a>
+          <a href="#" class="hover:text-[#fcb621] transition">Blog</a>
+          <a href="#" class="hover:text-[#fcb621] transition">Contact</a>
+          <a href="#" class="hover:text-[#fcb621] transition">About Us</a>
+          <a href="#" class="hover:text-[#fcb621] transition">FAQ</a>
+        </nav>
+
+        <!-- Login Button - Desktop -->
+        <div class="hidden md:block">
+          <a href="#" class="bg-[#fcb621] text-white font-semibold px-4 py-2 rounded-md hover:bg-[#e0a80dc9] transition">
+            Login
+          </a>
+        </div>
+
+        <!-- Hamburger Menu - Mobile -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none" aria-label="Toggle Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="md:hidden px-6 pb-4 text-white text-lg font-normal bg-black/60 backdrop-blur-sm hidden transition-all duration-300">
+        <ul class="flex flex-col gap-2">
+          <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">Home</a></li>
+          <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">Services</a></li>
+          <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">Blog</a></li>
+          <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">Contact</a></li>
+          <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">About Us</a></li>
+          <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">FAQ</a></li>
+          <li>
+            <a href="#" class="block py-2 mt-2 text-center bg-[#fcb621] text-white rounded-md hover:bg-[#e0a80dc9] transition">
+              Login
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+  `;
+};
+
+const NavbarScript = () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbarContainer = document.getElementById("navbar");
+    if (!navbarContainer) return;
+
+    navbarContainer.innerHTML = NavbarComponent();
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle?.addEventListener("click", () => {
+      mobileMenu?.classList.toggle("hidden");
+    });
+  });
+};
+
+export default NavbarScript;
