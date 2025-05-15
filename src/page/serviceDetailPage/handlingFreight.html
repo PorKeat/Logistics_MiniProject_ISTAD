@@ -417,34 +417,34 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module">
       AOS.init();
-      import NavbarScript from '../../../components/navbar.js';
-      import footerHTML from '../../../components/footer.js'
+      import NavbarScript from "../../../components/navbar.js";
+      import footerHTML from "../../../components/footer.js";
       NavbarScript();
       footerHTML();
       // Mobile menu functionality
-      const mobileMenuButton = document.querySelector('.mobile-menu-button');
-      const sidebar = document.querySelector('.sidebar');
-      const overlay = document.querySelector('.overlay');
+      const mobileMenuButton = document.querySelector(".mobile-menu-button");
+      const sidebar = document.querySelector(".sidebar");
+      const overlay = document.querySelector(".overlay");
 
       function toggleMobileMenu() {
-        sidebar.classList.toggle('translate-x-0');
-        overlay.classList.toggle('hidden');
-        setTimeout(() => overlay.classList.toggle('opacity-0'), 0);
+        sidebar.classList.toggle("translate-x-0");
+        overlay.classList.toggle("hidden");
+        setTimeout(() => overlay.classList.toggle("opacity-0"), 0);
         document.body.style.overflow = sidebar.classList.contains(
-          'translate-x-0'
+          "translate-x-0"
         )
-          ? 'hidden'
-          : '';
+          ? "hidden"
+          : "";
       }
 
-      mobileMenuButton.addEventListener('click', toggleMobileMenu);
-      overlay.addEventListener('click', toggleMobileMenu);
+      mobileMenuButton.addEventListener("click", toggleMobileMenu);
+      overlay.addEventListener("click", toggleMobileMenu);
 
       // Close mobile menu on window resize if open
-      window.addEventListener('resize', () => {
+      window.addEventListener("resize", () => {
         if (
           window.innerWidth >= 1024 &&
-          sidebar.classList.contains('translate-x-0')
+          sidebar.classList.contains("translate-x-0")
         ) {
           toggleMobileMenu();
         }
@@ -452,12 +452,13 @@
 
       // Notification animation
       const notificationIcon = document.querySelector(
-        '.material-icons-outlined:nth-child(2)'
+        ".material-icons-outlined:nth-child(2)"
       );
       setInterval(() => {
-        notificationIcon.classList.add('scale-110');
-        setTimeout(() => notificationIcon.classList.remove('scale-110'), 200);
+        notificationIcon.classList.add("scale-110");
+        setTimeout(() => notificationIcon.classList.remove("scale-110"), 200);
       }, 5000);
     </script>
+    <script src="../../js/script.js" type="module"></script>
   </body>
 </html>
