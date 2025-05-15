@@ -109,11 +109,9 @@
 //   });
 // };
 
-// export default NavbarScript;
 const getPageHref = (page) => {
-  return page === "index.html" ? "./index.html" : `./page/${page}`;
+  return page === "index.html" ? "/src/index.html" : `/src/page/${page}`;
 };
-
 const NavbarComponent = () => {
   const pages = [
     "index.html",
@@ -123,17 +121,31 @@ const NavbarComponent = () => {
     "blog.html",
   ];
 
+  // Get current page path
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
   const navLinks = pages
     .map((page) => {
       const label = page
         .replace(".html", "")
         .replace("index", "Home")
         .replace(/^\w/, (c) => c.toUpperCase());
+
+      const isActive =
+        currentPath === page || (currentPath === "" && page === "index.html");
+
       return `
         <li class="relative group">
           <a href="${getPageHref(page)}"
-             class="hover:text-[#fcb621] transition">
+             class="hover:text-[#fcb621] transition ${
+               isActive ? "text-[#fcb621] font-medium" : ""
+             }">
             ${label}
+            ${
+              isActive
+                ? '<span class="absolute left-0 -bottom-1 w-full h-0.5 bg-[#fcb621]"></span>'
+                : ""
+            }
           </a>
         </li>`;
     })
@@ -145,11 +157,16 @@ const NavbarComponent = () => {
         .replace(".html", "")
         .replace("index", "Home")
         .replace(/^\w/, (c) => c.toUpperCase());
+
+      const isActive =
+        currentPath === page || (currentPath === "" && page === "index.html");
+
       return `
         <li>
-          <a href="${getPageHref(
-            page
-          )}" class="block py-2 hover:text-[#fcb621] transition">
+          <a href="${getPageHref(page)}" 
+             class="block py-2 hover:text-[#fcb621] transition ${
+               isActive ? "text-[#fcb621] font-medium" : ""
+             }">
             ${label}
           </a>
         </li>`;
@@ -162,11 +179,13 @@ const NavbarComponent = () => {
 
         <!-- Logo -->
         <div class="flex items-center gap-2">
-          <img 
-            src="https://cdn.prod.website-files.com/5dd7315081d3e97c21e69c0f/5dd7c04c4e896a0ca249c4cd_logo-white.png" 
-            alt="Logo" 
-            class="h-8"
-          >
+          <a href="./">
+            <img 
+              src="https://cdn.prod.website-files.com/5dd7315081d3e97c21e69c0f/5dd7c04c4e896a0ca249c4cd_logo-white.png" 
+              alt="Logo" 
+              class="h-8"
+            >
+          </a>
         </div>
 
         <!-- Center Nav - Desktop -->
@@ -176,7 +195,7 @@ const NavbarComponent = () => {
 
         <!-- Login Button - Desktop -->
         <div class="hidden md:block">
-          <a href="#" class="bg-[#fcb621] text-white font-semibold px-4 py-2 rounded-md hover:bg-[#e0a80dc9] transition">
+          <a href="/src/page/login.html" class="bg-[#fcb621] text-white font-semibold px-4 py-2 rounded-md hover:bg-[#e0a80dc9] transition">
             Login
           </a>
         </div>
@@ -196,7 +215,7 @@ const NavbarComponent = () => {
         <ul class="flex flex-col gap-2">
           ${mobileLinks}
           <li>
-            <a href="#" class="block py-2 mt-2 text-center bg-[#fcb621] text-white rounded-md hover:bg-[#e0a80dc9] transition">
+            <a href="/src/page/login.html" class="block py-2 mt-2 text-center bg-[#fcb621] text-white rounded-md hover:bg-[#e0a80dc9] transition">
               Login
             </a>
           </li>
@@ -207,17 +226,32 @@ const NavbarComponent = () => {
 };
 
 const NavbarScript = () => {
-  document.addEventListener("DOMContentLoaded", () => {
-    const navbarContainer = document.getElementById("navbar");
-    if (!navbarContainer) return;
+  // Create navbar container if it doesn't exist
+  let navbarContainer = document.getElementById("navbar");
+  if (!navbarContainer) {
+    navbarContainer = document.createElement("div");
+    navbarContainer.id = "navbar";
+    document.body.prepend(navbarContainer);
+  }
 
-    navbarContainer.innerHTML = NavbarComponent();
+  // Insert navbar HTML
+  navbarContainer.innerHTML = NavbarComponent();
 
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
+  // Mobile menu toggle functionality
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
 
-    menuToggle?.addEventListener("click", () => {
-      mobileMenu?.classList.toggle("hidden");
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Close mobile menu when clicking on a link
+  const mobileLinks = document.querySelectorAll("#mobile-menu a");
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
     });
   });
 };
