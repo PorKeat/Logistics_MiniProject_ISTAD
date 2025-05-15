@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Hero Section -->
+  <section class="bg-cover bg-center text-white h-[50vh] sm:h-[60vh] lg:h-[70vh] flex items-center justify-center" 
+           style="background-image: linear-gradient(rgba(10, 27, 43, 0.47), rgba(10, 27, 43, 0.98) 70%, #0a1b2b), url('https://assets-global.website-files.com/5dd7315081d3e97c21e69c0f/5dd87523967a3b57f6267029_blog_hero_04.jpg');">
+    <div class="text-center px-4 " data-aos="zoom-in-up">
+      <p class="text-[#FCB621] font-semibold mb-2 uppercase tracking-wide ">FAQ</p>
+      <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold">
+        Clear your doubts and keep turning the page — FAQs made simple.
+      </h1>
+    </div>
+  </section>
+
+  <!-- FAQ Header -->
+  <section class="text-center py-10 mt-10">
+    <h2 class="text-5xl lg:text-6xl sm:text-4xl font-bold text-[#000000]" data-aos="zoom-out-up">
+      Frequently Asked Questions
+    </h2>
+  </section>
+
+  <!-- FAQ Content -->
+  <section class="py-10 px-6 lg:px-32">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 font-serif mb-6 mt-4">
+      <!-- Left Column -->
+      <div  data-aos="fade-right">
+        <h3 class="text-5xl font-bold lg:text-6xl sm:text-4xl text-[#FCB621] mb-6 mt-4">Question</h3>
+        <p class="mb-6 text-gray-700 text-xl font-semibold ">
+          Need help using our logistics platform? Find quick answers to common
+          <br>
+           questions about tracking,
+          shipping, and managing your deliveries here.
+        </p>
+
+        <h3 class="text-5xl font-bold lg:text-6xl sm:text-4xl text-[#FCB621] mb-6 mt-4">Contact Support</h3>
+        <p class="text-gray-700 text-xl mb-6 font-semibold">
+          Still need help? Our support team is here for you—contact us
+          <br>
+           anytime for quick assistance with your logistics needs.
+        </p>
+        <button class="bg-[#FCB621] hover:bg-[#e0a800] text-white font-semibold px-6 py-2 rounded shadow mb-6 mt-4">
+          Contact Us
+        </button>
+      </div>
+
+      <!-- Right Column (FAQs) -->
+      <div class="space-y-4" data-aos="fade-left">
+        <!-- FAQ Item 1 -->
+        <div class="bg-white shadow p-4 rounded flex justify-between items-center cursor-pointer" onclick="toggleAccordion(0)">
+          <span class="text-[#fcb621] font-semibold text-xl">How can I track the status of my shipment?</span>
+          <span id="icon-0" class="text-2xl"><i class="fa-solid fa-caret-down"></i></span>
+        </div>
+        <div id="answer-0" class="accordion-item hidden p-4 bg-gray-50 text-gray-600 font-semibold text-xl">
+          <p>You can track the status of your shipment by entering the tracking number provided at checkout.</p>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="bg-white shadow p-4 rounded flex justify-between items-center cursor-pointer" onclick="toggleAccordion(1)">
+          <span class="text-[#fcb621] font-semibold text-xl">What shipping carriers do you use?</span>
+          <span id="icon-1" class="text-2xl"><i class="fa-solid fa-caret-down"></i></span>
+        </div>
+        <div id="answer-1" class="accordion-item hidden p-4 bg-gray-50 text-gray-600 font-semibold text-xl">
+          <p>We use a variety of carriers, including UPS, FedEx, and DHL, to deliver your packages.</p>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="bg-white shadow p-4 rounded flex justify-between items-center cursor-pointer " onclick="toggleAccordion(2)">
+          <span class="text-[#fcb621] font-semibold text-xl">Can I change the shipping address after placing an order?</span>
+          <span id="icon-2" class="text-2xl"><i class="fa-solid fa-caret-down"></i></span>
+        </div>
+        <div id="answer-2" class="accordion-item hidden p-4 bg-gray-50 text-gray-600 font-semibold text-xl">
+          <p>If your order has not been shipped yet, you can update your shipping address by contacting customer support.</p>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="bg-white shadow p-4 rounded flex justify-between items-center cursor-pointer" onclick="toggleAccordion(3)">
+          <span class="text-[#fcb621] font-semibold text-xl">How can I request a return or refund?</span>
+          <span id="icon-3" class="text-2xl"><i class="fa-solid fa-caret-down"></i></span>
+        </div>
+        <div id="answer-3" class="accordion-item hidden p-4 bg-gray-50 text-gray-600 font-semibold text-xl">
+          <p>You can request a return or refund within 30 days of receiving your order by contacting customer service.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Accordion Toggle Script -->
+ <script>
+  function toggleAccordion(index) {
+    const answer = document.getElementById(`answer-${index}`);
+    const icon = document.querySelector(`#icon-${index} i`);
+    const isOpen = !answer.classList.contains('hidden');
+
+    // Toggle the answer visibility
+    answer.classList.toggle('hidden');
+
+    // Toggle the icon direction
+    if (isOpen) {
+      icon.classList.remove('fa-caret-up');
+      icon.classList.add('fa-caret-down');
+    } else {
+      icon.classList.remove('fa-caret-down');
+      icon.classList.add('fa-caret-up');
+    }
+  }
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+
+</html>
