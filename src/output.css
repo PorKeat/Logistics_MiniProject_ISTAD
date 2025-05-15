@@ -1465,9 +1465,12 @@
   .text-\[24px\] {
     font-size: 24px;
   }
+<<<<<<< HEAD
   .text-\[28px\] {
     font-size: 28px;
   }
+=======
+>>>>>>> dc097696440dded9ed6c02b7628901784d9a9ef5
   .text-\[32px\] {
     font-size: 32px;
   }
@@ -3040,11 +3043,14 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+<<<<<<< HEAD
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
     }
   }
+=======
+>>>>>>> dc097696440dded9ed6c02b7628901784d9a9ef5
   .lg\:items-stretch {
     @media (width >= 64rem) {
       align-items: stretch;
