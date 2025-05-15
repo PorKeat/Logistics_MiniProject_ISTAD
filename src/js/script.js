@@ -1,4 +1,5 @@
-import NavbarScript from "../../components/Navbar.js";
-import renderFooter from "../../components/Footer.js";
+import NavbarScript from '../../components/navbar.js';
+import renderFooter from '../../components/footer.js';
+
 NavbarScript();
 renderFooter();

@@ -190,7 +190,7 @@ const NavbarComponent = () => {
         </div>
 
         <!-- Center Nav - Desktop -->
-        <ul class="hidden md:flex justify-end w-full max-w-5xl gap-7 text-white text-lg font-normal">
+        <ul class="hidden md:flex justify-end w-full px-5  max-w-5xl gap-7 text-white text-lg font-normal">
           ${navLinks}
         </ul>
 
