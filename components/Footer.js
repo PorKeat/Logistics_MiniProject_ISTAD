@@ -12,7 +12,7 @@ export default function renderFooter() {
     if (path === "index.html") {
       return `/src/index.html`;
     }
-    return `/src/pages/${path}`;
+    return `/src/page/${path}`;
   };
 
   const footerHTML = `
