@@ -1,4 +1,3 @@
-
 // const getPageHref = (page) => {
 //   return page === "index.html" ? "./index.html" : `../page/${page}`;
 // };
@@ -110,68 +109,68 @@
 // };
 
 const getPageHref = (page) => {
-  return page === "index.html" ? "/src/index.html" : `/src/page/${page}`;
+  return page === 'index.html' ? '/src/index.html' : `/src/page/${page}`;
 };
 const NavbarComponent = () => {
   const pages = [
-    "index.html",
-    "services.html",
-    "about.html",
-    "contact.html",
-    "blog.html",
+    'index.html',
+    'services.html',
+    'about.html',
+    'contact.html',
+    'blog.html',
   ];
 
   // Get current page path
-  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
   const navLinks = pages
     .map((page) => {
       const label = page
-        .replace(".html", "")
-        .replace("index", "Home")
+        .replace('.html', '')
+        .replace('index', 'Home')
         .replace(/^\w/, (c) => c.toUpperCase());
 
       const isActive =
-        currentPath === page || (currentPath === "" && page === "index.html");
+        currentPath === page || (currentPath === '' && page === 'index.html');
 
       return `
         <li class="relative group">
           <a href="${getPageHref(page)}"
              class="hover:text-[#fcb621] transition ${
-               isActive ? "text-[#fcb621] font-medium" : ""
+               isActive ? 'text-[#fcb621] font-medium' : ''
              }">
             ${label}
             ${
               isActive
                 ? '<span class="absolute left-0 -bottom-1 w-full h-0.5 bg-[#fcb621]"></span>'
-                : ""
+                : ''
             }
           </a>
         </li>`;
     })
-    .join("");
+    .join('');
 
   const mobileLinks = pages
     .map((page) => {
       const label = page
-        .replace(".html", "")
-        .replace("index", "Home")
+        .replace('.html', '')
+        .replace('index', 'Home')
         .replace(/^\w/, (c) => c.toUpperCase());
 
       const isActive =
-        currentPath === page || (currentPath === "" && page === "index.html");
+        currentPath === page || (currentPath === '' && page === 'index.html');
 
       return `
         <li>
           <a href="${getPageHref(page)}" 
              class="block py-2 hover:text-[#fcb621] transition ${
-               isActive ? "text-[#fcb621] font-medium" : ""
+               isActive ? 'text-[#fcb621] font-medium' : ''
              }">
             ${label}
           </a>
         </li>`;
     })
-    .join("");
+    .join('');
 
   return `
     <nav class="fixed top-0 left-0 w-full z-50 bg-[#1e33472e] backdrop-blur-md border-b border-white/10">
@@ -195,8 +194,13 @@ const NavbarComponent = () => {
 
         <!-- Login Button - Desktop -->
         <div class="hidden md:block">
-          <a href="/src/page/login.html" class="bg-[#fcb621] text-white font-semibold px-4 py-2 rounded-md hover:bg-[#e0a80dc9] transition">
-            Login
+          <a href="/src/page/login.html" class="flex items-center justify-center group">
+            <!-- Login Icon (Material Design User Icon) -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+              class="transition"
+              style="color: #fcb621;">
+              <path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/>
+            </svg>
           </a>
         </div>
 
@@ -215,8 +219,11 @@ const NavbarComponent = () => {
         <ul class="flex flex-col gap-2">
           ${mobileLinks}
           <li>
-            <a href="/src/page/login.html" class="block py-2 mt-2 text-center bg-[#fcb621] text-white rounded-md hover:bg-[#e0a80dc9] transition">
-              Login
+            <a href="/src/page/login.html" class="block py-2 mt-2 text-center bg-[#fcb621] text-white rounded-md hover:bg-[#e0a80dc9] transition flex items-center justify-center">
+              <!-- Login Icon (Material Design User Icon) -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/>
+              </svg>
             </a>
           </li>
         </ul>
@@ -227,10 +234,10 @@ const NavbarComponent = () => {
 
 const NavbarScript = () => {
   // Create navbar container if it doesn't exist
-  let navbarContainer = document.getElementById("navbar");
+  let navbarContainer = document.getElementById('navbar');
   if (!navbarContainer) {
-    navbarContainer = document.createElement("div");
-    navbarContainer.id = "navbar";
+    navbarContainer = document.createElement('div');
+    navbarContainer.id = 'navbar';
     document.body.prepend(navbarContainer);
   }
 
@@ -238,20 +245,20 @@ const NavbarScript = () => {
   navbarContainer.innerHTML = NavbarComponent();
 
   // Mobile menu toggle functionality
-  const menuToggle = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
 
   if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
   }
 
   // Close mobile menu when clicking on a link
-  const mobileLinks = document.querySelectorAll("#mobile-menu a");
+  const mobileLinks = document.querySelectorAll('#mobile-menu a');
   mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
     });
   });
 };

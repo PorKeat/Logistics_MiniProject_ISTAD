@@ -1,77 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Navbar</title>
-  <link rel="stylesheet" href="../src/output.css"/>
-</head>
-<body>
-  <nav class="fixed top-0 left-0 w-full z-50 bg-[#1e33472e] backdrop-blur-md border-b border-white/10">
-    <div class="max-w-7xl  mx-auto px-6 py-4 flex items-center justify-between">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body>
+    <nav
+      class="fixed top-0 left-0 w-full z-50 bg-[#1e33472e] backdrop-blur-md border-b border-white/10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img
+            src="https://cdn.prod.website-files.com/5dd7315081d3e97c21e69c0f/5dd7c04c4e896a0ca249c4cd_logo-white.png"
+            alt="Logo"
+            class="h-8"
+          />
+        </div>
 
-      <!-- Logo -->
-      <div class="flex items-center gap-2">
-        <img 
-          src="https://cdn.prod.website-files.com/5dd7315081d3e97c21e69c0f/5dd7c04c4e896a0ca249c4cd_logo-white.png" 
-          alt="Logo" 
-          class="h-8"
+        <!-- Center Nav - Desktop -->
+        <div
+          class="hidden md:flex justify-end w-full max-w-5xl gap-7 text-white text-lg font-normal"
         >
-      </div>
+          <a href="../src/index.html" class="hover:text-[#fcb621] transition"
+            >Home</a
+          >
+          <a
+            href="../src/page/services.html"
+            class="hover:text-[#fcb621] transition"
+            >Services</a
+          >
+          <a
+            href="../src/page/blog.html"
+            class="hover:text-[#fcb621] transition"
+            >Blog</a
+          >
+          <a
+            href="../src/page/contact.html"
+            class="hover:text-[#fcb621] transition"
+            >Contact</a
+          >
+          <a
+            href="../src/page/about.html"
+            class="hover:text-[#fcb621] transition"
+            >About Us</a
+          >
+          <a href="../src/page/faq.html" class="hover:text-[#fcb621] transition"
+            >FAQ</a
+          >
+        </div>
 
-      <!-- Center Nav - Desktop -->
-      <div class="hidden md:flex justify-end w-full max-w-5xl gap-7 text-white text-lg font-normal">
-        <a href="../src/index.html" class="hover:text-[#fcb621] transition">Home</a>
-        <a href="../src/page/services.html" class="hover:text-[#fcb621] transition">Services</a>
-        <a href="../src/page/blog.html" class="hover:text-[#fcb621] transition">Blog</a>
-        <a href="../src/page/contact.html" class="hover:text-[#fcb621] transition">Contact</a>
-        <a href="../src/page/about.html" class="hover:text-[#fcb621] transition">About Us</a>
-        <a href="../src/page/faq.html" class="hover:text-[#fcb621] transition">FAQ</a>
-      </div>
-
-      <!-- Login Button - Desktop -->
-      <div class="hidden md:block">
-        <a href="#" class="bg-[#fcb621] text-white font-semibold px-4 py-2 rounded-md hover:bg-[#e0a80dc9] transition">
-          Login
-        </a>
-      </div>
-
-      <!-- Hamburger Menu - Mobile -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-white focus:outline-none" aria-label="Toggle Menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="md:hidden px-6 pb-4 text-white text-lg font-normal bg-black/60 backdrop-blur-sm hidden transition-all duration-300">
-      <ul class="flex flex-col gap-2">
-        <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">Home</a></li>
-        <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">Services</a></li>
-        <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">Blog</a></li>
-        <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">Contact</a></li>
-        <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">About Us</a></li>
-        <li><a href="#" class="block py-2 hover:text-[#fcb621] transition">FAQ</a></li>
-        <li>
-          <a href="#" class="block py-2 mt-2 text-center bg-[#fcb621] text-white rounded-md hover:bg-[#e0a80dc9] transition">
-            Login
+        <!-- Login Icon - Desktop -->
+        <div class="hidden md:block">
+          <a
+            href="#"
+            class="text-white hover:text-[#fcb621] transition"
+            aria-label="Login"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5.121 17.804A9 9 0 1112 21a9 9 0 01-6.879-3.196z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
           </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        </div>
 
-  <!-- JavaScript for toggle -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+        <!-- Hamburger Menu - Mobile -->
+        <div class="md:hidden">
+          <button
+            id="menu-toggle"
+            class="text-white focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
 
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
-</body>
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden px-6 pb-4 text-white text-lg font-normal bg-black/60 backdrop-blur-sm hidden transition-all duration-300"
+      >
+        <ul class="flex flex-col gap-2">
+          <li>
+            <a href="#" class="block py-2 hover:text-[#fcb621] transition"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#" class="block py-2 hover:text-[#fcb621] transition"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="#" class="block py-2 hover:text-[#fcb621] transition"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="#" class="block py-2 hover:text-[#fcb621] transition"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="#" class="block py-2 hover:text-[#fcb621] transition"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="#" class="block py-2 hover:text-[#fcb621] transition"
+              >FAQ</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block py-2 text-center text-white hover:text-[#fcb621] transition"
+              aria-label="Login"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="mx-auto h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5.121 17.804A9 9 0 1112 21a9 9 0 01-6.879-3.196z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- JavaScript for toggle -->
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </body>
 </html>
